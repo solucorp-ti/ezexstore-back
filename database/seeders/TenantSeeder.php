@@ -30,7 +30,8 @@ class TenantSeeder extends Seeder
         ApiKey::factory()->create([
             'tenant_id' => $tenant->id,
             'user_id' => $user->id,
-            'name' => 'Demo API Key'
+            'name' => 'Demo API Key',
+            'scopes' => ['products:read', 'products:write', 'inventory:read', 'inventory:write']
         ]);
 
         Warehouse::factory()->create([

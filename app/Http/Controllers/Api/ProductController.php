@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Services\Interfaces\ProductServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class ProductController extends BaseApiController
 {
@@ -21,23 +22,34 @@ class ProductController extends BaseApiController
         return $this->successResponse($products, 'Products retrieved successfully');
     }
 
-    public function store(Request $request)
+    private function getValidationRules($productId = null): array
     {
-        $validator = Validator::make($request->all(), [
+        return [
             'product_name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'base_price' => 'required|numeric|min:0',
             'status' => 'required|in:active,inactive,discontinued',
             'unit_of_measure' => 'required|in:piece,kg,liter,meter',
-            'sku' => 'nullable|string|unique:products,sku',
+            'sku' => [
+                'nullable',
+                'string',
+                Rule::unique('products')->where(function ($query) {
+                    return $query->where('tenant_id', request()->tenant->id);
+                })->ignore($productId)
+            ],
             'part_number' => 'nullable|string',
             'serial_number' => 'nullable|string',
             'part_condition' => 'nullable|in:new,used,discontinued,damaged,refurbished',
             'brand' => 'nullable|string',
             'family' => 'nullable|string',
             'line' => 'nullable|string',
-            'is_active' => 'sometimes|boolean',
-        ]);
+        ];
+    }
+
+
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), $this->getValidationRules());
 
         if ($validator->fails()) {
             return $this->errorResponse($validator->errors()->first(), 422);
@@ -50,7 +62,7 @@ class ProductController extends BaseApiController
     public function show(Request $request, $id)
     {
         $product = $this->productService->findProduct($id, $request->tenant->id);
-        
+
         if (!$product) {
             return $this->errorResponse('Product not found', 404);
         }
@@ -60,20 +72,7 @@ class ProductController extends BaseApiController
 
     public function update(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [
-            'product_name' => 'sometimes|string|max:255',
-            'description' => 'nullable|string',
-            'base_price' => 'sometimes|numeric|min:0',
-            'status' => 'sometimes|in:active,inactive,discontinued',
-            'unit_of_measure' => 'sometimes|in:piece,kg,liter,meter',
-            'sku' => 'nullable|string|unique:products,sku,' . $id,
-            'part_number' => 'nullable|string',
-            'serial_number' => 'nullable|string',
-            'part_condition' => 'nullable|in:new,used,discontinued,damaged,refurbished',
-            'brand' => 'nullable|string',
-            'family' => 'nullable|string',
-            'line' => 'nullable|string',
-        ]);
+        $validator = Validator::make($request->all(), $this->getValidationRules());
 
         if ($validator->fails()) {
             return $this->errorResponse($validator->errors()->first(), 422);
