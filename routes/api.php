@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('api.key')->group(function () {
-    Route::get('/test', function () {
-        return response()->json([
-            'message' => 'API key is valid',
-            'tenant' => request('tenant')->name,
-            'user' => request('api_user')->name
-        ]);
-    });
+    Route::get('/test', [TestController::class, 'testConnection']);
 });
