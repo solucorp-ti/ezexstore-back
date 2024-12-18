@@ -27,4 +27,29 @@ class Tenant extends Model
     {
         return $this->hasMany(ApiKey::class);
     }
+
+    public function warehouses()
+    {
+        return $this->hasMany(Warehouse::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function config()
+    {
+        return $this->hasOne(TenantConfig::class);
+    }
+
+    public function supportAssignments()
+    {
+        return $this->hasMany(SupportAssignment::class);
+    }
+
+    public function inventoryLogs()
+    {
+        return $this->hasMany(InventoryLog::class);
+    }
 }
