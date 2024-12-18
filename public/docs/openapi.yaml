@@ -7,39 +7,11 @@ servers:
   -
     url: 'http://ezexstore-back.test'
 paths:
-  /api/test:
-    get:
-      summary: ''
-      operationId: getApiTest
-      description: ''
-      parameters:
-        -
-          in: header
-          name: X-API-KEY
-          description: ''
-          example: '{YOUR_API_KEY}'
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Invalid API key'
-                properties:
-                  message:
-                    type: string
-                    example: 'Invalid API key'
-      tags:
-        - Endpoints
   /api/products:
     get:
-      summary: ''
-      operationId: getApiProducts
-      description: ''
+      summary: 'List Products'
+      operationId: listProducts
+      description: 'Returns a list of all products belonging to the authenticated tenant.'
       parameters:
         -
           in: header
@@ -49,24 +21,112 @@ paths:
           schema:
             type: string
       responses:
-        401:
-          description: ''
+        200:
+          description: success
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Invalid API key'
+                  success: true
+                  data:
+                    -
+                      id: 1
+                      product_serial: TEST001
+                      product_name: 'Test Product'
+                      description: 'Product description'
+                      base_price: '99.99'
+                      status: active
+                      unit_of_measure: piece
+                      sku: SKU001
+                      part_number: PART001
+                      serial_number: SN001
+                      part_condition: new
+                      brand: 'Test Brand'
+                      family: 'Test Family'
+                      line: 'Test Line'
+                      is_active: true
+                  message: 'Products retrieved successfully'
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        product_serial: TEST001
+                        product_name: 'Test Product'
+                        description: 'Product description'
+                        base_price: '99.99'
+                        status: active
+                        unit_of_measure: piece
+                        sku: SKU001
+                        part_number: PART001
+                        serial_number: SN001
+                        part_condition: new
+                        brand: 'Test Brand'
+                        family: 'Test Family'
+                        line: 'Test Line'
+                        is_active: true
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        product_serial:
+                          type: string
+                          example: TEST001
+                        product_name:
+                          type: string
+                          example: 'Test Product'
+                        description:
+                          type: string
+                          example: 'Product description'
+                        base_price:
+                          type: string
+                          example: '99.99'
+                        status:
+                          type: string
+                          example: active
+                        unit_of_measure:
+                          type: string
+                          example: piece
+                        sku:
+                          type: string
+                          example: SKU001
+                        part_number:
+                          type: string
+                          example: PART001
+                        serial_number:
+                          type: string
+                          example: SN001
+                        part_condition:
+                          type: string
+                          example: new
+                        brand:
+                          type: string
+                          example: 'Test Brand'
+                        family:
+                          type: string
+                          example: 'Test Family'
+                        line:
+                          type: string
+                          example: 'Test Line'
+                        is_active:
+                          type: boolean
+                          example: true
                   message:
                     type: string
-                    example: 'Invalid API key'
+                    example: 'Products retrieved successfully'
       tags:
-        - Endpoints
+        - Products
     post:
-      summary: ''
-      operationId: postApiProducts
-      description: ''
+      summary: 'Create Product'
+      operationId: createProduct
+      description: 'Creates a new product for the authenticated tenant.'
       parameters:
         -
           in: header
@@ -75,14 +135,158 @@ paths:
           example: '{YOUR_API_KEY}'
           schema:
             type: string
-      responses: {  }
+      responses:
+        201:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    id: 1
+                    product_name: 'Test Product'
+                    description: 'A test product description'
+                    base_price: '99.99'
+                    status: active
+                    unit_of_measure: piece
+                    sku: SKU001
+                    created_at: '2024-12-18T00:00:00.000000Z'
+                    updated_at: '2024-12-18T00:00:00.000000Z'
+                  message: 'Product created successfully'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      product_name:
+                        type: string
+                        example: 'Test Product'
+                      description:
+                        type: string
+                        example: 'A test product description'
+                      base_price:
+                        type: string
+                        example: '99.99'
+                      status:
+                        type: string
+                        example: active
+                      unit_of_measure:
+                        type: string
+                        example: piece
+                      sku:
+                        type: string
+                        example: SKU001
+                      created_at:
+                        type: string
+                        example: '2024-12-18T00:00:00.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-12-18T00:00:00.000000Z'
+                  message:
+                    type: string
+                    example: 'Product created successfully'
+        422:
+          description: 'validation error'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'The product name field is required.'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'The product name field is required.'
       tags:
-        - Endpoints
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_name:
+                  type: string
+                  description: 'The name of the product.'
+                  example: 'Test Product'
+                  nullable: false
+                description:
+                  type: string
+                  description: 'optional The description of the product.'
+                  example: 'A test product description'
+                  nullable: false
+                base_price:
+                  type: numeric
+                  description: 'The base price of the product.'
+                  example: '99.99'
+                  nullable: false
+                status:
+                  type: string
+                  description: 'The status of the product (active, inactive, discontinued).'
+                  example: active
+                  nullable: false
+                unit_of_measure:
+                  type: string
+                  description: 'The unit of measure (piece, kg, liter, meter).'
+                  example: piece
+                  nullable: false
+                sku:
+                  type: string
+                  description: 'optional The SKU of the product (must be unique per tenant).'
+                  example: SKU001
+                  nullable: false
+                part_number:
+                  type: string
+                  description: 'optional The part number of the product.'
+                  example: PART001
+                  nullable: false
+                serial_number:
+                  type: string
+                  description: 'optional The serial number of the product.'
+                  example: SN001
+                  nullable: false
+                part_condition:
+                  type: string
+                  description: 'optional The condition of the product (new, used, discontinued, damaged, refurbished).'
+                  example: new
+                  nullable: false
+                brand:
+                  type: string
+                  description: 'optional The brand of the product.'
+                  example: 'Test Brand'
+                  nullable: false
+                family:
+                  type: string
+                  description: 'optional The product family.'
+                  example: 'Test Family'
+                  nullable: false
+                line:
+                  type: string
+                  description: 'optional The product line.'
+                  example: 'Test Line'
+                  nullable: false
+              required:
+                - product_name
+                - base_price
+                - status
+                - unit_of_measure
   '/api/products/{id}':
     get:
-      summary: ''
-      operationId: getApiProductsId
-      description: ''
+      summary: 'Get Product Details'
+      operationId: getProductDetails
+      description: 'Returns detailed information about a specific product.'
       parameters:
         -
           in: header
@@ -92,24 +296,108 @@ paths:
           schema:
             type: string
       responses:
-        401:
-          description: ''
+        200:
+          description: success
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Invalid API key'
+                  success: true
+                  data:
+                    id: 1
+                    product_serial: TEST001
+                    product_name: 'Test Product'
+                    description: 'Product description'
+                    base_price: '99.99'
+                    status: active
+                    unit_of_measure: piece
+                    sku: SKU001
+                    part_number: PART001
+                    serial_number: SN001
+                    part_condition: new
+                    brand: 'Test Brand'
+                    family: 'Test Family'
+                    line: 'Test Line'
+                    is_active: true
+                  message: 'Product retrieved successfully'
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      product_serial:
+                        type: string
+                        example: TEST001
+                      product_name:
+                        type: string
+                        example: 'Test Product'
+                      description:
+                        type: string
+                        example: 'Product description'
+                      base_price:
+                        type: string
+                        example: '99.99'
+                      status:
+                        type: string
+                        example: active
+                      unit_of_measure:
+                        type: string
+                        example: piece
+                      sku:
+                        type: string
+                        example: SKU001
+                      part_number:
+                        type: string
+                        example: PART001
+                      serial_number:
+                        type: string
+                        example: SN001
+                      part_condition:
+                        type: string
+                        example: new
+                      brand:
+                        type: string
+                        example: 'Test Brand'
+                      family:
+                        type: string
+                        example: 'Test Family'
+                      line:
+                        type: string
+                        example: 'Test Line'
+                      is_active:
+                        type: boolean
+                        example: true
                   message:
                     type: string
-                    example: 'Invalid API key'
+                    example: 'Product retrieved successfully'
+        404:
+          description: 'not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Product not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Product not found'
       tags:
-        - Endpoints
+        - Products
     put:
-      summary: ''
-      operationId: putApiProductsId
-      description: ''
+      summary: 'Update Product'
+      operationId: updateProduct
+      description: 'Updates an existing product. All fields are optional for updates.'
       parameters:
         -
           in: header
@@ -118,13 +406,132 @@ paths:
           example: '{YOUR_API_KEY}'
           schema:
             type: string
-      responses: {  }
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    id: 1
+                    product_name: 'Updated Product'
+                    base_price: '149.99'
+                    status: inactive
+                  message: 'Product updated successfully'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      product_name:
+                        type: string
+                        example: 'Updated Product'
+                      base_price:
+                        type: string
+                        example: '149.99'
+                      status:
+                        type: string
+                        example: inactive
+                  message:
+                    type: string
+                    example: 'Product updated successfully'
+        404:
+          description: 'not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Product not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Product not found'
       tags:
-        - Endpoints
+        - Products
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_name:
+                  type: string
+                  description: 'optional The name of the product.'
+                  example: 'Updated Product'
+                  nullable: false
+                description:
+                  type: string
+                  description: 'optional The description of the product.'
+                  example: 'Deserunt voluptas ut rerum sit.'
+                  nullable: false
+                base_price:
+                  type: numeric
+                  description: 'optional The base price of the product.'
+                  example: '149.99'
+                  nullable: false
+                status:
+                  type: string
+                  description: 'optional The status (active, inactive, discontinued).'
+                  example: inactive
+                  nullable: false
+                unit_of_measure:
+                  type: string
+                  description: 'optional The unit of measure (piece, kg, liter, meter).'
+                  example: kg
+                  nullable: false
+                sku:
+                  type: string
+                  description: 'optional The SKU (must be unique per tenant).'
+                  example: SKU002
+                  nullable: false
+                part_number:
+                  type: string
+                  description: 'optional The part number.'
+                  example: PART002
+                  nullable: false
+                serial_number:
+                  type: string
+                  description: 'optional The serial number.'
+                  example: SN002
+                  nullable: false
+                part_condition:
+                  type: string
+                  description: 'optional The condition (new, used, discontinued, damaged, refurbished).'
+                  example: used
+                  nullable: false
+                brand:
+                  type: string
+                  description: 'optional The brand.'
+                  example: 'New Brand'
+                  nullable: false
+                family:
+                  type: string
+                  description: 'optional The product family.'
+                  example: 'New Family'
+                  nullable: false
+                line:
+                  type: string
+                  description: 'optional The product line.'
+                  example: 'New Line'
+                  nullable: false
     delete:
-      summary: ''
-      operationId: deleteApiProductsId
-      description: ''
+      summary: 'Delete Product'
+      operationId: deleteProduct
+      description: 'Soft deletes a product. The product can be reactivated later by updating its status to active.'
       parameters:
         -
           in: header
@@ -133,9 +540,45 @@ paths:
           example: '{YOUR_API_KEY}'
           schema:
             type: string
-      responses: {  }
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data: null
+                  message: 'Product deleted successfully'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: string
+                    example: null
+                  message:
+                    type: string
+                    example: 'Product deleted successfully'
+        404:
+          description: 'not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Product not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Product not found'
       tags:
-        - Endpoints
+        - Products
     parameters:
       -
         in: path
@@ -145,11 +588,11 @@ paths:
         required: true
         schema:
           type: integer
-  /api/warehouses:
-    get:
-      summary: ''
-      operationId: getApiWarehouses
-      description: ''
+  /api/inventory/adjust:
+    post:
+      summary: 'Adjust Stock'
+      operationId: adjustStock
+      description: "Adjusts the stock quantity of a product in a specific warehouse.\nUse type 'restock' to add inventory or 'order' to reduce it."
       parameters:
         -
           in: header
@@ -159,36 +602,116 @@ paths:
           schema:
             type: string
       responses:
-        401:
-          description: ''
+        200:
+          description: success
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Invalid API key'
+                  success: true
+                  data:
+                    product_id: 1
+                    warehouse_id: 1
+                    quantity: 10
+                    type: restock
+                    created_at: '2024-12-18T00:00:00.000000Z'
+                  message: 'Stock adjusted successfully'
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      product_id:
+                        type: integer
+                        example: 1
+                      warehouse_id:
+                        type: integer
+                        example: 1
+                      quantity:
+                        type: integer
+                        example: 10
+                      type:
+                        type: string
+                        example: restock
+                      created_at:
+                        type: string
+                        example: '2024-12-18T00:00:00.000000Z'
                   message:
                     type: string
-                    example: 'Invalid API key'
-      tags:
-        - Endpoints
-  /api/inventory/adjust:
-    post:
-      summary: ''
-      operationId: postApiInventoryAdjust
-      description: ''
-      parameters:
-        -
-          in: header
-          name: X-API-KEY
+                    example: 'Stock adjusted successfully'
+        400:
           description: ''
-          example: '{YOUR_API_KEY}'
-          schema:
-            type: string
-      responses: {  }
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  -
+                    description: 'insufficient stock'
+                    type: object
+                    example:
+                      success: false
+                      message: 'Insufficient stock. Available: 5, Required: 10'
+                      error_code: insufficient_stock
+                      details:
+                        current_stock: 5
+                        required_stock: 10
+                        missing_stock: 5
+                    properties:
+                      success:
+                        type: boolean
+                        example: false
+                      message:
+                        type: string
+                        example: 'Insufficient stock. Available: 5, Required: 10'
+                      error_code:
+                        type: string
+                        example: insufficient_stock
+                      details:
+                        type: object
+                        properties:
+                          current_stock:
+                            type: integer
+                            example: 5
+                          required_stock:
+                            type: integer
+                            example: 10
+                          missing_stock:
+                            type: integer
+                            example: 5
+                  -
+                    description: 'invalid ownership'
+                    type: object
+                    example:
+                      success: false
+                      message: 'Invalid product or warehouse for this tenant'
+                      error_code: invalid_ownership
+                      details:
+                        product_exists: false
+                        warehouse_exists: true
+                    properties:
+                      success:
+                        type: boolean
+                        example: false
+                      message:
+                        type: string
+                        example: 'Invalid product or warehouse for this tenant'
+                      error_code:
+                        type: string
+                        example: invalid_ownership
+                      details:
+                        type: object
+                        properties:
+                          product_exists:
+                            type: boolean
+                            example: false
+                          warehouse_exists:
+                            type: boolean
+                            example: true
       tags:
-        - Endpoints
+        - Inventory
       requestBody:
         required: true
         content:
@@ -197,28 +720,25 @@ paths:
               type: object
               properties:
                 product_id:
-                  type: string
-                  description: ''
-                  example: deserunt
+                  type: integer
+                  description: 'The ID of the product.'
+                  example: 1
                   nullable: false
                 warehouse_id:
-                  type: string
-                  description: ''
-                  example: explicabo
+                  type: integer
+                  description: 'The ID of the warehouse.'
+                  example: 1
                   nullable: false
                 quantity:
                   type: integer
-                  description: 'Must be at least 1.'
-                  example: 21
+                  description: 'The quantity to adjust (must be positive).'
+                  example: 10
                   nullable: false
                 type:
                   type: string
-                  description: ''
+                  description: 'The type of adjustment (order, restock).'
                   example: restock
                   nullable: false
-                  enum:
-                    - order
-                    - restock
               required:
                 - product_id
                 - warehouse_id
@@ -226,9 +746,9 @@ paths:
                 - type
   /api/inventory/stock:
     get:
-      summary: ''
-      operationId: getApiInventoryStock
-      description: ''
+      summary: 'Get Current Stock'
+      operationId: getCurrentStock
+      description: 'Returns the current stock quantity of a product in a specific warehouse.'
       parameters:
         -
           in: header
@@ -238,20 +758,48 @@ paths:
           schema:
             type: string
       responses:
-        401:
-          description: ''
+        200:
+          description: success
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Invalid API key'
+                  success: true
+                  data:
+                    stock: 15
+                  message: 'Stock retrieved successfully'
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      stock:
+                        type: integer
+                        example: 15
                   message:
                     type: string
-                    example: 'Invalid API key'
+                    example: 'Stock retrieved successfully'
+        422:
+          description: 'validation error'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'The product id field is required.'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'The product id field is required.'
       tags:
-        - Endpoints
+        - Inventory
       requestBody:
         required: true
         content:
@@ -260,22 +808,216 @@ paths:
               type: object
               properties:
                 product_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the products table.'
-                  example: modi
+                  type: integer
+                  description: 'The ID of the product.'
+                  example: 1
                   nullable: false
                 warehouse_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the warehouses table.'
-                  example: corporis
+                  type: integer
+                  description: 'The ID of the warehouse.'
+                  example: 1
                   nullable: false
               required:
                 - product_id
                 - warehouse_id
+  /api/warehouses:
+    get:
+      summary: 'List Warehouses'
+      operationId: listWarehouses
+      description: 'Returns a list of all warehouses belonging to the authenticated tenant.'
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    -
+                      id: 1
+                      tenant_id: 1
+                      name: 'Main Warehouse'
+                      address: '123 Storage St.'
+                      created_at: '2024-12-18T00:00:00.000000Z'
+                      updated_at: '2024-12-18T00:00:00.000000Z'
+                  message: 'Warehouses retrieved successfully'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        tenant_id: 1
+                        name: 'Main Warehouse'
+                        address: '123 Storage St.'
+                        created_at: '2024-12-18T00:00:00.000000Z'
+                        updated_at: '2024-12-18T00:00:00.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        tenant_id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 'Main Warehouse'
+                        address:
+                          type: string
+                          example: '123 Storage St.'
+                        created_at:
+                          type: string
+                          example: '2024-12-18T00:00:00.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-12-18T00:00:00.000000Z'
+                  message:
+                    type: string
+                    example: 'Warehouses retrieved successfully'
+        401:
+          description: unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Invalid API key'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - Warehouses
+  /api/test:
+    get:
+      summary: 'Test API Connection'
+      operationId: testAPIConnection
+      description: 'Returns basic information about the authenticated tenant and user to verify API connectivity.'
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    tenant:
+                      id: 1
+                      name: 'Demo Store'
+                      subdomain: demo
+                    user:
+                      id: 1
+                      name: 'Demo Admin'
+                      email: admin@demo.com
+                    scopes:
+                      - 'products:read'
+                      - 'products:write'
+                      - 'inventory:read'
+                      - 'inventory:write'
+                  message: 'API connection successful'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      tenant:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 1
+                          name:
+                            type: string
+                            example: 'Demo Store'
+                          subdomain:
+                            type: string
+                            example: demo
+                      user:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 1
+                          name:
+                            type: string
+                            example: 'Demo Admin'
+                          email:
+                            type: string
+                            example: admin@demo.com
+                      scopes:
+                        type: array
+                        example:
+                          - 'products:read'
+                          - 'products:write'
+                          - 'inventory:read'
+                          - 'inventory:write'
+                        items:
+                          type: string
+                  message:
+                    type: string
+                    example: 'API connection successful'
+        401:
+          description: 'invalid api key'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Invalid API key'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - 'Connection Test'
 tags:
   -
-    name: Endpoints
-    description: ''
+    name: Products
+    description: "\nAPIs for managing products in the tenant's catalog"
+  -
+    name: Inventory
+    description: "\nAPIs for managing product inventory and stock movements"
+  -
+    name: Warehouses
+    description: "\nAPIs for managing tenant warehouses"
+  -
+    name: 'Connection Test'
+    description: "\nAPIs for testing API connection and authentication"
 components:
   securitySchemes:
     default:

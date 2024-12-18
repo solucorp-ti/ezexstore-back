@@ -10,70 +10,17 @@
     ],
     "info": {
         "name": "EzexStore API Documentation",
-        "_postman_id": "8ea8e2ea-4cdb-4031-8a70-161e2e1ecfab",
+        "_postman_id": "80012497-4d78-4b16-a65e-bec3dfbd8cec",
         "description": "API Documentation for EzexStore Backend System",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Endpoints",
-            "description": "",
+            "name": "Products",
+            "description": "\nAPIs for managing products in the tenant's catalog",
             "item": [
                 {
-                    "name": "GET api\/test",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/test",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/test"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Invalid API key\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET api\/products",
+                    "name": "List Products",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -93,40 +40,19 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "Returns a list of all products belonging to the authenticated tenant."
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Invalid API key\"}",
-                            "name": ""
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"product_serial\": \"TEST001\",\n      \"product_name\": \"Test Product\",\n      \"description\": \"Product description\",\n      \"base_price\": \"99.99\",\n      \"status\": \"active\",\n      \"unit_of_measure\": \"piece\",\n      \"sku\": \"SKU001\",\n      \"part_number\": \"PART001\",\n      \"serial_number\": \"SN001\",\n      \"part_condition\": \"new\",\n      \"brand\": \"Test Brand\",\n      \"family\": \"Test Family\",\n      \"line\": \"Test Line\",\n      \"is_active\": true\n    }\n  ],\n  \"message\": \"Products retrieved successfully\"\n}",
+                            "name": "success"
                         }
                     ]
                 },
                 {
-                    "name": "POST api\/products",
+                    "name": "Create Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -145,13 +71,29 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": ""
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"product_name\":\"Test Product\",\"description\":\"A test product description\",\"base_price\":\"99.99\",\"status\":\"active\",\"unit_of_measure\":\"piece\",\"sku\":\"SKU001\",\"part_number\":\"PART001\",\"serial_number\":\"SN001\",\"part_condition\":\"new\",\"brand\":\"Test Brand\",\"family\":\"Test Family\",\"line\":\"Test Line\"}"
+                        },
+                        "description": "Creates a new product for the authenticated tenant."
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"product_name\": \"Test Product\",\n    \"description\": \"A test product description\",\n    \"base_price\": \"99.99\",\n    \"status\": \"active\",\n    \"unit_of_measure\": \"piece\",\n    \"sku\": \"SKU001\",\n    \"created_at\": \"2024-12-18T00:00:00.000000Z\",\n    \"updated_at\": \"2024-12-18T00:00:00.000000Z\"\n  },\n  \"message\": \"Product created successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"The product name field is required.\"\n}",
+                            "name": "validation error"
+                        }
+                    ]
                 },
                 {
-                    "name": "GET api\/products\/{id}",
+                    "name": "Get Product Details",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -179,40 +121,25 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "Returns detailed information about a specific product."
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "57"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Invalid API key\"}",
-                            "name": ""
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"product_serial\": \"TEST001\",\n    \"product_name\": \"Test Product\",\n    \"description\": \"Product description\",\n    \"base_price\": \"99.99\",\n    \"status\": \"active\",\n    \"unit_of_measure\": \"piece\",\n    \"sku\": \"SKU001\",\n    \"part_number\": \"PART001\",\n    \"serial_number\": \"SN001\",\n    \"part_condition\": \"new\",\n    \"brand\": \"Test Brand\",\n    \"family\": \"Test Family\",\n    \"line\": \"Test Line\",\n    \"is_active\": true\n  },\n  \"message\": \"Product retrieved successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Product not found\"\n}",
+                            "name": "not found"
                         }
                     ]
                 },
                 {
-                    "name": "PUT api\/products\/{id}",
+                    "name": "Update Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -239,13 +166,29 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": ""
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"product_name\":\"Updated Product\",\"description\":\"Deserunt voluptas ut rerum sit.\",\"base_price\":\"149.99\",\"status\":\"inactive\",\"unit_of_measure\":\"kg\",\"sku\":\"SKU002\",\"part_number\":\"PART002\",\"serial_number\":\"SN002\",\"part_condition\":\"used\",\"brand\":\"New Brand\",\"family\":\"New Family\",\"line\":\"New Line\"}"
+                        },
+                        "description": "Updates an existing product. All fields are optional for updates."
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"product_name\": \"Updated Product\",\n    \"base_price\": \"149.99\",\n    \"status\": \"inactive\"\n  },\n  \"message\": \"Product updated successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Product not found\"\n}",
+                            "name": "not found"
+                        }
+                    ]
                 },
                 {
-                    "name": "DELETE api\/products\/{id}",
+                    "name": "Delete Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -273,65 +216,31 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/warehouses",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/warehouses",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/warehouses"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
+                        "description": "Soft deletes a product. The product can be reactivated later by updating its status to active."
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Invalid API key\"}",
-                            "name": ""
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": null,\n  \"message\": \"Product deleted successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Product not found\"\n}",
+                            "name": "not found"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "description": "\nAPIs for managing product inventory and stock movements",
+            "item": [
                 {
-                    "name": "POST api\/inventory\/adjust",
+                    "name": "Adjust Stock",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -352,14 +261,33 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":\"deserunt\",\"warehouse_id\":\"explicabo\",\"quantity\":21,\"type\":\"restock\"}"
+                            "raw": "{\"product_id\":1,\"warehouse_id\":1,\"quantity\":10,\"type\":\"restock\"}"
                         },
-                        "description": ""
+                        "description": "Adjusts the stock quantity of a product in a specific warehouse.\nUse type 'restock' to add inventory or 'order' to reduce it."
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": {\n    \"product_id\": 1,\n    \"warehouse_id\": 1,\n    \"quantity\": 10,\n    \"type\": \"restock\",\n    \"created_at\": \"2024-12-18T00:00:00.000000Z\"\n  },\n  \"message\": \"Stock adjusted successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Insufficient stock. Available: 5, Required: 10\",\n  \"error_code\": \"insufficient_stock\",\n  \"details\": {\n    \"current_stock\": 5,\n    \"required_stock\": 10,\n    \"missing_stock\": 5\n  }\n}",
+                            "name": "insufficient stock"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Invalid product or warehouse for this tenant\",\n  \"error_code\": \"invalid_ownership\",\n  \"details\": {\n    \"product_exists\": false,\n    \"warehouse_exists\": true\n  }\n}",
+                            "name": "invalid ownership"
+                        }
+                    ]
                 },
                 {
-                    "name": "GET api\/inventory\/stock",
+                    "name": "Get Current Stock",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -380,37 +308,110 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":\"modi\",\"warehouse_id\":\"corporis\"}"
+                            "raw": "{\"product_id\":1,\"warehouse_id\":1}"
                         },
-                        "description": ""
+                        "description": "Returns the current stock quantity of a product in a specific warehouse."
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "55"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": {\n    \"stock\": 15\n  },\n  \"message\": \"Stock retrieved successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"The product id field is required.\"\n}",
+                            "name": "validation error"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Warehouses",
+            "description": "\nAPIs for managing tenant warehouses",
+            "item": [
+                {
+                    "name": "List Warehouses",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/warehouses",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/warehouses"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Returns a list of all warehouses belonging to the authenticated tenant."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"tenant_id\": 1,\n      \"name\": \"Main Warehouse\",\n      \"address\": \"123 Storage St.\",\n      \"created_at\": \"2024-12-18T00:00:00.000000Z\",\n      \"updated_at\": \"2024-12-18T00:00:00.000000Z\"\n    }\n  ],\n  \"message\": \"Warehouses retrieved successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
                             "code": 401,
-                            "body": "{\"message\":\"Invalid API key\"}",
-                            "name": ""
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Invalid API key\"\n}",
+                            "name": "unauthorized"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Connection Test",
+            "description": "\nAPIs for testing API connection and authentication",
+            "item": [
+                {
+                    "name": "Test API Connection",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/test",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/test"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Returns basic information about the authenticated tenant and user to verify API connectivity."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"success\": true,\n  \"data\": {\n    \"tenant\": {\n      \"id\": 1,\n      \"name\": \"Demo Store\",\n      \"subdomain\": \"demo\"\n    },\n    \"user\": {\n      \"id\": 1,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin@demo.com\"\n    },\n    \"scopes\": [\"products:read\", \"products:write\", \"inventory:read\", \"inventory:write\"]\n  },\n  \"message\": \"API connection successful\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n  \"success\": false,\n  \"message\": \"Invalid API key\"\n}",
+                            "name": "invalid api key"
                         }
                     ]
                 }

@@ -23,7 +23,7 @@ return [
 
     'type' => 'static',
     
-    'theme' => 'default',
+    'theme' => 'elements',
 
     'static' => [
         'output_path' => 'public/docs',
