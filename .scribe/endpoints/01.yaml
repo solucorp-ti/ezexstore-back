@@ -63,7 +63,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - v4f6Pgab5Z1386acekDdVhE
+      - 4h3aV1aPDv8c6ekd5f6EbZg
     controller: null
     method: null
     route: null
@@ -262,7 +262,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - h1Eaak4v86P6DdVeZcgfb35
+      - kE5hf38av1aPdebVc46g6DZ
     controller: null
     method: null
     route: null
@@ -346,7 +346,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - a3Dfe18aZdhV54Eckb66gPv
+      - 6bVdPce6h3Ea4vgf1kDZa85
     controller: null
     method: null
     route: null
@@ -401,7 +401,7 @@ endpoints:
         name: description
         description: 'optional The description of the product.'
         required: false
-        example: 'Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.'
+        example: 'Soluta quod voluptas nemo necessitatibus et.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -509,7 +509,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       product_name: 'Updated Product'
-      description: 'Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.'
+      description: 'Soluta quod voluptas nemo necessitatibus et.'
       base_price: '149.99'
       status: inactive
       unit_of_measure: kg
@@ -552,7 +552,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 6VbkZd8h4f1acae5PvD36gE
+      - chP8Va3aEvkgZ5e6bD6df14
     controller: null
     method: null
     route: null
@@ -620,7 +620,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 64av85a3bhg6fD1dkZEVPec
+      - Vdgck164vPb3658hEfaZeDa
     controller: null
     method: null
     route: null

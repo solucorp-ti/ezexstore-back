@@ -2445,7 +2445,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.
+                        Soluta quod voluptas nemo necessitatibus et.
                     </div>
                 </div>
             </div>
@@ -2859,7 +2859,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "product_name": "Updated Product",
-    "description": "Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.",
+    "description": "Soluta quod voluptas nemo necessitatibus et.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -2968,7 +2968,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"product_name\": \"Updated Product\",
-    \"description\": \"Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.\",
+    \"description\": \"Soluta quod voluptas nemo necessitatibus et.\",
     \"base_price\": \"149.99\",
     \"status\": \"inactive\",
     \"unit_of_measure\": \"kg\",
@@ -2999,7 +2999,7 @@ const headers = {
 
 let body = {
     "product_name": "Updated Product",
-    "description": "Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.",
+    "description": "Soluta quod voluptas nemo necessitatibus et.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -3035,7 +3035,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'product_name' =&gt; 'Updated Product',
-            'description' =&gt; 'Natus id placeat aliquam nulla sed eligendi omnis necessitatibus.',
+            'description' =&gt; 'Soluta quod voluptas nemo necessitatibus et.',
             'base_price' =&gt; '149.99',
             'status' =&gt; 'inactive',
             'unit_of_measure' =&gt; 'kg',
