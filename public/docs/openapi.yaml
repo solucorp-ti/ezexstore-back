@@ -1,0 +1,288 @@
+openapi: 3.0.3
+info:
+  title: 'EzexStore API Documentation'
+  description: 'API Documentation for EzexStore Backend System'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://ezexstore-back.test'
+paths:
+  /api/test:
+    get:
+      summary: ''
+      operationId: getApiTest
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Invalid API key'
+                properties:
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - Endpoints
+  /api/products:
+    get:
+      summary: ''
+      operationId: getApiProducts
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Invalid API key'
+                properties:
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - Endpoints
+    post:
+      summary: ''
+      operationId: postApiProducts
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+  '/api/products/{id}':
+    get:
+      summary: ''
+      operationId: getApiProductsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Invalid API key'
+                properties:
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - Endpoints
+    put:
+      summary: ''
+      operationId: putApiProductsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+    delete:
+      summary: ''
+      operationId: deleteApiProductsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/warehouses:
+    get:
+      summary: ''
+      operationId: getApiWarehouses
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Invalid API key'
+                properties:
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - Endpoints
+  /api/inventory/adjust:
+    post:
+      summary: ''
+      operationId: postApiInventoryAdjust
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_id:
+                  type: string
+                  description: ''
+                  example: eos
+                  nullable: false
+                warehouse_id:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                  nullable: false
+                quantity:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 7
+                  nullable: false
+                type:
+                  type: string
+                  description: ''
+                  example: restock
+                  nullable: false
+                  enum:
+                    - order
+                    - restock
+              required:
+                - product_id
+                - warehouse_id
+                - quantity
+                - type
+  /api/inventory/stock:
+    get:
+      summary: ''
+      operationId: getApiInventoryStock
+      description: ''
+      parameters:
+        -
+          in: header
+          name: X-API-KEY
+          description: ''
+          example: '{YOUR_API_KEY}'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Invalid API key'
+                properties:
+                  message:
+                    type: string
+                    example: 'Invalid API key'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the products table.'
+                  example: adipisci
+                  nullable: false
+                warehouse_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the warehouses table.'
+                  example: inventore
+                  nullable: false
+              required:
+                - product_id
+                - warehouse_id
+tags:
+  -
+    name: Endpoints
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: apiKey
+      name: X-API-KEY
+      in: header
+      description: 'Todas las peticiones deben incluir una API key válida en el header X-API-KEY.'
+security:
+  -
+    default: []
