@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\TestController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\InventoryController;
+use App\Http\Controllers\Api\WarehouseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::middleware('api.key')->group(function () {
 
     // Rutas de productos
     Route::apiResource('products', ProductController::class);
+
+    Route::get('warehouses', [WarehouseController::class, 'index']);
 
     // Rutas de inventario
     Route::prefix('inventory')->group(function () {

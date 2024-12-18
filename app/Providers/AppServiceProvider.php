@@ -20,6 +20,9 @@ use App\Repositories\InventoryRepository;
 use App\Services\Interfaces\InventoryServiceInterface;
 use App\Services\InventoryService;
 
+use App\Repositories\Interfaces\WarehouseRepositoryInterface;
+use App\Repositories\WarehouseRepository;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -38,6 +41,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(InventoryRepositoryInterface::class, InventoryRepository::class);
         $this->app->bind(ProductServiceInterface::class, ProductService::class);
         $this->app->bind(InventoryServiceInterface::class, InventoryService::class);
+        $this->app->bind(WarehouseRepositoryInterface::class, WarehouseRepository::class);
     }
 
     /**
