@@ -34,7 +34,6 @@ class ProductService implements ProductServiceInterface
     public function createProduct(array $data, int $tenantId)
     {
         $data['tenant_id'] = $tenantId;
-        $data['product_serial'] = $this->productRepository->generateSerial($tenantId);
 
         return DB::transaction(function () use ($data) {
             return $this->productRepository->create($data);

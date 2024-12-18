@@ -6,5 +6,4 @@ interface ProductRepositoryInterface extends BaseRepositoryInterface
 {
     public function findByTenant(int $tenantId);
     public function findBySerialAndTenant(string $serial, int $tenantId);
-    public function generateSerial(int $tenantId): string;
 }
