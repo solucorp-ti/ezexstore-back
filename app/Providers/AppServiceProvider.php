@@ -10,6 +10,11 @@ use App\Services\ApiKeyService;
 use App\Services\Interfaces\ApiKeyServiceInterface;
 use Illuminate\Support\ServiceProvider;
 
+use App\Repositories\Interfaces\ProductRepositoryInterface;
+use App\Repositories\ProductRepository;
+use App\Services\Interfaces\ProductServiceInterface;
+use App\Services\ProductService;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ApiKeyRepositoryInterface::class, ApiKeyRepository::class);
         $this->app->bind(ApiKeyServiceInterface::class, ApiKeyService::class);
         $this->app->bind(ApiKeyServiceInterface::class, ApiKeyService::class);
+        $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
+        $this->app->bind(ProductServiceInterface::class, ProductService::class);
     }
 
     /**
