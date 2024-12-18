@@ -199,17 +199,17 @@ paths:
                 product_id:
                   type: string
                   description: ''
-                  example: eos
+                  example: deserunt
                   nullable: false
                 warehouse_id:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: explicabo
                   nullable: false
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 7
+                  example: 21
                   nullable: false
                 type:
                   type: string
@@ -262,12 +262,12 @@ paths:
                 product_id:
                   type: string
                   description: 'The <code>id</code> of an existing record in the products table.'
-                  example: adipisci
+                  example: modi
                   nullable: false
                 warehouse_id:
                   type: string
                   description: 'The <code>id</code> of an existing record in the warehouses table.'
-                  example: inventore
+                  example: corporis
                   nullable: false
               required:
                 - product_id

@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - hcfbgvdVaE86Zk643PaD5e1
+      - f5d66ZvV3ecEgPhk4baD81a
     controller: null
     method: null
     route: null
@@ -86,7 +86,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 8hVkfacbdg6Ea5v3PZ164De
+      - 8h5dVcav6PkEfab1ZD36e4g
     controller: null
     method: null
     route: null
@@ -120,7 +120,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - EdVk4e6vZD6351agaPbfch8
+      - D6geVZ6acP1h8vf543adkbE
     controller: null
     method: null
     route: null
@@ -176,7 +176,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - aefD3P64vba5h1kVE68gdcZ
+      - aEebdf6h38ZDVcPkg5av146
     controller: null
     method: null
     route: null
@@ -222,7 +222,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - ZgkchvPb8Ea1dV463f6D5ae
+      - gbcvf5ZhPeEV3D6k14d6a8a
     controller: null
     method: null
     route: null
@@ -267,7 +267,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - fcDZak65PaVg43Eeb81vh6d
+      - vV6eaagD8d5E6khc1Z3Pbf4
     controller: null
     method: null
     route: null
@@ -312,7 +312,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - acDZEVea1d6gkvb3f485hP6
+      - 3agDP615ebcZ4khfa6vd8VE
     controller: null
     method: null
     route: null
@@ -343,7 +343,7 @@ endpoints:
         name: product_id
         description: ''
         required: true
-        example: eos
+        example: deserunt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -353,7 +353,7 @@ endpoints:
         name: warehouse_id
         description: ''
         required: true
-        example: voluptatem
+        example: explicabo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -363,7 +363,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 7
+        example: 21
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -382,9 +382,9 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      product_id: eos
-      warehouse_id: voluptatem
-      quantity: 7
+      product_id: deserunt
+      warehouse_id: explicabo
+      quantity: 21
       type: restock
     fileParameters: []
     responses: []
@@ -392,7 +392,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - gZ8aP651vcaVEbf6eDd34hk
+      - 5ecb18vDVgP63hak6Z4Edfa
     controller: null
     method: null
     route: null
@@ -423,7 +423,7 @@ endpoints:
         name: product_id
         description: 'The <code>id</code> of an existing record in the products table.'
         required: true
-        example: adipisci
+        example: modi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -433,15 +433,15 @@ endpoints:
         name: warehouse_id
         description: 'The <code>id</code> of an existing record in the warehouses table.'
         required: true
-        example: inventore
+        example: corporis
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      product_id: adipisci
-      warehouse_id: inventore
+      product_id: modi
+      warehouse_id: corporis
     fileParameters: []
     responses:
       -
@@ -459,7 +459,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - E6vZaP5hdcbg4eD1V8ak36f
+      - P66D8k41dahg5Vbec3vaZEf
     controller: null
     method: null
     route: null

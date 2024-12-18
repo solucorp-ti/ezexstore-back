@@ -1259,9 +1259,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"product_id\": \"eos\",
-    \"warehouse_id\": \"voluptatem\",
-    \"quantity\": 7,
+    \"product_id\": \"deserunt\",
+    \"warehouse_id\": \"explicabo\",
+    \"quantity\": 21,
     \"type\": \"restock\"
 }"
 </code></pre></div>
@@ -1279,9 +1279,9 @@ const headers = {
 };
 
 let body = {
-    "product_id": "eos",
-    "warehouse_id": "voluptatem",
-    "quantity": 7,
+    "product_id": "deserunt",
+    "warehouse_id": "explicabo",
+    "quantity": 21,
     "type": "restock"
 };
 
@@ -1304,9 +1304,9 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'product_id' =&gt; 'eos',
-            'warehouse_id' =&gt; 'voluptatem',
-            'quantity' =&gt; 7,
+            'product_id' =&gt; 'deserunt',
+            'warehouse_id' =&gt; 'explicabo',
+            'quantity' =&gt; 21,
             'type' =&gt; 'restock',
         ],
     ]
@@ -1405,10 +1405,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_id"                data-endpoint="POSTapi-inventory-adjust"
-               value="eos"
+               value="deserunt"
                data-component="body">
     <br>
-<p>Example: <code>eos</code></p>
+<p>Example: <code>deserunt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>warehouse_id</code></b>&nbsp;&nbsp;
@@ -1416,10 +1416,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="warehouse_id"                data-endpoint="POSTapi-inventory-adjust"
-               value="voluptatem"
+               value="explicabo"
                data-component="body">
     <br>
-<p>Example: <code>voluptatem</code></p>
+<p>Example: <code>explicabo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -1427,10 +1427,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="POSTapi-inventory-adjust"
-               value="7"
+               value="21"
                data-component="body">
     <br>
-<p>Must be at least 1. Example: <code>7</code></p>
+<p>Must be at least 1. Example: <code>21</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>type</code></b>&nbsp;&nbsp;
@@ -1466,8 +1466,8 @@ Must be one of:
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"product_id\": \"adipisci\",
-    \"warehouse_id\": \"inventore\"
+    \"product_id\": \"modi\",
+    \"warehouse_id\": \"corporis\"
 }"
 </code></pre></div>
 
@@ -1484,8 +1484,8 @@ const headers = {
 };
 
 let body = {
-    "product_id": "adipisci",
-    "warehouse_id": "inventore"
+    "product_id": "modi",
+    "warehouse_id": "corporis"
 };
 
 fetch(url, {
@@ -1507,8 +1507,8 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'product_id' =&gt; 'adipisci',
-            'warehouse_id' =&gt; 'inventore',
+            'product_id' =&gt; 'modi',
+            'warehouse_id' =&gt; 'corporis',
         ],
     ]
 );
@@ -1624,10 +1624,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_id"                data-endpoint="GETapi-inventory-stock"
-               value="adipisci"
+               value="modi"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the products table. Example: <code>adipisci</code></p>
+<p>The <code>id</code> of an existing record in the products table. Example: <code>modi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>warehouse_id</code></b>&nbsp;&nbsp;
@@ -1635,10 +1635,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="warehouse_id"                data-endpoint="GETapi-inventory-stock"
-               value="inventore"
+               value="corporis"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the warehouses table. Example: <code>inventore</code></p>
+<p>The <code>id</code> of an existing record in the warehouses table. Example: <code>corporis</code></p>
         </div>
         </form>
 

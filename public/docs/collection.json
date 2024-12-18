@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "EzexStore API Documentation",
-        "_postman_id": "646fd2e9-b3ab-4545-bc34-55f3770c7f9e",
+        "_postman_id": "8ea8e2ea-4cdb-4031-8a70-161e2e1ecfab",
         "description": "API Documentation for EzexStore Backend System",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -352,7 +352,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":\"eos\",\"warehouse_id\":\"voluptatem\",\"quantity\":7,\"type\":\"restock\"}"
+                            "raw": "{\"product_id\":\"deserunt\",\"warehouse_id\":\"explicabo\",\"quantity\":21,\"type\":\"restock\"}"
                         },
                         "description": ""
                     },
@@ -380,7 +380,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":\"adipisci\",\"warehouse_id\":\"inventore\"}"
+                            "raw": "{\"product_id\":\"modi\",\"warehouse_id\":\"corporis\"}"
                         },
                         "description": ""
                     },
