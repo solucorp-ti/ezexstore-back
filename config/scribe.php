@@ -21,7 +21,7 @@ return [
         ],
     ],
 
-    'type' => 'static',
+    'type' => 'laravel',
     
     'theme' => 'elements',
 
