@@ -24,13 +24,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
             ->first();
     }
 
-    public function create(array $data)
-    {
-        $data['product_serial'] = $this->generateSerial($data['tenant_id']);
-        return parent::create($data);
-    }
-
-    private function generateSerial(int $tenantId): string
+    public function generateSerial(int $tenantId): string
     {
         $lastProduct = $this->model
             ->where('tenant_id', $tenantId)
