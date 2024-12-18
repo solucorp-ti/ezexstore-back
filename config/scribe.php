@@ -7,7 +7,7 @@ return [
     
     'description' => 'API Documentation for EzexStore Backend System',
 
-    'base_url' => 'http://ezexstore-back.test',
+    'base_url' => 'https://backend.ezexstore.com',
 
     'routes' => [
         [
