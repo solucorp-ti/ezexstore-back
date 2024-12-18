@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Product;
 use App\Repositories\Interfaces\ProductRepositoryInterface;
+use Illuminate\Support\Facades\DB;
 
 class ProductRepository extends BaseRepository implements ProductRepositoryInterface
 {
@@ -53,8 +54,11 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
     {
         $record = $this->find($id);
         if ($record) {
-            $record->update(['status' => 'inactive']);
-            $record->delete();
+            return DB::transaction(function () use ($record) {
+                $record->update(['status' => 'inactive']);
+                $record->delete();
+                return $record;
+            });
         }
         return $record;
     }
