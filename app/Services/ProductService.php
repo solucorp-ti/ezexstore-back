@@ -49,8 +49,31 @@ class ProductService implements ProductServiceInterface
             return null;
         }
 
-        return DB::transaction(function () use ($id, $data) {
+        return DB::transaction(function () use ($id, $data, $product) {
+            // Si se está activando un producto eliminado
+            if ((isset($data['status']) && $data['status'] === 'active')) {
+                // Primero restauramos el modelo
+                $product->restore();
+                // Luego actualizamos los demás datos
+                $product->update($data);
+                // Refrescamos el modelo para asegurarnos que tenemos los datos actualizados
+                return $product->fresh();
+            }
+
             return $this->productRepository->update($id, $data);
+        });
+    }
+
+    public function reactivateProduct(int $id, int $tenantId)
+    {
+        $product = $this->productRepository->find($id);
+
+        if (!$product || $product->tenant_id !== $tenantId) {
+            return false;
+        }
+
+        return DB::transaction(function () use ($id) {
+            return $this->productRepository->update($id, ['deleted_at' => null, 'status' => 'active']);
         });
     }
 

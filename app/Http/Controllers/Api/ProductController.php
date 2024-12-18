@@ -36,6 +36,7 @@ class ProductController extends BaseApiController
             'brand' => 'nullable|string',
             'family' => 'nullable|string',
             'line' => 'nullable|string',
+            'is_active' => 'sometimes|boolean',
         ]);
 
         if ($validator->fails()) {

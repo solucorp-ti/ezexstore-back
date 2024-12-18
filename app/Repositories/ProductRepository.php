@@ -12,6 +12,20 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         parent::__construct($model);
     }
 
+    public function find($id)
+    {
+        return $this->model->withTrashed()->find($id);
+    }
+
+    public function update($id, array $data)
+    {
+        $record = $this->find($id);
+        if ($record) {
+            $record->update($data);
+        }
+        return $record;
+    }
+
     public function findByTenant(int $tenantId)
     {
         return $this->model->where('tenant_id', $tenantId)->get();
@@ -33,5 +47,15 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 
         $sequence = $lastProduct ? (int)substr($lastProduct->product_serial, -6) + 1 : 1;
         return sprintf('P%06d', $sequence);
+    }
+
+    public function delete($id)
+    {
+        $record = $this->find($id);
+        if ($record) {
+            $record->update(['status' => 'inactive']);
+            $record->delete();
+        }
+        return $record;
     }
 }
