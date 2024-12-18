@@ -20,6 +20,17 @@ class ProductService implements ProductServiceInterface
         return $this->productRepository->findByTenant($tenantId);
     }
 
+    public function findProduct(int $id, int $tenantId)
+    {
+        $product = $this->productRepository->find($id);
+
+        if (!$product || $product->tenant_id !== $tenantId) {
+            return null;
+        }
+
+        return $product;
+    }
+
     public function createProduct(array $data, int $tenantId)
     {
         $data['tenant_id'] = $tenantId;
@@ -33,7 +44,7 @@ class ProductService implements ProductServiceInterface
     public function updateProduct(int $id, array $data, int $tenantId)
     {
         $product = $this->productRepository->find($id);
-        
+
         if (!$product || $product->tenant_id !== $tenantId) {
             return null;
         }
@@ -46,7 +57,7 @@ class ProductService implements ProductServiceInterface
     public function deleteProduct(int $id, int $tenantId)
     {
         $product = $this->productRepository->find($id);
-        
+
         if (!$product || $product->tenant_id !== $tenantId) {
             return false;
         }

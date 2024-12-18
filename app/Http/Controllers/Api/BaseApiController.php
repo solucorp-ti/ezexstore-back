@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 class BaseApiController extends Controller
 {
-    protected function successResponse($data, $message = null, $code = 200)
+    protected function successResponse($data, string $message = null, int $code = 200)
     {
         return response()->json([
             'success' => true,
@@ -15,7 +15,7 @@ class BaseApiController extends Controller
         ], $code);
     }
 
-    protected function errorResponse($message, $code = 400)
+    protected function errorResponse(string $message, int $code = 400)
     {
         return response()->json([
             'success' => false,
