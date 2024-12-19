@@ -26,6 +26,7 @@ Route::middleware('api.key')->group(function () {
     Route::apiResource('products', ProductController::class);
 
     Route::post('products/{product}/photos', [ProductPhotoController::class, 'store']);
+    Route::delete('products/{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
     
     Route::apiResource('tenants', TenantController::class)->only(['store', 'update']);
 
