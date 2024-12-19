@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\InventoryController;
 use App\Http\Controllers\Api\WarehouseController;
+use App\Http\Controllers\Api\TenantController;
+use App\Http\Controllers\Api\ProductPhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,10 @@ Route::middleware('api.key')->group(function () {
 
     // Rutas de productos
     Route::apiResource('products', ProductController::class);
+
+    Route::post('products/{product}/photos', [ProductPhotoController::class, 'store']);
+    
+    Route::apiResource('tenants', TenantController::class)->only(['store', 'update']);
 
     Route::get('warehouses', [WarehouseController::class, 'index']);
 
