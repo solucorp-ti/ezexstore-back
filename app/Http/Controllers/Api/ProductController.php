@@ -6,6 +6,7 @@ use App\Services\Interfaces\ProductServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use Illuminate\Http\JsonResponse;
 
 /**
  * @group Products
@@ -51,10 +52,24 @@ class ProductController extends BaseApiController
      *   "message": "Products retrieved successfully"
      * }
      */
-    public function index(Request $request)
+    public function index(Request $request): JsonResponse
     {
-        $products = $this->productService->getProducts($request->tenant->id);
-        return $this->successResponse($products, 'Products retrieved successfully');
+        $products = $this->productService->getProducts(
+            $request->tenant->id,
+            $request->input('per_page')
+        );
+    
+        return response()->json([
+            'success' => true,
+            'data' => $products->items(),
+            'meta' => [
+                'current_page' => $products->currentPage(),
+                'last_page' => $products->lastPage(),
+                'per_page' => $products->perPage(),
+                'total' => $products->total()
+            ],
+            'message' => 'Products retrieved successfully'
+        ]);
     }
 
     private function getValidationRules($productId = null): array

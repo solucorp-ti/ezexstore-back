@@ -8,9 +8,23 @@ use Illuminate\Support\Facades\DB;
 
 class ProductRepository extends BaseRepository implements ProductRepositoryInterface
 {
+    protected int $perPage = 15;
+
     public function __construct(Product $model)
     {
         parent::__construct($model);
+    }
+
+    public function paginateByTenant(
+        int $tenantId,
+        ?int $perPage = null,
+        array $relations = [],
+        array $columns = ['*']
+    ) {
+        return $this->model
+            ->where('tenant_id', $tenantId)
+            ->with($relations)
+            ->paginate($perPage ?? $this->perPage, $columns);
     }
 
     public function find($id)

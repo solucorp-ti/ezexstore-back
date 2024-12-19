@@ -15,9 +15,13 @@ class ProductService implements ProductServiceInterface
         $this->productRepository = $productRepository;
     }
 
-    public function getProducts(int $tenantId)
+    public function getProducts(int $tenantId, ?int $perPage = null)
     {
-        return $this->productRepository->findByTenant($tenantId);
+        return $this->productRepository->paginateByTenant(
+            tenantId: $tenantId,
+            perPage: $perPage,
+            relations: ['photos', 'warehouses']  // Eager loading
+        );
     }
 
     public function findProduct(int $id, int $tenantId)
