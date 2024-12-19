@@ -2,94 +2,100 @@
 
 namespace App\Services;
 
-use App\Repositories\Interfaces\ProductRepositoryInterface;
-use App\Services\Interfaces\ProductServiceInterface;
+use App\Models\Product;
+use App\Repositories\ProductRepository;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Exception;
 
-class ProductService implements ProductServiceInterface
+class ProductService
 {
-    protected $productRepository;
+    public function __construct(protected ProductRepository $repository) {}
 
-    public function __construct(ProductRepositoryInterface $productRepository)
+    /**
+     * Obtener productos paginados
+     */
+    public function getPaginatedProducts(int $tenantId, array $filters = []): LengthAwarePaginator 
     {
-        $this->productRepository = $productRepository;
+        return $this->repository->getPaginatedForTenant($tenantId, $filters);
     }
 
-    public function getProducts(int $tenantId, ?int $perPage = null)
+    /**
+     * Crear nuevo producto
+     */
+    public function createProduct(array $data): Product|null
     {
-        return $this->productRepository->paginateByTenant(
-            tenantId: $tenantId,
-            perPage: $perPage,
-            relations: ['photos', 'warehouses']  // Eager loading
-        );
-    }
-
-    public function findProduct(int $id, int $tenantId)
-    {
-        $product = $this->productRepository->find($id);
-
-        if (!$product || $product->tenant_id !== $tenantId) {
-            return null;
-        }
-
-        return $product;
-    }
-
-    public function createProduct(array $data, int $tenantId)
-    {
-        $data['tenant_id'] = $tenantId;
-
-        return DB::transaction(function () use ($data) {
-            return $this->productRepository->create($data);
-        });
-    }
-
-    public function updateProduct(int $id, array $data, int $tenantId)
-    {
-        $product = $this->productRepository->find($id);
-
-        if (!$product || $product->tenant_id !== $tenantId) {
-            return null;
-        }
-
-        return DB::transaction(function () use ($id, $data, $product) {
-            // Si se está activando un producto eliminado
-            if ((isset($data['status']) && $data['status'] === 'active')) {
-                // Primero restauramos el modelo
-                $product->restore();
-                // Luego actualizamos los demás datos
-                $product->update($data);
-                // Refrescamos el modelo para asegurarnos que tenemos los datos actualizados
-                return $product->fresh();
+        try {
+            DB::beginTransaction();
+            
+            $product = $this->repository->create($data);
+            
+            // Si hay fotos, las procesamos aquí
+            if (!empty($data['photos'])) {
+                // TODO: Implementar lógica de fotos
             }
 
-            return $this->productRepository->update($id, $data);
-        });
+            DB::commit();
+            return $product;
+
+        } catch (Exception $e) {
+            DB::rollBack();
+            Log::error('Error creating product: ' . $e->getMessage());
+            throw $e;
+        }
     }
 
-    public function reactivateProduct(int $id, int $tenantId)
+    /**
+     * Actualizar producto
+     */
+    public function updateProduct(Product $product, array $data): bool
     {
-        $product = $this->productRepository->find($id);
+        try {
+            DB::beginTransaction();
+            
+            $updated = $this->repository->update($product, $data);
+            
+            if (!empty($data['photos'])) {
+                // TODO: Implementar lógica de fotos
+            }
 
-        if (!$product || $product->tenant_id !== $tenantId) {
-            return false;
+            DB::commit();
+            return $updated;
+
+        } catch (Exception $e) {
+            DB::rollBack();
+            Log::error('Error updating product: ' . $e->getMessage());
+            throw $e;
         }
-
-        return DB::transaction(function () use ($id) {
-            return $this->productRepository->update($id, ['deleted_at' => null, 'status' => 'active']);
-        });
     }
 
-    public function deleteProduct(int $id, int $tenantId)
+    /**
+     * Eliminar producto
+     */
+    public function deleteProduct(Product $product): bool
     {
-        $product = $this->productRepository->find($id);
+        try {
+            DB::beginTransaction();
+            
+            // Aquí podríamos añadir lógica adicional antes de eliminar
+            $deleted = $this->repository->delete($product);
+            
+            DB::commit();
+            return $deleted;
 
-        if (!$product || $product->tenant_id !== $tenantId) {
-            return false;
+        } catch (Exception $e) {
+            DB::rollBack();
+            Log::error('Error deleting product: ' . $e->getMessage());
+            throw $e;
         }
+    }
 
-        return DB::transaction(function () use ($id) {
-            return $this->productRepository->delete($id);
-        });
+    /**
+     * Buscar producto verificando tenant
+     */
+    public function findProductForTenant(int $productId, int $tenantId): ?Product
+    {
+        return $this->repository->findForTenant($productId, $tenantId);
     }
 }
