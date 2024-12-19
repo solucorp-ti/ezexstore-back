@@ -3,7 +3,7 @@
 API Documentation for EzexStore Backend System
 
 <aside>
-    <strong>Base URL</strong>: <code>http://ezexstore-back.test</code>
+    <strong>Base URL</strong>: <code>https://backend.ezexstore.com</code>
 </aside>
 
 Esta documentación proporciona toda la información necesaria para trabajar con la API de EzexStore.

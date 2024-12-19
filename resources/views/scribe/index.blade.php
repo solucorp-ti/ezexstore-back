@@ -521,7 +521,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: December 18, 2024
+            Last updated: December 19, 2024
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -551,7 +551,7 @@
                 <h1 id="introduction">Introduction</h1>
 <p>API Documentation for EzexStore Backend System</p>
 <aside>
-    <strong>Base URL</strong>: <code>http://ezexstore-back.test</code>
+    <strong>Base URL</strong>: <code>https://backend.ezexstore.com</code>
 </aside>
 <p>Esta documentación proporciona toda la información necesaria para trabajar con la API de EzexStore.</p>
 <p>La API utiliza autenticación mediante API Keys y maneja datos específicos por tenant.</p>
@@ -595,7 +595,7 @@
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/products"
+            <div title="https://backend.ezexstore.com/api/products"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -605,7 +605,7 @@
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/products</div>
                     </div>
 
@@ -873,7 +873,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/products" \
+    --get "https://backend.ezexstore.com/api/products" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -884,7 +884,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/products"
+    "https://backend.ezexstore.com/api/products"
 );
 
 const headers = {
@@ -904,7 +904,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/products';
+$url = 'https://backend.ezexstore.com/api/products';
 $response = $client-&gt;get(
     $url,
     [
@@ -996,7 +996,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/products"
+            <div title="https://backend.ezexstore.com/api/products"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -1006,7 +1006,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/products</div>
                     </div>
 
@@ -1626,7 +1626,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://ezexstore-back.test/api/products" \
+    "https://backend.ezexstore.com/api/products" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1652,7 +1652,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/products"
+    "https://backend.ezexstore.com/api/products"
 );
 
 const headers = {
@@ -1688,7 +1688,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/products';
+$url = 'https://backend.ezexstore.com/api/products';
 $response = $client-&gt;post(
     $url,
     [
@@ -1798,7 +1798,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/products/{id}"
+            <div title="https://backend.ezexstore.com/api/products/{id}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -1808,7 +1808,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/products/{id}</div>
                     </div>
 
@@ -2139,7 +2139,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/products/1" \
+    --get "https://backend.ezexstore.com/api/products/1" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -2150,7 +2150,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/products/1"
+    "https://backend.ezexstore.com/api/products/1"
 );
 
 const headers = {
@@ -2170,7 +2170,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/products/1';
+$url = 'https://backend.ezexstore.com/api/products/1';
 $response = $client-&gt;get(
     $url,
     [
@@ -2272,7 +2272,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/products/{id}"
+            <div title="https://backend.ezexstore.com/api/products/{id}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -2287,7 +2287,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/products/{id}</div>
                     </div>
 
@@ -2445,7 +2445,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Soluta quod voluptas nemo necessitatibus et.
+                        Qui sunt et voluptatem.
                     </div>
                 </div>
             </div>
@@ -2859,7 +2859,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "product_name": "Updated Product",
-    "description": "Soluta quod voluptas nemo necessitatibus et.",
+    "description": "Qui sunt et voluptatem.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -2962,13 +2962,13 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://ezexstore-back.test/api/products/1" \
+    "https://backend.ezexstore.com/api/products/1" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"product_name\": \"Updated Product\",
-    \"description\": \"Soluta quod voluptas nemo necessitatibus et.\",
+    \"description\": \"Qui sunt et voluptatem.\",
     \"base_price\": \"149.99\",
     \"status\": \"inactive\",
     \"unit_of_measure\": \"kg\",
@@ -2988,7 +2988,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/products/1"
+    "https://backend.ezexstore.com/api/products/1"
 );
 
 const headers = {
@@ -2999,7 +2999,7 @@ const headers = {
 
 let body = {
     "product_name": "Updated Product",
-    "description": "Soluta quod voluptas nemo necessitatibus et.",
+    "description": "Qui sunt et voluptatem.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -3024,7 +3024,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/products/1';
+$url = 'https://backend.ezexstore.com/api/products/1';
 $response = $client-&gt;put(
     $url,
     [
@@ -3035,7 +3035,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'product_name' =&gt; 'Updated Product',
-            'description' =&gt; 'Soluta quod voluptas nemo necessitatibus et.',
+            'description' =&gt; 'Qui sunt et voluptatem.',
             'base_price' =&gt; '149.99',
             'status' =&gt; 'inactive',
             'unit_of_measure' =&gt; 'kg',
@@ -3129,7 +3129,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/products/{id}"
+            <div title="https://backend.ezexstore.com/api/products/{id}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3139,7 +3139,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/products/{id}</div>
                     </div>
 
@@ -3470,7 +3470,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://ezexstore-back.test/api/products/1" \
+    "https://backend.ezexstore.com/api/products/1" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -3481,7 +3481,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/products/1"
+    "https://backend.ezexstore.com/api/products/1"
 );
 
 const headers = {
@@ -3501,7 +3501,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/products/1';
+$url = 'https://backend.ezexstore.com/api/products/1';
 $response = $client-&gt;delete(
     $url,
     [
@@ -3595,7 +3595,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/inventory/adjust"
+            <div title="https://backend.ezexstore.com/api/inventory/adjust"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3605,7 +3605,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/inventory/adjust</div>
                     </div>
 
@@ -4018,7 +4018,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://ezexstore-back.test/api/inventory/adjust" \
+    "https://backend.ezexstore.com/api/inventory/adjust" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -4036,7 +4036,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/inventory/adjust"
+    "https://backend.ezexstore.com/api/inventory/adjust"
 );
 
 const headers = {
@@ -4064,7 +4064,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/inventory/adjust';
+$url = 'https://backend.ezexstore.com/api/inventory/adjust';
 $response = $client-&gt;post(
     $url,
     [
@@ -4185,7 +4185,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/inventory/stock"
+            <div title="https://backend.ezexstore.com/api/inventory/stock"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -4195,7 +4195,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/inventory/stock</div>
                     </div>
 
@@ -4551,7 +4551,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/inventory/stock" \
+    --get "https://backend.ezexstore.com/api/inventory/stock" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -4567,7 +4567,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/inventory/stock"
+    "https://backend.ezexstore.com/api/inventory/stock"
 );
 
 const headers = {
@@ -4593,7 +4593,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/inventory/stock';
+$url = 'https://backend.ezexstore.com/api/inventory/stock';
 $response = $client-&gt;get(
     $url,
     [
@@ -4693,7 +4693,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/warehouses"
+            <div title="https://backend.ezexstore.com/api/warehouses"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -4703,7 +4703,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/warehouses</div>
                     </div>
 
@@ -4971,7 +4971,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/warehouses" \
+    --get "https://backend.ezexstore.com/api/warehouses" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4982,7 +4982,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/warehouses"
+    "https://backend.ezexstore.com/api/warehouses"
 );
 
 const headers = {
@@ -5002,7 +5002,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/warehouses';
+$url = 'https://backend.ezexstore.com/api/warehouses';
 $response = $client-&gt;get(
     $url,
     [
@@ -5105,7 +5105,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/test"
+            <div title="https://backend.ezexstore.com/api/test"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -5115,7 +5115,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/test</div>
                     </div>
 
@@ -5383,7 +5383,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/test" \
+    --get "https://backend.ezexstore.com/api/test" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -5394,7 +5394,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/test"
+    "https://backend.ezexstore.com/api/test"
 );
 
 const headers = {
@@ -5414,7 +5414,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/test';
+$url = 'https://backend.ezexstore.com/api/test';
 $response = $client-&gt;get(
     $url,
     [
