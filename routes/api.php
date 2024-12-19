@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\InventoryController;
 use App\Http\Controllers\Api\WarehouseController;
 use App\Http\Controllers\Api\TenantController;
 use App\Http\Controllers\Api\ProductPhotoController;
+use App\Http\Controllers\Api\InventoryLogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::middleware('api.key')->group(function () {
     Route::post('products/{product}/photos', [ProductPhotoController::class, 'store']);
     Route::delete('products/{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
 
+    Route::get('inventory-logs', [InventoryLogController::class, 'index']);
     
     Route::apiResource('tenants', TenantController::class)->only(['store', 'update']);
 
