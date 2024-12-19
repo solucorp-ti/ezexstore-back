@@ -20,7 +20,7 @@ use App\Http\Controllers\Api\InventoryLogController;
 |
 */
 
-Route::middleware('api.key')->group(function () {
+Route::middleware('api.key')->prefix('v1')->group(function () {
     Route::get('/test', [TestController::class, 'testConnection']);
 
     // Rutas de productos
@@ -31,7 +31,7 @@ Route::middleware('api.key')->group(function () {
     Route::delete('products/{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
 
     Route::get('inventory-logs', [InventoryLogController::class, 'index']);
-    
+
     Route::apiResource('tenants', TenantController::class)->only(['store', 'update']);
 
     Route::get('warehouses', [WarehouseController::class, 'index']);
