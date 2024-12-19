@@ -1,176 +1,33 @@
-name: Products
+name: 'Connection Test'
 description: |-
 
-  APIs for managing products in the tenant's catalog
+  APIs for testing API connection and authentication
 endpoints:
   -
     httpMethods:
-      - PUT
-    uri: api/v1/products
+      - GET
+    uri: api/v1/test
     metadata:
-      groupName: Products
+      groupName: 'Connection Test'
       groupDescription: |-
 
-        APIs for managing products in the tenant's catalog
+        APIs for testing API connection and authentication
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update Product'
-      description: 'Updates an existing product. All fields are optional for updates.'
+      title: 'Test API Connection'
+      description: 'Returns basic information about the authenticated tenant and user to verify API connectivity.'
       authenticated: true
       custom: []
     headers:
       X-API-KEY: '{YOUR_API_KEY}'
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the product.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 1
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      product_name:
-        name: product_name
-        description: 'optional The name of the product.'
-        required: false
-        example: 'Updated Product'
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      description:
-        name: description
-        description: 'optional The description of the product.'
-        required: false
-        example: 'Dignissimos nihil impedit aut.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      base_price:
-        name: base_price
-        description: 'optional The base price of the product.'
-        required: false
-        example: '149.99'
-        type: numeric
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      status:
-        name: status
-        description: 'optional The status (active, inactive, discontinued).'
-        required: false
-        example: inactive
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      unit_of_measure:
-        name: unit_of_measure
-        description: 'optional The unit of measure (piece, kg, liter, meter).'
-        required: false
-        example: kg
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      sku:
-        name: sku
-        description: 'optional The SKU (must be unique per tenant).'
-        required: false
-        example: SKU002
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      part_number:
-        name: part_number
-        description: 'optional The part number.'
-        required: false
-        example: PART002
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      serial_number:
-        name: serial_number
-        description: 'optional The serial number.'
-        required: false
-        example: SN002
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      part_condition:
-        name: part_condition
-        description: 'optional The condition (new, used, discontinued, damaged, refurbished).'
-        required: false
-        example: used
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      brand:
-        name: brand
-        description: 'optional The brand.'
-        required: false
-        example: 'New Brand'
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      family:
-        name: family
-        description: 'optional The product family.'
-        required: false
-        example: 'New Family'
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      line:
-        name: line
-        description: 'optional The product line.'
-        required: false
-        example: 'New Line'
-        type: string
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-    cleanBodyParameters:
-      product_name: 'Updated Product'
-      description: 'Dignissimos nihil impedit aut.'
-      base_price: '149.99'
-      status: inactive
-      unit_of_measure: kg
-      sku: SKU002
-      part_number: PART002
-      serial_number: SN002
-      part_condition: used
-      brand: 'New Brand'
-      family: 'New Family'
-      line: 'New Line'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
@@ -179,31 +36,38 @@ endpoints:
           {
             "success": true,
             "data": {
-              "id": 1,
-              "product_name": "Updated Product",
-              "base_price": "149.99",
-              "status": "inactive"
+              "tenant": {
+                "id": 1,
+                "name": "Demo Store",
+                "subdomain": "demo"
+              },
+              "user": {
+                "id": 1,
+                "name": "Demo Admin",
+                "email": "admin@demo.com"
+              },
+              "scopes": ["products:read", "products:write", "inventory:read", "inventory:write"]
             },
-            "message": "Product updated successfully"
+            "message": "API connection successful"
           }
         headers: []
         description: success
         custom: []
       -
-        status: 404
+        status: 401
         content: |-
           {
             "success": false,
-            "message": "Product not found"
+            "message": "Invalid API key"
           }
         headers: []
-        description: 'not found'
+        description: 'invalid api key'
         custom: []
     responseFields: []
     auth:
       - headers
       - X-API-KEY
-      - abag6E5dk4v138ehZVfDPc6
+      - gbv6Vac36d1E8aZf5hP4kDe
     controller: null
     method: null
     route: null

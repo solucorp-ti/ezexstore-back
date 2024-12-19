@@ -470,6 +470,37 @@
                                                             </div>
                                             </div>
                                     <div class="expandable">
+                        <div title="Endpoints" id="toc-item-endpoints"
+                             class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-4 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none">
+                            <a href="#endpoints"
+                               class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0">Endpoints</a>
+                                                            <div class="sl-flex sl-items-center sl-text-xs expansion-chevrons">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                         data-icon="chevron-right"
+                                         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                                    </svg>
+                                </div>
+                                                    </div>
+
+                                                    <div class="children" style="display: none;">
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-endpoints-GETapi-health-check">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/health-check">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#endpoints-GETapi-health-check">
+                                                    GET api/health-check
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                                    <div class="expandable">
                         <div title="Inventory Logs" id="toc-item-inventory-logs"
                              class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-4 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none">
                             <a href="#inventory-logs"
@@ -586,10 +617,10 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-tenants-PUTapi-v1-tenants--id-">
+                                             id="toc-item-tenants-PUTapi-v1-tenants">
                                             <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Update Tenant">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#tenants-PUTapi-v1-tenants--id-">
+                                                   href="#tenants-PUTapi-v1-tenants">
                                                     Update Tenant
                                                 </a>
                                             </div>
@@ -632,7 +663,7 @@
                 <h1 id="introduction">Introduction</h1>
 <p>API Documentation for EzexStore Backend System</p>
 <aside>
-    <strong>Base URL</strong>: <code>https://backend.ezexstore.com</code>
+    <strong>Base URL</strong>: <code>http://ezexstore-back.test</code>
 </aside>
 <p>Esta documentación proporciona toda la información necesaria para trabajar con la API de EzexStore.</p>
 <p>La API utiliza autenticación mediante API Keys y maneja datos específicos por tenant.</p>
@@ -676,7 +707,7 @@
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/products"
+            <div title="http://ezexstore-back.test/api/v1/products"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -686,7 +717,7 @@
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/products</div>
                     </div>
 
@@ -844,7 +875,7 @@
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Dignissimos nihil impedit aut.
+                        Saepe minima aliquam accusamus non.
                     </div>
                 </div>
             </div>
@@ -1258,7 +1289,7 @@
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "product_name": "Updated Product",
-    "description": "Dignissimos nihil impedit aut.",
+    "description": "Saepe minima aliquam accusamus non.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -1361,13 +1392,13 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://backend.ezexstore.com/api/v1/products" \
+    "http://ezexstore-back.test/api/v1/products" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"product_name\": \"Updated Product\",
-    \"description\": \"Dignissimos nihil impedit aut.\",
+    \"description\": \"Saepe minima aliquam accusamus non.\",
     \"base_price\": \"149.99\",
     \"status\": \"inactive\",
     \"unit_of_measure\": \"kg\",
@@ -1387,7 +1418,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/products"
+    "http://ezexstore-back.test/api/v1/products"
 );
 
 const headers = {
@@ -1398,7 +1429,7 @@ const headers = {
 
 let body = {
     "product_name": "Updated Product",
-    "description": "Dignissimos nihil impedit aut.",
+    "description": "Saepe minima aliquam accusamus non.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -1423,7 +1454,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/products';
+$url = 'http://ezexstore-back.test/api/v1/products';
 $response = $client-&gt;put(
     $url,
     [
@@ -1434,7 +1465,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'product_name' =&gt; 'Updated Product',
-            'description' =&gt; 'Dignissimos nihil impedit aut.',
+            'description' =&gt; 'Saepe minima aliquam accusamus non.',
             'base_price' =&gt; '149.99',
             'status' =&gt; 'inactive',
             'unit_of_measure' =&gt; 'kg',
@@ -1536,7 +1567,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/inventory/adjust"
+            <div title="http://ezexstore-back.test/api/v1/inventory/adjust"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -1546,7 +1577,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/inventory/adjust</div>
                     </div>
 
@@ -1959,7 +1990,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://backend.ezexstore.com/api/v1/inventory/adjust" \
+    "http://ezexstore-back.test/api/v1/inventory/adjust" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1977,7 +2008,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/inventory/adjust"
+    "http://ezexstore-back.test/api/v1/inventory/adjust"
 );
 
 const headers = {
@@ -2005,7 +2036,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/inventory/adjust';
+$url = 'http://ezexstore-back.test/api/v1/inventory/adjust';
 $response = $client-&gt;post(
     $url,
     [
@@ -2126,7 +2157,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/inventory/stock"
+            <div title="http://ezexstore-back.test/api/v1/inventory/stock"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -2136,7 +2167,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/inventory/stock</div>
                     </div>
 
@@ -2492,7 +2523,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://backend.ezexstore.com/api/v1/inventory/stock" \
+    --get "http://ezexstore-back.test/api/v1/inventory/stock" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2508,7 +2539,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/inventory/stock"
+    "http://ezexstore-back.test/api/v1/inventory/stock"
 );
 
 const headers = {
@@ -2534,7 +2565,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/inventory/stock';
+$url = 'http://ezexstore-back.test/api/v1/inventory/stock';
 $response = $client-&gt;get(
     $url,
     [
@@ -2634,7 +2665,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/warehouses"
+            <div title="http://ezexstore-back.test/api/v1/warehouses"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -2644,7 +2675,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/warehouses</div>
                     </div>
 
@@ -2912,7 +2943,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://backend.ezexstore.com/api/v1/warehouses" \
+    --get "http://ezexstore-back.test/api/v1/warehouses" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -2923,7 +2954,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/warehouses"
+    "http://ezexstore-back.test/api/v1/warehouses"
 );
 
 const headers = {
@@ -2943,7 +2974,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/warehouses';
+$url = 'http://ezexstore-back.test/api/v1/warehouses';
 $response = $client-&gt;get(
     $url,
     [
@@ -3046,7 +3077,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/test"
+            <div title="http://ezexstore-back.test/api/v1/test"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3056,7 +3087,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/test</div>
                     </div>
 
@@ -3324,7 +3355,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://backend.ezexstore.com/api/v1/test" \
+    --get "http://ezexstore-back.test/api/v1/test" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -3335,7 +3366,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/test"
+    "http://ezexstore-back.test/api/v1/test"
 );
 
 const headers = {
@@ -3355,7 +3386,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/test';
+$url = 'http://ezexstore-back.test/api/v1/test';
 $response = $client-&gt;get(
     $url,
     [
@@ -3446,6 +3477,423 @@ print_r(json_decode((string) $body));</code></pre>                              
     </div>
 </div>
 
+                <h1 id="endpoints"
+        class="sl-text-5xl sl-leading-tight sl-font-prose sl-text-heading"
+    >
+        Endpoints
+    </h1>
+
+    
+
+                                <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="endpoints-GETapi-health-check">
+                    GET api/health-check
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://ezexstore-back.test/api/health-check"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: green;"
+                        >
+                            GET
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/health-check</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                    </div>
+        </div>
+
+        
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">X-API-KEY</div>
+                                    </div>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        {YOUR_API_KEY}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                    
+
+                    
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="GET"
+              data-path="api/health-check"
+              data-hasfiles="0"
+              data-hasjsonbody="0">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-GETapi-health-check">X-API-KEY</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code></code>
+                                    <input aria-label="X-API-KEY"
+                                           id="auth-GETapi-health-check"
+                                           data-component="header"
+                                           data-prefix=""
+                                           name="X-API-KEY"
+                                           placeholder="{YOUR_API_KEY}"
+                                           class="auth-value sl-relative sl-w-full sl-pr-2.5 sl-pl-2.5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-GETapi-health-check-Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-GETapi-health-check-Content-Type"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-GETapi-health-check-Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-GETapi-health-check-Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+            
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="GETapi-health-check"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="GETapi-health-check"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="GETapi-health-check"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>bash</option>
+                                                                                            <option>javascript</option>
+                                                                                            <option>php</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-bash">curl --request GET \
+    --get "http://ezexstore-back.test/api/health-check" \
+    --header "X-API-KEY: {YOUR_API_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://ezexstore-back.test/api/health-check"
+);
+
+const headers = {
+    "X-API-KEY": "{YOUR_API_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-php"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://ezexstore-back.test/api/health-check';
+$response = $client-&gt;get(
+    $url,
+    [
+        'headers' =&gt; [
+            'X-API-KEY' =&gt; '{YOUR_API_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-GETapi-health-check-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('GETapi-health-check', event.target.value);">
+                                                                                                            <option value="0">200</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-health-check example-response-GETapi-health-check-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
+                                                <summary style="cursor: pointer; list-style: none;">
+                                                    <small>
+                                                        <span class="expansion-chevrons">
+
+    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+         data-icon="chevron-right"
+         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+    </svg>
+                                                            </span>
+                                                        Headers
+                                                    </small>
+                                                </summary>
+                                                <pre><code class="language-http">                                                            cache-control
+                                                            : no-cache, private
+                                                                                                                    content-type
+                                                            : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 59
+                                                                                                                    access-control-allow-origin
+                                                            : *
+                                                         </code></pre>
+                                            </details>
+                                                                                                                                                                        
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;status&quot;: &quot;ok&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
+                            </div>
+    </div>
+</div>
+
                 <h1 id="inventory-logs"
         class="sl-text-5xl sl-leading-tight sl-font-prose sl-text-heading"
     >
@@ -3466,7 +3914,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/inventory-logs"
+            <div title="http://ezexstore-back.test/api/v1/inventory/logs"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -3476,8 +3924,8 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/inventory-logs</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/v1/inventory/logs</div>
                     </div>
 
                                                     <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
@@ -3696,7 +4144,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        23
+                        5
                     </div>
                 </div>
             </div>
@@ -3721,7 +4169,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2
+                        20
                     </div>
                 </div>
             </div>
@@ -3746,7 +4194,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        5
+                        17
                     </div>
                 </div>
             </div>
@@ -3770,7 +4218,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        restock
+                        order
                     </div>
                 </div>
             </div>
@@ -3795,7 +4243,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2024-12-19T21:15:00
+                        2024-12-19T23:37:13
                     </div>
                 </div>
             </div>
@@ -3820,7 +4268,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2055-07-17
+                        2042-03-24
                     </div>
                 </div>
             </div>
@@ -3842,7 +4290,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="GET"
-              data-path="api/v1/inventory-logs"
+              data-path="api/v1/inventory/logs"
               data-hasfiles="0"
               data-hasjsonbody="1">
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
@@ -4036,12 +4484,12 @@ These logs include changes in inventory, restocks, orders, and other related eve
                                      id="json-body-GETapi-v1-inventory-logs"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "per_page": 23,
-    "product_id": 2,
-    "warehouse_id": 5,
-    "type": "restock",
-    "date_from": "2024-12-19T21:15:00",
-    "date_to": "2055-07-17"
+    "per_page": 5,
+    "product_id": 20,
+    "warehouse_id": 17,
+    "type": "order",
+    "date_from": "2024-12-19T23:37:13",
+    "date_to": "2042-03-24"
 }</div>
                             </div>
                                             </div>
@@ -4134,17 +4582,17 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://backend.ezexstore.com/api/v1/inventory-logs?start_date=2024-01-01&amp;end_date=2024-12-31&amp;event_type=restock&amp;page=1&amp;per_page=10" \
+    --get "http://ezexstore-back.test/api/v1/inventory/logs?start_date=2024-01-01&amp;end_date=2024-12-31&amp;event_type=restock&amp;page=1&amp;per_page=10" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"per_page\": 23,
-    \"product_id\": 2,
-    \"warehouse_id\": 5,
-    \"type\": \"restock\",
-    \"date_from\": \"2024-12-19T21:15:00\",
-    \"date_to\": \"2055-07-17\"
+    \"per_page\": 5,
+    \"product_id\": 20,
+    \"warehouse_id\": 17,
+    \"type\": \"order\",
+    \"date_from\": \"2024-12-19T23:37:13\",
+    \"date_to\": \"2042-03-24\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -4154,7 +4602,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/inventory-logs"
+    "http://ezexstore-back.test/api/v1/inventory/logs"
 );
 
 const params = {
@@ -4174,12 +4622,12 @@ const headers = {
 };
 
 let body = {
-    "per_page": 23,
-    "product_id": 2,
-    "warehouse_id": 5,
-    "type": "restock",
-    "date_from": "2024-12-19T21:15:00",
-    "date_to": "2055-07-17"
+    "per_page": 5,
+    "product_id": 20,
+    "warehouse_id": 17,
+    "type": "order",
+    "date_from": "2024-12-19T23:37:13",
+    "date_to": "2042-03-24"
 };
 
 fetch(url, {
@@ -4194,7 +4642,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/inventory-logs';
+$url = 'http://ezexstore-back.test/api/v1/inventory/logs';
 $response = $client-&gt;get(
     $url,
     [
@@ -4211,12 +4659,12 @@ $response = $client-&gt;get(
             'per_page' =&gt; '10',
         ],
         'json' =&gt; [
-            'per_page' =&gt; 23,
-            'product_id' =&gt; 2,
-            'warehouse_id' =&gt; 5,
-            'type' =&gt; 'restock',
-            'date_from' =&gt; '2024-12-19T21:15:00',
-            'date_to' =&gt; '2055-07-17',
+            'per_page' =&gt; 5,
+            'product_id' =&gt; 20,
+            'warehouse_id' =&gt; 17,
+            'type' =&gt; 'order',
+            'date_from' =&gt; '2024-12-19T23:37:13',
+            'date_to' =&gt; '2042-03-24',
         ],
     ]
 );
@@ -4319,7 +4767,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/products/{product_id}/photos"
+            <div title="http://ezexstore-back.test/api/v1/products/{product_id}/photos"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -4329,7 +4777,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/products/{product_id}/photos</div>
                     </div>
 
@@ -4722,7 +5170,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://backend.ezexstore.com/api/v1/products/1/photos?per_page=10" \
+    --get "http://ezexstore-back.test/api/v1/products/1/photos?per_page=10" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4733,7 +5181,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/products/1/photos"
+    "http://ezexstore-back.test/api/v1/products/1/photos"
 );
 
 const params = {
@@ -4759,7 +5207,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/products/1/photos';
+$url = 'http://ezexstore-back.test/api/v1/products/1/photos';
 $response = $client-&gt;get(
     $url,
     [
@@ -4848,7 +5296,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/products/{product_id}/photos"
+            <div title="http://ezexstore-back.test/api/v1/products/{product_id}/photos"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -4858,7 +5306,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/products/{product_id}/photos</div>
                     </div>
 
@@ -5241,7 +5689,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://backend.ezexstore.com/api/v1/products/1/photos" \
+    "http://ezexstore-back.test/api/v1/products/1/photos" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -5256,7 +5704,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/products/1/photos"
+    "http://ezexstore-back.test/api/v1/products/1/photos"
 );
 
 const headers = {
@@ -5281,7 +5729,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/products/1/photos';
+$url = 'http://ezexstore-back.test/api/v1/products/1/photos';
 $response = $client-&gt;post(
     $url,
     [
@@ -5376,7 +5824,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/products/{product_id}/photos/{photo}"
+            <div title="http://ezexstore-back.test/api/v1/products/{product_id}/photos/{photo}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -5386,7 +5834,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/products/{product_id}/photos/{photo}</div>
                     </div>
 
@@ -5511,7 +5959,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        excepturi
+                        voluptas
                     </div>
                 </div>
             </div>
@@ -5680,7 +6128,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="photo" name="photo"
                                                id="urlparam-DELETEapi-v1-products--product_id--photos--photo--photo"
                                                placeholder="The photo."
-                                               value="excepturi" data-component="url"
+                                               value="voluptas" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5789,7 +6237,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://backend.ezexstore.com/api/v1/products/1/photos/excepturi" \
+    "http://ezexstore-back.test/api/v1/products/1/photos/voluptas" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -5800,7 +6248,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/products/1/photos/excepturi"
+    "http://ezexstore-back.test/api/v1/products/1/photos/voluptas"
 );
 
 const headers = {
@@ -5820,7 +6268,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/products/1/photos/excepturi';
+$url = 'http://ezexstore-back.test/api/v1/products/1/photos/voluptas';
 $response = $client-&gt;delete(
     $url,
     [
@@ -5913,7 +6361,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/tenants"
+            <div title="http://ezexstore-back.test/api/v1/tenants"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -5923,7 +6371,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
                         <div class="sl-flex-1 sl-font-semibold">/api/v1/tenants</div>
                     </div>
 
@@ -6049,7 +6497,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The subdomain of the tenant.</p>
+            <p>The subdomain of the tenant (only lowercase alphanumeric and hyphens).</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -6080,6 +6528,8 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">config</div>
                                             <span class="sl-truncate sl-text-muted">object</span>
                                     </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
             <p>The configuration of the tenant.</p>
@@ -6094,43 +6544,18 @@ print_r(json_decode((string) $body));</code></pre>                              
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">logo_url</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must be a valid URL.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        http://bruen.com/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-7">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">company_name</div>
                                             <span class="sl-truncate sl-text-muted">string</span>
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must not be greater than 255 characters.</p>
+            <p>The company name.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        qdhkskkgwxlbtjfnkeplvr
+                        &quot;Example Company&quot;
                     </div>
                 </div>
             </div>
@@ -6149,13 +6574,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must be a valid email address.</p>
+            <p>Email of the company.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ubauch@example.net
+                        &quot;contact@example.com&quot;
                     </div>
                 </div>
             </div>
@@ -6180,7 +6605,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        vdjjrpoudcfchfzofdc
+                        kfqyamvchtvyjtut
                     </div>
                 </div>
             </div>
@@ -6197,15 +6622,17 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">search_engine_type</div>
                                             <span class="sl-truncate sl-text-muted">string</span>
                                     </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must not be greater than 255 characters.</p>
+            <p>The type of search engine (regular/expandable).</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        hhlkptrrsdpma
+                        &quot;regular&quot;
                     </div>
                 </div>
             </div>
@@ -6309,7 +6736,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The password of the user.</p>
+            <p>The password of the user (min 8 characters).</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -6330,13 +6757,23 @@ print_r(json_decode((string) $body));</code></pre>                              
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">role_id</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the roles table.</p>
+            <p>The role ID for the user.</p>
         </div>
-                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        2
+                    </div>
+                </div>
+            </div>
+            </div>
 </div>
 
             </div>
@@ -6467,17 +6904,16 @@ print_r(json_decode((string) $body));</code></pre>                              
     "name": "\"Example Tenant\"",
     "subdomain": "\"example\"",
     "config": {
-        "logo_url": "http:\/\/bruen.com\/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima",
-        "company_name": "qdhkskkgwxlbtjfnkeplvr",
-        "company_email": "ubauch@example.net",
-        "whatsapp_number": "vdjjrpoudcfchfzofdc",
-        "search_engine_type": "hhlkptrrsdpma"
+        "company_name": "\"Example Company\"",
+        "company_email": "\"contact@example.com\"",
+        "whatsapp_number": "kfqyamvchtvyjtut",
+        "search_engine_type": "\"regular\""
     },
     "user": {
         "name": "\"John Doe\"",
         "email": "\"john.doe@example.com\"",
         "password": "\"password123\"",
-        "role_id": null
+        "role_id": 2
     }
 }</div>
                             </div>
@@ -6571,7 +7007,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://backend.ezexstore.com/api/v1/tenants" \
+    "http://ezexstore-back.test/api/v1/tenants" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -6579,16 +7015,16 @@ You can check the Dev Tools console for debugging information.</p>
     \"name\": \"\\\"Example Tenant\\\"\",
     \"subdomain\": \"\\\"example\\\"\",
     \"config\": {
-        \"logo_url\": \"http:\\/\\/bruen.com\\/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima\",
-        \"company_name\": \"qdhkskkgwxlbtjfnkeplvr\",
-        \"company_email\": \"ubauch@example.net\",
-        \"whatsapp_number\": \"vdjjrpoudcfchfzofdc\",
-        \"search_engine_type\": \"hhlkptrrsdpma\"
+        \"company_name\": \"\\\"Example Company\\\"\",
+        \"company_email\": \"\\\"contact@example.com\\\"\",
+        \"whatsapp_number\": \"kfqyamvchtvyjtut\",
+        \"search_engine_type\": \"\\\"regular\\\"\"
     },
     \"user\": {
         \"name\": \"\\\"John Doe\\\"\",
         \"email\": \"\\\"john.doe@example.com\\\"\",
-        \"password\": \"\\\"password123\\\"\"
+        \"password\": \"\\\"password123\\\"\",
+        \"role_id\": 2
     }
 }"
 </code></pre>                                        </div>
@@ -6599,7 +7035,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/tenants"
+    "http://ezexstore-back.test/api/v1/tenants"
 );
 
 const headers = {
@@ -6612,16 +7048,16 @@ let body = {
     "name": "\"Example Tenant\"",
     "subdomain": "\"example\"",
     "config": {
-        "logo_url": "http:\/\/bruen.com\/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima",
-        "company_name": "qdhkskkgwxlbtjfnkeplvr",
-        "company_email": "ubauch@example.net",
-        "whatsapp_number": "vdjjrpoudcfchfzofdc",
-        "search_engine_type": "hhlkptrrsdpma"
+        "company_name": "\"Example Company\"",
+        "company_email": "\"contact@example.com\"",
+        "whatsapp_number": "kfqyamvchtvyjtut",
+        "search_engine_type": "\"regular\""
     },
     "user": {
         "name": "\"John Doe\"",
         "email": "\"john.doe@example.com\"",
-        "password": "\"password123\""
+        "password": "\"password123\"",
+        "role_id": 2
     }
 };
 
@@ -6637,7 +7073,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/tenants';
+$url = 'http://ezexstore-back.test/api/v1/tenants';
 $response = $client-&gt;post(
     $url,
     [
@@ -6650,16 +7086,16 @@ $response = $client-&gt;post(
             'name' =&gt; '"Example Tenant"',
             'subdomain' =&gt; '"example"',
             'config' =&gt; [
-                'logo_url' =&gt; 'http://bruen.com/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima',
-                'company_name' =&gt; 'qdhkskkgwxlbtjfnkeplvr',
-                'company_email' =&gt; 'ubauch@example.net',
-                'whatsapp_number' =&gt; 'vdjjrpoudcfchfzofdc',
-                'search_engine_type' =&gt; 'hhlkptrrsdpma',
+                'company_name' =&gt; '"Example Company"',
+                'company_email' =&gt; '"contact@example.com"',
+                'whatsapp_number' =&gt; 'kfqyamvchtvyjtut',
+                'search_engine_type' =&gt; '"regular"',
             ],
             'user' =&gt; [
                 'name' =&gt; '"John Doe"',
                 'email' =&gt; '"john.doe@example.com"',
                 'password' =&gt; '"password123"',
+                'role_id' =&gt; 2,
             ],
         ],
     ]
@@ -6705,15 +7141,39 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-  &quot;message&quot;: &quot;Tenant created successfully&quot;,
-  &quot;data&quot;: {
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Example Tenant&quot;,
-    &quot;subdomain&quot;: &quot;example&quot;,
-    &quot;config&quot;: {...},
-    &quot;users&quot;: [...],
-    &quot;apiKeys&quot;: [...]
-  }
+    &quot;message&quot;: &quot;Tenant created successfully&quot;,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Example Tenant&quot;,
+        &quot;subdomain&quot;: &quot;example&quot;,
+        &quot;config&quot;: {
+            &quot;company_name&quot;: &quot;Example Company&quot;,
+            &quot;company_email&quot;: &quot;contact@example.com&quot;,
+            &quot;search_engine_type&quot;: &quot;regular&quot;
+        },
+        &quot;users&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;John Doe&quot;,
+                &quot;email&quot;: &quot;john.doe@example.com&quot;,
+                &quot;pivot&quot;: {
+                    &quot;role_id&quot;: 2
+                }
+            }
+        ],
+        &quot;apiKeys&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;key&quot;: &quot;api-key-string&quot;,
+                &quot;scopes&quot;: [
+                    &quot;products:read&quot;,
+                    &quot;products:write&quot;,
+                    &quot;inventory:read&quot;,
+                    &quot;inventory:write&quot;
+                ]
+            }
+        ]
+    }
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -6723,8 +7183,18 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Validation error message&quot;
+    &quot;message&quot;: &quot;Validation error&quot;,
+    &quot;errors&quot;: {
+        &quot;subdomain&quot;: [
+            &quot;Este subdominio ya est&aacute; en uso.&quot;
+        ],
+        &quot;user.email&quot;: [
+            &quot;Este correo electr&oacute;nico ya est&aacute; registrado.&quot;
+        ],
+        &quot;user.role_id&quot;: [
+            &quot;El rol es requerido.&quot;
+        ]
+    }
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -6738,14 +7208,14 @@ print_r(json_decode((string) $body));</code></pre>                              
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="tenants-PUTapi-v1-tenants--id-">
+                    id="tenants-PUTapi-v1-tenants">
                     Update Tenant
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="https://backend.ezexstore.com/api/v1/tenants/{id}"
+            <div title="http://ezexstore-back.test/api/v1/tenants"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -6753,15 +7223,10 @@ print_r(json_decode((string) $body));</code></pre>                              
                         >
                             PUT
                         </div>
-                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
-                             style="background-color: purple;"
-                        >
-                            PATCH
-                        </div>
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">https://backend.ezexstore.com</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/tenants/{id}</div>
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/v1/tenants</div>
                     </div>
 
                                                     <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
@@ -6771,7 +7236,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
         </div>
 
-        <p>Updates the information of an existing tenant.</p>
+        <p>Updates the information of the current tenant. The tenant is identified by the API key.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -6839,36 +7304,6 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                             </div>
                         </div>
                     
-                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">URL Parameters</h3>
-
-                            <div class="sl-text-sm">
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">id</div>
-                                            <span class="sl-truncate sl-text-muted">integer</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The ID of the tenant to update.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        1
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                            </div>
-                        </div>
                     
 
                     
@@ -6918,7 +7353,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        http://www.mraz.org/ipsam-voluptate-quia-labore-laboriosam-sint-provident
+                        http://bauch.com/laborum-quo-facere-voluptate-quasi
                     </div>
                 </div>
             </div>
@@ -6937,13 +7372,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must not be greater than 255 characters.</p>
+            <p>The company name.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        lfggnzlfaaggvmmuwgkf
+                        &quot;Updated Company&quot;
                     </div>
                 </div>
             </div>
@@ -6962,13 +7397,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must be a valid email address.</p>
+            <p>Email of the company.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        lueilwitz.sanford@example.com
+                        &quot;new@example.com&quot;
                     </div>
                 </div>
             </div>
@@ -6987,13 +7422,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must not be greater than 20 characters.</p>
+            <p>WhatsApp number.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        yoqfdtemzr
+                        &quot;+1234567890&quot;
                     </div>
                 </div>
             </div>
@@ -7012,13 +7447,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must not be greater than 255 characters.</p>
+            <p>The type of search engine (regular/expandable).</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        jygye
+                        &quot;expandable&quot;
                     </div>
                 </div>
             </div>
@@ -7053,31 +7488,6 @@ print_r(json_decode((string) $body));</code></pre>                              
 </div>
 
             </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">subdomain</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The updated subdomain of the tenant.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        &quot;updated&quot;
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
                             </div>
                         </div>
                     
@@ -7092,7 +7502,7 @@ print_r(json_decode((string) $body));</code></pre>                              
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="PUT"
-              data-path="api/v1/tenants/{id}"
+              data-path="api/v1/tenants"
               data-hasfiles="0"
               data-hasjsonbody="1">
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
@@ -7114,13 +7524,13 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                             <label aria-hidden="true"
-                                   for="auth-PUTapi-v1-tenants--id-">X-API-KEY</label>
+                                   for="auth-PUTapi-v1-tenants">X-API-KEY</label>
                             <span class="sl-mx-3">:</span>
                             <div class="sl-flex sl-flex-1">
                                 <div class="sl-input sl-flex-1 sl-relative">
                                     <code></code>
                                     <input aria-label="X-API-KEY"
-                                           id="auth-PUTapi-v1-tenants--id-"
+                                           id="auth-PUTapi-v1-tenants"
                                            data-component="header"
                                            data-prefix=""
                                            name="X-API-KEY"
@@ -7151,23 +7561,23 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                                                             <label aria-hidden="true"
-                                       for="header-PUTapi-v1-tenants--id--Content-Type">Content-Type</label>
+                                       for="header-PUTapi-v1-tenants-Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-PUTapi-v1-tenants--id--Content-Type"
+                                               id="header-PUTapi-v1-tenants-Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-PUTapi-v1-tenants--id--Accept">Accept</label>
+                                       for="header-PUTapi-v1-tenants-Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-PUTapi-v1-tenants--id--Accept"
+                                               id="header-PUTapi-v1-tenants-Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -7176,39 +7586,6 @@ print_r(json_decode((string) $body));</code></pre>                              
                     </div>
                 </div>
             
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            URL Parameters
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                                                            <label aria-hidden="true"
-                                       for="urlparam-PUTapi-v1-tenants--id--id">id</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="id" name="id"
-                                               id="urlparam-PUTapi-v1-tenants--id--id"
-                                               placeholder="The ID of the tenant to update."
-                                               value="1" data-component="url"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                    </div>
-                    </div>
-                </div>
             
             
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
@@ -7230,18 +7607,17 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                                                     <div class="TextRequestBody sl-p-4">
                                 <div class="code-editor language-json"
-                                     id="json-body-PUTapi-v1-tenants--id-"
+                                     id="json-body-PUTapi-v1-tenants"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "config": {
-        "logo_url": "http:\/\/www.mraz.org\/ipsam-voluptate-quia-labore-laboriosam-sint-provident",
-        "company_name": "lfggnzlfaaggvmmuwgkf",
-        "company_email": "lueilwitz.sanford@example.com",
-        "whatsapp_number": "yoqfdtemzr",
-        "search_engine_type": "jygye"
+        "logo_url": "http:\/\/bauch.com\/laborum-quo-facere-voluptate-quasi",
+        "company_name": "\"Updated Company\"",
+        "company_email": "\"new@example.com\"",
+        "whatsapp_number": "\"+1234567890\"",
+        "search_engine_type": "\"expandable\""
     },
-    "name": "\"Updated Tenant\"",
-    "subdomain": "\"updated\""
+    "name": "\"Updated Tenant\""
 }</div>
                             </div>
                                             </div>
@@ -7249,7 +7625,7 @@ print_r(json_decode((string) $body));</code></pre>                              
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="PUTapi-v1-tenants--id-"
+                    <button type="button" data-endpoint="PUTapi-v1-tenants"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -7257,7 +7633,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 </div>
             </div>
 
-            <div data-endpoint="PUTapi-v1-tenants--id-"
+            <div data-endpoint="PUTapi-v1-tenants"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -7284,7 +7660,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="PUTapi-v1-tenants--id-"
+                <div data-endpoint="PUTapi-v1-tenants"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -7334,20 +7710,19 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://backend.ezexstore.com/api/v1/tenants/1" \
+    "http://ezexstore-back.test/api/v1/tenants" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"config\": {
-        \"logo_url\": \"http:\\/\\/www.mraz.org\\/ipsam-voluptate-quia-labore-laboriosam-sint-provident\",
-        \"company_name\": \"lfggnzlfaaggvmmuwgkf\",
-        \"company_email\": \"lueilwitz.sanford@example.com\",
-        \"whatsapp_number\": \"yoqfdtemzr\",
-        \"search_engine_type\": \"jygye\"
+        \"logo_url\": \"http:\\/\\/bauch.com\\/laborum-quo-facere-voluptate-quasi\",
+        \"company_name\": \"\\\"Updated Company\\\"\",
+        \"company_email\": \"\\\"new@example.com\\\"\",
+        \"whatsapp_number\": \"\\\"+1234567890\\\"\",
+        \"search_engine_type\": \"\\\"expandable\\\"\"
     },
-    \"name\": \"\\\"Updated Tenant\\\"\",
-    \"subdomain\": \"\\\"updated\\\"\"
+    \"name\": \"\\\"Updated Tenant\\\"\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -7357,7 +7732,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/tenants/1"
+    "http://ezexstore-back.test/api/v1/tenants"
 );
 
 const headers = {
@@ -7368,14 +7743,13 @@ const headers = {
 
 let body = {
     "config": {
-        "logo_url": "http:\/\/www.mraz.org\/ipsam-voluptate-quia-labore-laboriosam-sint-provident",
-        "company_name": "lfggnzlfaaggvmmuwgkf",
-        "company_email": "lueilwitz.sanford@example.com",
-        "whatsapp_number": "yoqfdtemzr",
-        "search_engine_type": "jygye"
+        "logo_url": "http:\/\/bauch.com\/laborum-quo-facere-voluptate-quasi",
+        "company_name": "\"Updated Company\"",
+        "company_email": "\"new@example.com\"",
+        "whatsapp_number": "\"+1234567890\"",
+        "search_engine_type": "\"expandable\""
     },
-    "name": "\"Updated Tenant\"",
-    "subdomain": "\"updated\""
+    "name": "\"Updated Tenant\""
 };
 
 fetch(url, {
@@ -7390,7 +7764,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/tenants/1';
+$url = 'http://ezexstore-back.test/api/v1/tenants';
 $response = $client-&gt;put(
     $url,
     [
@@ -7401,14 +7775,13 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'config' =&gt; [
-                'logo_url' =&gt; 'http://www.mraz.org/ipsam-voluptate-quia-labore-laboriosam-sint-provident',
-                'company_name' =&gt; 'lfggnzlfaaggvmmuwgkf',
-                'company_email' =&gt; 'lueilwitz.sanford@example.com',
-                'whatsapp_number' =&gt; 'yoqfdtemzr',
-                'search_engine_type' =&gt; 'jygye',
+                'logo_url' =&gt; 'http://bauch.com/laborum-quo-facere-voluptate-quasi',
+                'company_name' =&gt; '"Updated Company"',
+                'company_email' =&gt; '"new@example.com"',
+                'whatsapp_number' =&gt; '"+1234567890"',
+                'search_engine_type' =&gt; '"expandable"',
             ],
             'name' =&gt; '"Updated Tenant"',
-            'subdomain' =&gt; '"updated"',
         ],
     ]
 );
@@ -7426,11 +7799,11 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <div class="sl-mb-2 sl-inline-block">Example response:</div>
                                             <div class="sl-mb-2 sl-inline-block">
                                                 <select
-                                                        class="example-response-PUTapi-v1-tenants--id--toggle sl-text-base"
+                                                        class="example-response-PUTapi-v1-tenants-toggle sl-text-base"
                                                         aria-label="Response sample"
-                                                        onchange="switchExampleResponse('PUTapi-v1-tenants--id-', event.target.value);">
+                                                        onchange="switchExampleResponse('PUTapi-v1-tenants', event.target.value);">
                                                                                                             <option value="0">200, success</option>
-                                                                                                            <option value="1">404, not found</option>
+                                                                                                            <option value="1">422, validation error</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -7447,7 +7820,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                 </button>
                             </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-v1-tenants--id- example-response-PUTapi-v1-tenants--id--0"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-v1-tenants example-response-PUTapi-v1-tenants-0"
                                      style=" "
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -7457,20 +7830,33 @@ print_r(json_decode((string) $body));</code></pre>                              
   &quot;data&quot;: {
     &quot;id&quot;: 1,
     &quot;name&quot;: &quot;Updated Tenant&quot;,
-    &quot;subdomain&quot;: &quot;updated&quot;,
-    &quot;config&quot;: {...}
+    &quot;config&quot;: {
+      &quot;company_name&quot;: &quot;Updated Company&quot;,
+      &quot;company_email&quot;: &quot;new@example.com&quot;,
+      &quot;whatsapp_number&quot;: &quot;+1234567890&quot;,
+      &quot;search_engine_type&quot;: &quot;expandable&quot;
+    },
+    &quot;users&quot;: [...],
+    &quot;warehouses&quot;: [...]
   }
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-v1-tenants--id- example-response-PUTapi-v1-tenants--id--1"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-v1-tenants example-response-PUTapi-v1-tenants-1"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Tenant not found.&quot;
+    &quot;message&quot;: &quot;Validation error&quot;,
+    &quot;errors&quot;: {
+        &quot;name&quot;: [
+            &quot;El nombre es requerido.&quot;
+        ],
+        &quot;config.search_engine_type&quot;: [
+            &quot;El tipo de buscador debe ser regular o expandable.&quot;
+        ]
+    }
 }</code></pre>
                                                                             </div>
                                 </div>

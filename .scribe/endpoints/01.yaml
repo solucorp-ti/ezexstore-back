@@ -1,21 +1,21 @@
-name: 'Connection Test'
+name: Tenants
 description: |-
 
-  APIs for testing API connection and authentication
+  APIs for managing tenant information
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/v1/test
+      - POST
+    uri: api/v1/tenants
     metadata:
-      groupName: 'Connection Test'
+      groupName: Tenants
       groupDescription: |-
 
-        APIs for testing API connection and authentication
+        APIs for managing tenant information
       subgroup: ''
       subgroupDescription: ''
-      title: 'Test API Connection'
-      description: 'Returns basic information about the authenticated tenant and user to verify API connectivity.'
+      title: 'Create Tenant'
+      description: 'Creates a new tenant with the provided information.'
       authenticated: true
       custom: []
     headers:
@@ -26,48 +26,340 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the tenant.'
+        required: true
+        example: '"Example Tenant"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      subdomain:
+        name: subdomain
+        description: 'The subdomain of the tenant (only lowercase alphanumeric and hyphens).'
+        required: true
+        example: '"example"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      config:
+        name: config
+        description: 'The configuration of the tenant.'
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      config.company_name:
+        name: config.company_name
+        description: 'The company name.'
+        required: false
+        example: '"Example Company"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      config.company_email:
+        name: config.company_email
+        description: 'Email of the company.'
+        required: false
+        example: '"contact@example.com"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      config.whatsapp_number:
+        name: config.whatsapp_number
+        description: 'Must not be greater than 20 characters.'
+        required: false
+        example: kfqyamvchtvyjtut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      config.search_engine_type:
+        name: config.search_engine_type
+        description: 'The type of search engine (regular/expandable).'
+        required: true
+        example: '"regular"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user:
+        name: user
+        description: 'The administrator user information.'
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      user.name:
+        name: user.name
+        description: 'The name of the user.'
+        required: true
+        example: '"John Doe"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user.email:
+        name: user.email
+        description: 'The email of the user.'
+        required: true
+        example: '"john.doe@example.com"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user.password:
+        name: user.password
+        description: 'The password of the user (min 8 characters).'
+        required: true
+        example: '"password123"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user.role_id:
+        name: user.role_id
+        description: 'The role ID for the user.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: '"Example Tenant"'
+      subdomain: '"example"'
+      config:
+        company_name: '"Example Company"'
+        company_email: '"contact@example.com"'
+        whatsapp_number: kfqyamvchtvyjtut
+        search_engine_type: '"regular"'
+      user:
+        name: '"John Doe"'
+        email: '"john.doe@example.com"'
+        password: '"password123"'
+        role_id: 2
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+            "message": "Tenant created successfully",
+            "data": {
+              "id": 1,
+              "name": "Example Tenant",
+              "subdomain": "example",
+              "config": {
+                "company_name": "Example Company",
+                "company_email": "contact@example.com",
+                "search_engine_type": "regular"
+              },
+              "users": [{
+                "id": 1,
+                "name": "John Doe",
+                "email": "john.doe@example.com",
+                "pivot": {
+                  "role_id": 2
+                }
+              }],
+              "apiKeys": [{
+                "id": 1,
+                "key": "api-key-string",
+                "scopes": ["products:read","products:write","inventory:read","inventory:write"]
+              }]
+            }
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "message": "Validation error",
+            "errors": {
+              "subdomain": ["Este subdominio ya está en uso."],
+              "user.email": ["Este correo electrónico ya está registrado."],
+              "user.role_id": ["El rol es requerido."]
+            }
+          }
+        headers: []
+        description: 'validation error'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - X-API-KEY
+      - Vc1EvD4haa6b8P3efg65dZk
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/v1/tenants
+    metadata:
+      groupName: Tenants
+      groupDescription: |-
+
+        APIs for managing tenant information
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Tenant'
+      description: 'Updates the information of the current tenant. The tenant is identified by the API key.'
+      authenticated: true
+      custom: []
+    headers:
+      X-API-KEY: '{YOUR_API_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      config:
+        name: config
+        description: 'The updated configuration of the tenant.'
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      config.logo_url:
+        name: config.logo_url
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://bauch.com/laborum-quo-facere-voluptate-quasi'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      config.company_name:
+        name: config.company_name
+        description: 'The company name.'
+        required: false
+        example: '"Updated Company"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      config.company_email:
+        name: config.company_email
+        description: 'Email of the company.'
+        required: false
+        example: '"new@example.com"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      config.whatsapp_number:
+        name: config.whatsapp_number
+        description: 'WhatsApp number.'
+        required: false
+        example: '"+1234567890"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      config.search_engine_type:
+        name: config.search_engine_type
+        description: 'The type of search engine (regular/expandable).'
+        required: false
+        example: '"expandable"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      name:
+        name: name
+        description: 'The updated name of the tenant.'
+        required: false
+        example: '"Updated Tenant"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      config:
+        logo_url: 'http://bauch.com/laborum-quo-facere-voluptate-quasi'
+        company_name: '"Updated Company"'
+        company_email: '"new@example.com"'
+        whatsapp_number: '"+1234567890"'
+        search_engine_type: '"expandable"'
+      name: '"Updated Tenant"'
     fileParameters: []
     responses:
       -
         status: 200
         content: |-
           {
-            "success": true,
+            "message": "Tenant updated successfully",
             "data": {
-              "tenant": {
-                "id": 1,
-                "name": "Demo Store",
-                "subdomain": "demo"
+              "id": 1,
+              "name": "Updated Tenant",
+              "config": {
+                "company_name": "Updated Company",
+                "company_email": "new@example.com",
+                "whatsapp_number": "+1234567890",
+                "search_engine_type": "expandable"
               },
-              "user": {
-                "id": 1,
-                "name": "Demo Admin",
-                "email": "admin@demo.com"
-              },
-              "scopes": ["products:read", "products:write", "inventory:read", "inventory:write"]
-            },
-            "message": "API connection successful"
+              "users": [...],
+              "warehouses": [...]
+            }
           }
         headers: []
         description: success
         custom: []
       -
-        status: 401
+        status: 422
         content: |-
           {
-            "success": false,
-            "message": "Invalid API key"
+            "message": "Validation error",
+            "errors": {
+              "name": ["El nombre es requerido."],
+              "config.search_engine_type": ["El tipo de buscador debe ser regular o expandable."]
+            }
           }
         headers: []
-        description: 'invalid api key'
+        description: 'validation error'
         custom: []
     responseFields: []
     auth:
       - headers
       - X-API-KEY
-      - v8Vc3PZ5a6agdfb4E6ek1Dh
+      - Vac164Z8Pv6akdghDe35Ebf
     controller: null
     method: null
     route: null
