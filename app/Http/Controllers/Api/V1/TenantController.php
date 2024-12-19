@@ -55,9 +55,10 @@ class TenantController extends Controller
     public function store(StoreTenantRequest $request): JsonResponse
     {
         try {
-            Log::info('Creating tenant', $request->validated());
+            // El request se valida automáticamente porque usamos StoreTenantRequest
+            Log::info('Tenant creation request data:', $request->validated());
             $tenant = $this->tenantService->create($request->validated());
-
+    
             return response()->json([
                 'message' => 'Tenant created successfully',
                 'data' => $tenant->load(['config', 'users', 'apiKeys'])

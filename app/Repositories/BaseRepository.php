@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 abstract class BaseRepository implements BaseRepositoryInterface
 {
-    protected $model;
+    protected Model $model;
 
     public function __construct(Model $model)
     {
@@ -32,7 +32,9 @@ abstract class BaseRepository implements BaseRepositoryInterface
     public function update($id, array $data)
     {
         $record = $this->find($id);
-        $record->update($data);
+        if ($record) {
+            $record->update($data);
+        }
         return $record;
     }
 

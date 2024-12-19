@@ -19,30 +19,36 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::get('health-check', function() {
+    return response()->json(['status' => 'ok']);
+});
 
-Route::prefix('v1')->group(function () {
-
+Route::prefix('v1')->middleware(['api', 'json'])->group(function () {
+    // Rutas públicas
     Route::post('tenants', [TenantController::class, 'store']);
 
+    // Rutas protegidas
     Route::middleware('api.key')->group(function () {
-
+        // Test
         Route::get('/test', [TestController::class, 'testConnection']);
 
-        Route::put('products', [ProductController::class, 'update']);
+        // Productos y fotos
+        Route::prefix('products')->group(function () {
+            Route::put('/', [ProductController::class, 'update']);
+            Route::get('{product}/photos', [ProductPhotoController::class, 'index']);
+            Route::post('{product}/photos', [ProductPhotoController::class, 'store']);
+            Route::delete('{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
+        });
 
-        Route::get('products/{product}/photos', [ProductPhotoController::class, 'index']);
-        Route::post('products/{product}/photos', [ProductPhotoController::class, 'store']);
-        Route::delete('products/{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
-
-        Route::get('inventory-logs', [InventoryLogController::class, 'index']);
-
-        Route::apiResource('tenants', TenantController::class)->only(['update']);
-
-        Route::get('warehouses', [WarehouseController::class, 'index']);
-
+        // Inventario
         Route::prefix('inventory')->group(function () {
+            Route::get('logs', [InventoryLogController::class, 'index']);
             Route::post('adjust', [InventoryController::class, 'adjustStock']);
             Route::get('stock', [InventoryController::class, 'getStock']);
         });
+
+        // Tenants y Warehouses
+        Route::put('tenants', [TenantController::class, 'update']);
+        Route::get('warehouses', [WarehouseController::class, 'index']);
     });
 });
