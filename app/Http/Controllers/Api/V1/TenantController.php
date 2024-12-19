@@ -30,6 +30,10 @@ class TenantController extends Controller
      * @bodyParam name string required The name of the tenant. Example: "Example Tenant"
      * @bodyParam subdomain string required The subdomain of the tenant. Example: "example"
      * @bodyParam config object The configuration of the tenant.
+     * @bodyParam user object required The administrator user information.
+     * @bodyParam user.name string required The name of the user. Example: "John Doe"
+     * @bodyParam user.email string required The email of the user. Example: "john.doe@example.com"
+     * @bodyParam user.password string required The password of the user. Example: "password123"
      *
      * @response status=201 scenario="success" {
      *   "message": "Tenant created successfully",
@@ -37,7 +41,9 @@ class TenantController extends Controller
      *     "id": 1,
      *     "name": "Example Tenant",
      *     "subdomain": "example",
-     *     "config": {...}
+     *     "config": {...},
+     *     "users": [...],
+     *     "apiKeys": [...]
      *   }
      * }
      *
@@ -54,7 +60,7 @@ class TenantController extends Controller
 
             return response()->json([
                 'message' => 'Tenant created successfully',
-                'data' => $tenant->load(['users', 'warehouses', 'config'])
+                'data' => $tenant->load(['config', 'users', 'apiKeys'])
             ], 201);
         } catch (ValidationException $e) {
             return response()->json([

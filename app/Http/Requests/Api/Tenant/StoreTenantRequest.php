@@ -3,7 +3,6 @@
 namespace App\Http\Requests\Api\Tenant;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Log;
 
 class StoreTenantRequest extends FormRequest
 {
@@ -22,6 +21,10 @@ class StoreTenantRequest extends FormRequest
             'config.company_email' => 'nullable|email',
             'config.whatsapp_number' => 'nullable|string|max:20',
             'config.search_engine_type' => 'nullable|string|max:255',
+            'user.name' => 'required|string|max:255',
+            'user.email' => 'required|email|unique:users,email',
+            'user.password' => 'required|string|min:8',
+            'user.role_id' => 'nullable|exists:roles,id',
         ];
     }
 }

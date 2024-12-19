@@ -52,7 +52,7 @@ endpoints:
         name: description
         description: 'optional The description of the product.'
         required: false
-        example: 'Sed incidunt aut ad dolor adipisci et.'
+        example: 'Dignissimos nihil impedit aut.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -160,7 +160,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       product_name: 'Updated Product'
-      description: 'Sed incidunt aut ad dolor adipisci et.'
+      description: 'Dignissimos nihil impedit aut.'
       base_price: '149.99'
       status: inactive
       unit_of_measure: kg
@@ -203,7 +203,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - a5k183dhaZ46VfPvgeDcbE6
+      - abag6E5dk4v138ehZVfDPc6
     controller: null
     method: null
     route: null

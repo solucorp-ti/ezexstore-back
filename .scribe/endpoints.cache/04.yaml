@@ -90,7 +90,7 @@ endpoints:
         name: per_page
         description: 'Must be at least 1. Must not be greater than 100.'
         required: false
-        example: 25
+        example: 23
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -100,7 +100,7 @@ endpoints:
         name: product_id
         description: 'The <code>id</code> of an existing record in the products table.'
         required: false
-        example: 12
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: warehouse_id
         description: 'The <code>id</code> of an existing record in the warehouses table.'
         required: false
-        example: 1
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: type
         description: ''
         required: false
-        example: order
+        example: restock
         type: string
         enumValues:
           - order
@@ -132,7 +132,7 @@ endpoints:
         name: date_from
         description: 'Must be a valid date.'
         required: false
-        example: '2024-12-19T20:46:04'
+        example: '2024-12-19T21:15:00'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -142,19 +142,19 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after or equal to <code>date_from</code>.'
         required: false
-        example: '2115-01-24'
+        example: '2055-07-17'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      per_page: 25
-      product_id: 12
-      warehouse_id: 1
-      type: order
-      date_from: '2024-12-19T20:46:04'
-      date_to: '2115-01-24'
+      per_page: 23
+      product_id: 2
+      warehouse_id: 5
+      type: restock
+      date_from: '2024-12-19T21:15:00'
+      date_to: '2055-07-17'
     fileParameters: []
     responses:
       -
@@ -198,7 +198,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - vgDahca34efdEkb6Z81V5P6
+      - a3ge1ZhP48vDa65Vdk6cfEb
     controller: null
     method: null
     route: null

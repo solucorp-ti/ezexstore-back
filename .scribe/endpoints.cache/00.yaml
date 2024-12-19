@@ -63,7 +63,7 @@ endpoints:
         name: config.logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'https://www.dickinson.info/fugit-ratione-sequi-dolor-expedita-cum-nulla'
+        example: 'http://bruen.com/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -73,7 +73,7 @@ endpoints:
         name: config.company_name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: ndktapblhyjqz
+        example: qdhkskkgwxlbtjfnkeplvr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -83,7 +83,7 @@ endpoints:
         name: config.company_email
         description: 'Must be a valid email address.'
         required: false
-        example: adah19@example.com
+        example: ubauch@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -93,7 +93,7 @@ endpoints:
         name: config.whatsapp_number
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: pqbdpefca
+        example: vdjjrpoudcfchfzofdc
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,7 +103,57 @@ endpoints:
         name: config.search_engine_type
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: xczrppbnqqgawzghwvtazlsyv
+        example: hhlkptrrsdpma
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      user:
+        name: user
+        description: 'The administrator user information.'
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      user.name:
+        name: user.name
+        description: 'The name of the user.'
+        required: true
+        example: '"John Doe"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user.email:
+        name: user.email
+        description: 'The email of the user.'
+        required: true
+        example: '"john.doe@example.com"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user.password:
+        name: user.password
+        description: 'The password of the user.'
+        required: true
+        example: '"password123"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      user.role_id:
+        name: user.role_id
+        description: 'The <code>id</code> of an existing record in the roles table.'
+        required: false
+        example: null
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -113,11 +163,15 @@ endpoints:
       name: '"Example Tenant"'
       subdomain: '"example"'
       config:
-        logo_url: 'https://www.dickinson.info/fugit-ratione-sequi-dolor-expedita-cum-nulla'
-        company_name: ndktapblhyjqz
-        company_email: adah19@example.com
-        whatsapp_number: pqbdpefca
-        search_engine_type: xczrppbnqqgawzghwvtazlsyv
+        logo_url: 'http://bruen.com/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima'
+        company_name: qdhkskkgwxlbtjfnkeplvr
+        company_email: ubauch@example.net
+        whatsapp_number: vdjjrpoudcfchfzofdc
+        search_engine_type: hhlkptrrsdpma
+      user:
+        name: '"John Doe"'
+        email: '"john.doe@example.com"'
+        password: '"password123"'
     fileParameters: []
     responses:
       -
@@ -129,7 +183,9 @@ endpoints:
               "id": 1,
               "name": "Example Tenant",
               "subdomain": "example",
-              "config": {...}
+              "config": {...},
+              "users": [...],
+              "apiKeys": [...]
             }
           }
         headers: []
@@ -149,7 +205,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - c43VZfvaEP651h68ebkdaDg
+      - c8Vh5D6agk63bvE1fZ4aePd
     controller: null
     method: null
     route: null
@@ -204,7 +260,7 @@ endpoints:
         name: config.logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'http://www.lueilwitz.com/dicta-est-labore-doloremque-at.html'
+        example: 'http://www.mraz.org/ipsam-voluptate-quia-labore-laboriosam-sint-provident'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -214,7 +270,7 @@ endpoints:
         name: config.company_name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: nnburvixitjfrdgexjx
+        example: lfggnzlfaaggvmmuwgkf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -224,7 +280,7 @@ endpoints:
         name: config.company_email
         description: 'Must be a valid email address.'
         required: false
-        example: gust25@example.net
+        example: lueilwitz.sanford@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -234,7 +290,7 @@ endpoints:
         name: config.whatsapp_number
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: viibcpntxvulur
+        example: yoqfdtemzr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -244,7 +300,7 @@ endpoints:
         name: config.search_engine_type
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: imqbucmkoqszwomfoiaslfb
+        example: jygye
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -272,11 +328,11 @@ endpoints:
         custom: []
     cleanBodyParameters:
       config:
-        logo_url: 'http://www.lueilwitz.com/dicta-est-labore-doloremque-at.html'
-        company_name: nnburvixitjfrdgexjx
-        company_email: gust25@example.net
-        whatsapp_number: viibcpntxvulur
-        search_engine_type: imqbucmkoqszwomfoiaslfb
+        logo_url: 'http://www.mraz.org/ipsam-voluptate-quia-labore-laboriosam-sint-provident'
+        company_name: lfggnzlfaaggvmmuwgkf
+        company_email: lueilwitz.sanford@example.com
+        whatsapp_number: yoqfdtemzr
+        search_engine_type: jygye
       name: '"Updated Tenant"'
       subdomain: '"updated"'
     fileParameters: []
@@ -310,7 +366,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - PZDe8d16g6vaVEhf3c4bka5
+      - c6g5DavVPZb1Ek43dfea86h
     controller: null
     method: null
     route: null

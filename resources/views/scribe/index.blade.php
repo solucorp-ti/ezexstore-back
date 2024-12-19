@@ -844,7 +844,7 @@
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Sed incidunt aut ad dolor adipisci et.
+                        Dignissimos nihil impedit aut.
                     </div>
                 </div>
             </div>
@@ -1258,7 +1258,7 @@
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "product_name": "Updated Product",
-    "description": "Sed incidunt aut ad dolor adipisci et.",
+    "description": "Dignissimos nihil impedit aut.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -1367,7 +1367,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"product_name\": \"Updated Product\",
-    \"description\": \"Sed incidunt aut ad dolor adipisci et.\",
+    \"description\": \"Dignissimos nihil impedit aut.\",
     \"base_price\": \"149.99\",
     \"status\": \"inactive\",
     \"unit_of_measure\": \"kg\",
@@ -1398,7 +1398,7 @@ const headers = {
 
 let body = {
     "product_name": "Updated Product",
-    "description": "Sed incidunt aut ad dolor adipisci et.",
+    "description": "Dignissimos nihil impedit aut.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -1434,7 +1434,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'product_name' =&gt; 'Updated Product',
-            'description' =&gt; 'Sed incidunt aut ad dolor adipisci et.',
+            'description' =&gt; 'Dignissimos nihil impedit aut.',
             'base_price' =&gt; '149.99',
             'status' =&gt; 'inactive',
             'unit_of_measure' =&gt; 'kg',
@@ -3696,7 +3696,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        25
+                        23
                     </div>
                 </div>
             </div>
@@ -3721,7 +3721,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        12
+                        2
                     </div>
                 </div>
             </div>
@@ -3746,7 +3746,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        1
+                        5
                     </div>
                 </div>
             </div>
@@ -3770,7 +3770,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        order
+                        restock
                     </div>
                 </div>
             </div>
@@ -3795,7 +3795,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2024-12-19T20:46:04
+                        2024-12-19T21:15:00
                     </div>
                 </div>
             </div>
@@ -3820,7 +3820,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2115-01-24
+                        2055-07-17
                     </div>
                 </div>
             </div>
@@ -4036,12 +4036,12 @@ These logs include changes in inventory, restocks, orders, and other related eve
                                      id="json-body-GETapi-v1-inventory-logs"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "per_page": 25,
-    "product_id": 12,
-    "warehouse_id": 1,
-    "type": "order",
-    "date_from": "2024-12-19T20:46:04",
-    "date_to": "2115-01-24"
+    "per_page": 23,
+    "product_id": 2,
+    "warehouse_id": 5,
+    "type": "restock",
+    "date_from": "2024-12-19T21:15:00",
+    "date_to": "2055-07-17"
 }</div>
                             </div>
                                             </div>
@@ -4139,12 +4139,12 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"per_page\": 25,
-    \"product_id\": 12,
-    \"warehouse_id\": 1,
-    \"type\": \"order\",
-    \"date_from\": \"2024-12-19T20:46:04\",
-    \"date_to\": \"2115-01-24\"
+    \"per_page\": 23,
+    \"product_id\": 2,
+    \"warehouse_id\": 5,
+    \"type\": \"restock\",
+    \"date_from\": \"2024-12-19T21:15:00\",
+    \"date_to\": \"2055-07-17\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -4174,12 +4174,12 @@ const headers = {
 };
 
 let body = {
-    "per_page": 25,
-    "product_id": 12,
-    "warehouse_id": 1,
-    "type": "order",
-    "date_from": "2024-12-19T20:46:04",
-    "date_to": "2115-01-24"
+    "per_page": 23,
+    "product_id": 2,
+    "warehouse_id": 5,
+    "type": "restock",
+    "date_from": "2024-12-19T21:15:00",
+    "date_to": "2055-07-17"
 };
 
 fetch(url, {
@@ -4211,12 +4211,12 @@ $response = $client-&gt;get(
             'per_page' =&gt; '10',
         ],
         'json' =&gt; [
-            'per_page' =&gt; 25,
-            'product_id' =&gt; 12,
-            'warehouse_id' =&gt; 1,
-            'type' =&gt; 'order',
-            'date_from' =&gt; '2024-12-19T20:46:04',
-            'date_to' =&gt; '2115-01-24',
+            'per_page' =&gt; 23,
+            'product_id' =&gt; 2,
+            'warehouse_id' =&gt; 5,
+            'type' =&gt; 'restock',
+            'date_from' =&gt; '2024-12-19T21:15:00',
+            'date_to' =&gt; '2055-07-17',
         ],
     ]
 );
@@ -5511,7 +5511,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        corrupti
+                        excepturi
                     </div>
                 </div>
             </div>
@@ -5680,7 +5680,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="photo" name="photo"
                                                id="urlparam-DELETEapi-v1-products--product_id--photos--photo--photo"
                                                placeholder="The photo."
-                                               value="corrupti" data-component="url"
+                                               value="excepturi" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5789,7 +5789,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://backend.ezexstore.com/api/v1/products/1/photos/corrupti" \
+    "https://backend.ezexstore.com/api/v1/products/1/photos/excepturi" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -5800,7 +5800,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://backend.ezexstore.com/api/v1/products/1/photos/corrupti"
+    "https://backend.ezexstore.com/api/v1/products/1/photos/excepturi"
 );
 
 const headers = {
@@ -5820,7 +5820,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'https://backend.ezexstore.com/api/v1/products/1/photos/corrupti';
+$url = 'https://backend.ezexstore.com/api/v1/products/1/photos/excepturi';
 $response = $client-&gt;delete(
     $url,
     [
@@ -6105,7 +6105,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        https://www.dickinson.info/fugit-ratione-sequi-dolor-expedita-cum-nulla
+                        http://bruen.com/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima
                     </div>
                 </div>
             </div>
@@ -6130,7 +6130,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ndktapblhyjqz
+                        qdhkskkgwxlbtjfnkeplvr
                     </div>
                 </div>
             </div>
@@ -6155,7 +6155,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        adah19@example.com
+                        ubauch@example.net
                     </div>
                 </div>
             </div>
@@ -6180,7 +6180,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        pqbdpefca
+                        vdjjrpoudcfchfzofdc
                     </div>
                 </div>
             </div>
@@ -6205,11 +6205,138 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        xczrppbnqqgawzghwvtazlsyv
+                        hhlkptrrsdpma
                     </div>
                 </div>
             </div>
             </div>
+</div>
+
+            </div>
+            </div>
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2  sl-cursor-pointer ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                            <div class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted expansion-chevrons" role="button">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                         class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon" role="img"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                    </svg>
+                </div>
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">user</div>
+                                            <span class="sl-truncate sl-text-muted">object</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The administrator user information.</p>
+        </div>
+                                    </div>
+</div>
+
+                    <div class="children" style="display: none;">
+                <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The name of the user.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        &quot;John Doe&quot;
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">email</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The email of the user.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        &quot;john.doe@example.com&quot;
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">password</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The password of the user.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        &quot;password123&quot;
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">role_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The <code>id</code> of an existing record in the roles table.</p>
+        </div>
+                                    </div>
 </div>
 
             </div>
@@ -6340,11 +6467,17 @@ print_r(json_decode((string) $body));</code></pre>                              
     "name": "\"Example Tenant\"",
     "subdomain": "\"example\"",
     "config": {
-        "logo_url": "https:\/\/www.dickinson.info\/fugit-ratione-sequi-dolor-expedita-cum-nulla",
-        "company_name": "ndktapblhyjqz",
-        "company_email": "adah19@example.com",
-        "whatsapp_number": "pqbdpefca",
-        "search_engine_type": "xczrppbnqqgawzghwvtazlsyv"
+        "logo_url": "http:\/\/bruen.com\/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima",
+        "company_name": "qdhkskkgwxlbtjfnkeplvr",
+        "company_email": "ubauch@example.net",
+        "whatsapp_number": "vdjjrpoudcfchfzofdc",
+        "search_engine_type": "hhlkptrrsdpma"
+    },
+    "user": {
+        "name": "\"John Doe\"",
+        "email": "\"john.doe@example.com\"",
+        "password": "\"password123\"",
+        "role_id": null
     }
 }</div>
                             </div>
@@ -6446,11 +6579,16 @@ You can check the Dev Tools console for debugging information.</p>
     \"name\": \"\\\"Example Tenant\\\"\",
     \"subdomain\": \"\\\"example\\\"\",
     \"config\": {
-        \"logo_url\": \"https:\\/\\/www.dickinson.info\\/fugit-ratione-sequi-dolor-expedita-cum-nulla\",
-        \"company_name\": \"ndktapblhyjqz\",
-        \"company_email\": \"adah19@example.com\",
-        \"whatsapp_number\": \"pqbdpefca\",
-        \"search_engine_type\": \"xczrppbnqqgawzghwvtazlsyv\"
+        \"logo_url\": \"http:\\/\\/bruen.com\\/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima\",
+        \"company_name\": \"qdhkskkgwxlbtjfnkeplvr\",
+        \"company_email\": \"ubauch@example.net\",
+        \"whatsapp_number\": \"vdjjrpoudcfchfzofdc\",
+        \"search_engine_type\": \"hhlkptrrsdpma\"
+    },
+    \"user\": {
+        \"name\": \"\\\"John Doe\\\"\",
+        \"email\": \"\\\"john.doe@example.com\\\"\",
+        \"password\": \"\\\"password123\\\"\"
     }
 }"
 </code></pre>                                        </div>
@@ -6474,11 +6612,16 @@ let body = {
     "name": "\"Example Tenant\"",
     "subdomain": "\"example\"",
     "config": {
-        "logo_url": "https:\/\/www.dickinson.info\/fugit-ratione-sequi-dolor-expedita-cum-nulla",
-        "company_name": "ndktapblhyjqz",
-        "company_email": "adah19@example.com",
-        "whatsapp_number": "pqbdpefca",
-        "search_engine_type": "xczrppbnqqgawzghwvtazlsyv"
+        "logo_url": "http:\/\/bruen.com\/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima",
+        "company_name": "qdhkskkgwxlbtjfnkeplvr",
+        "company_email": "ubauch@example.net",
+        "whatsapp_number": "vdjjrpoudcfchfzofdc",
+        "search_engine_type": "hhlkptrrsdpma"
+    },
+    "user": {
+        "name": "\"John Doe\"",
+        "email": "\"john.doe@example.com\"",
+        "password": "\"password123\""
     }
 };
 
@@ -6507,11 +6650,16 @@ $response = $client-&gt;post(
             'name' =&gt; '"Example Tenant"',
             'subdomain' =&gt; '"example"',
             'config' =&gt; [
-                'logo_url' =&gt; 'https://www.dickinson.info/fugit-ratione-sequi-dolor-expedita-cum-nulla',
-                'company_name' =&gt; 'ndktapblhyjqz',
-                'company_email' =&gt; 'adah19@example.com',
-                'whatsapp_number' =&gt; 'pqbdpefca',
-                'search_engine_type' =&gt; 'xczrppbnqqgawzghwvtazlsyv',
+                'logo_url' =&gt; 'http://bruen.com/cumque-mollitia-nam-et-veniam-omnis-et-nesciunt-minima',
+                'company_name' =&gt; 'qdhkskkgwxlbtjfnkeplvr',
+                'company_email' =&gt; 'ubauch@example.net',
+                'whatsapp_number' =&gt; 'vdjjrpoudcfchfzofdc',
+                'search_engine_type' =&gt; 'hhlkptrrsdpma',
+            ],
+            'user' =&gt; [
+                'name' =&gt; '"John Doe"',
+                'email' =&gt; '"john.doe@example.com"',
+                'password' =&gt; '"password123"',
             ],
         ],
     ]
@@ -6562,7 +6710,9 @@ print_r(json_decode((string) $body));</code></pre>                              
     &quot;id&quot;: 1,
     &quot;name&quot;: &quot;Example Tenant&quot;,
     &quot;subdomain&quot;: &quot;example&quot;,
-    &quot;config&quot;: {...}
+    &quot;config&quot;: {...},
+    &quot;users&quot;: [...],
+    &quot;apiKeys&quot;: [...]
   }
 }</code></pre>
                                                                             </div>
@@ -6768,7 +6918,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        http://www.lueilwitz.com/dicta-est-labore-doloremque-at.html
+                        http://www.mraz.org/ipsam-voluptate-quia-labore-laboriosam-sint-provident
                     </div>
                 </div>
             </div>
@@ -6793,7 +6943,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        nnburvixitjfrdgexjx
+                        lfggnzlfaaggvmmuwgkf
                     </div>
                 </div>
             </div>
@@ -6818,7 +6968,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        gust25@example.net
+                        lueilwitz.sanford@example.com
                     </div>
                 </div>
             </div>
@@ -6843,7 +6993,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        viibcpntxvulur
+                        yoqfdtemzr
                     </div>
                 </div>
             </div>
@@ -6868,7 +7018,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        imqbucmkoqszwomfoiaslfb
+                        jygye
                     </div>
                 </div>
             </div>
@@ -7084,11 +7234,11 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "config": {
-        "logo_url": "http:\/\/www.lueilwitz.com\/dicta-est-labore-doloremque-at.html",
-        "company_name": "nnburvixitjfrdgexjx",
-        "company_email": "gust25@example.net",
-        "whatsapp_number": "viibcpntxvulur",
-        "search_engine_type": "imqbucmkoqszwomfoiaslfb"
+        "logo_url": "http:\/\/www.mraz.org\/ipsam-voluptate-quia-labore-laboriosam-sint-provident",
+        "company_name": "lfggnzlfaaggvmmuwgkf",
+        "company_email": "lueilwitz.sanford@example.com",
+        "whatsapp_number": "yoqfdtemzr",
+        "search_engine_type": "jygye"
     },
     "name": "\"Updated Tenant\"",
     "subdomain": "\"updated\""
@@ -7190,11 +7340,11 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"config\": {
-        \"logo_url\": \"http:\\/\\/www.lueilwitz.com\\/dicta-est-labore-doloremque-at.html\",
-        \"company_name\": \"nnburvixitjfrdgexjx\",
-        \"company_email\": \"gust25@example.net\",
-        \"whatsapp_number\": \"viibcpntxvulur\",
-        \"search_engine_type\": \"imqbucmkoqszwomfoiaslfb\"
+        \"logo_url\": \"http:\\/\\/www.mraz.org\\/ipsam-voluptate-quia-labore-laboriosam-sint-provident\",
+        \"company_name\": \"lfggnzlfaaggvmmuwgkf\",
+        \"company_email\": \"lueilwitz.sanford@example.com\",
+        \"whatsapp_number\": \"yoqfdtemzr\",
+        \"search_engine_type\": \"jygye\"
     },
     \"name\": \"\\\"Updated Tenant\\\"\",
     \"subdomain\": \"\\\"updated\\\"\"
@@ -7218,11 +7368,11 @@ const headers = {
 
 let body = {
     "config": {
-        "logo_url": "http:\/\/www.lueilwitz.com\/dicta-est-labore-doloremque-at.html",
-        "company_name": "nnburvixitjfrdgexjx",
-        "company_email": "gust25@example.net",
-        "whatsapp_number": "viibcpntxvulur",
-        "search_engine_type": "imqbucmkoqszwomfoiaslfb"
+        "logo_url": "http:\/\/www.mraz.org\/ipsam-voluptate-quia-labore-laboriosam-sint-provident",
+        "company_name": "lfggnzlfaaggvmmuwgkf",
+        "company_email": "lueilwitz.sanford@example.com",
+        "whatsapp_number": "yoqfdtemzr",
+        "search_engine_type": "jygye"
     },
     "name": "\"Updated Tenant\"",
     "subdomain": "\"updated\""
@@ -7251,11 +7401,11 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'config' =&gt; [
-                'logo_url' =&gt; 'http://www.lueilwitz.com/dicta-est-labore-doloremque-at.html',
-                'company_name' =&gt; 'nnburvixitjfrdgexjx',
-                'company_email' =&gt; 'gust25@example.net',
-                'whatsapp_number' =&gt; 'viibcpntxvulur',
-                'search_engine_type' =&gt; 'imqbucmkoqszwomfoiaslfb',
+                'logo_url' =&gt; 'http://www.mraz.org/ipsam-voluptate-quia-labore-laboriosam-sint-provident',
+                'company_name' =&gt; 'lfggnzlfaaggvmmuwgkf',
+                'company_email' =&gt; 'lueilwitz.sanford@example.com',
+                'whatsapp_number' =&gt; 'yoqfdtemzr',
+                'search_engine_type' =&gt; 'jygye',
             ],
             'name' =&gt; '"Updated Tenant"',
             'subdomain' =&gt; '"updated"',

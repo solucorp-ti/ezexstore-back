@@ -81,7 +81,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - daPkaZf68DVvec3hE4g1b56
+      - P1D8Egefca6563ahkd4bZVv
     controller: null
     method: null
     route: null
@@ -166,7 +166,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - v5ZdgEP4618aDehf3a6Vcbk
+      - e4fZ136b6aPhkDEagVc58vd
     controller: null
     method: null
     route: null
@@ -205,7 +205,7 @@ endpoints:
         name: photo
         description: 'The photo.'
         required: true
-        example: corrupti
+        example: excepturi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -223,7 +223,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       product_id: 1
-      photo: corrupti
+      photo: excepturi
       photoId: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -255,7 +255,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - k6vD5Zfa8bVd6ga4PE1eh3c
+      - kfVh3Pd84b6eg1ZvaE6cDa5
     controller: null
     method: null
     route: null
