@@ -1,13 +1,13 @@
 <?php
 
-use App\Http\Controllers\Api\TestController;
+use App\Http\Controllers\Api\V1\InventoryLogController;
+use App\Http\Controllers\Api\V1\ProductPhotoController;
+use App\Http\Controllers\Api\V1\InventoryController;
+use App\Http\Controllers\Api\V1\ProductController;
+use App\Http\Controllers\Api\V1\TenantController;
+use App\Http\Controllers\Api\V1\TestController;
+use App\Http\Controllers\Api\V1\WarehouseController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\ProductController;
-use App\Http\Controllers\Api\InventoryController;
-use App\Http\Controllers\Api\WarehouseController;
-use App\Http\Controllers\Api\TenantController;
-use App\Http\Controllers\Api\ProductPhotoController;
-use App\Http\Controllers\Api\InventoryLogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,25 +20,29 @@ use App\Http\Controllers\Api\InventoryLogController;
 |
 */
 
-Route::middleware('api.key')->prefix('v1')->group(function () {
-    Route::get('/test', [TestController::class, 'testConnection']);
+Route::prefix('v1')->group(function () {
 
-    // Rutas de productos
-    Route::apiResource('products', ProductController::class);
+    Route::post('tenants', [TenantController::class, 'store']);
 
-    Route::get('products/{product}/photos', [ProductPhotoController::class, 'index']);
-    Route::post('products/{product}/photos', [ProductPhotoController::class, 'store']);
-    Route::delete('products/{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
+    Route::middleware('api.key')->group(function () {
 
-    Route::get('inventory-logs', [InventoryLogController::class, 'index']);
+        Route::get('/test', [TestController::class, 'testConnection']);
 
-    Route::apiResource('tenants', TenantController::class)->only(['store', 'update']);
+        Route::put('products', [ProductController::class, 'update']);
 
-    Route::get('warehouses', [WarehouseController::class, 'index']);
+        Route::get('products/{product}/photos', [ProductPhotoController::class, 'index']);
+        Route::post('products/{product}/photos', [ProductPhotoController::class, 'store']);
+        Route::delete('products/{product}/photos/{photo}', [ProductPhotoController::class, 'destroy']);
 
-    // Rutas de inventario
-    Route::prefix('inventory')->group(function () {
-        Route::post('adjust', [InventoryController::class, 'adjustStock']);
-        Route::get('stock', [InventoryController::class, 'getStock']);
+        Route::get('inventory-logs', [InventoryLogController::class, 'index']);
+
+        Route::apiResource('tenants', TenantController::class)->only(['update']);
+
+        Route::get('warehouses', [WarehouseController::class, 'index']);
+
+        Route::prefix('inventory')->group(function () {
+            Route::post('adjust', [InventoryController::class, 'adjustStock']);
+            Route::get('stock', [InventoryController::class, 'getStock']);
+        });
     });
 });

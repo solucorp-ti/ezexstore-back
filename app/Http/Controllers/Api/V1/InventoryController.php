@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\V1;
 
+use App\Exceptions\InventoryException;
+use App\Http\Controllers\Api\BaseApiController;
 use App\Services\Interfaces\InventoryServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Exceptions\InventoryException;
 use Illuminate\Validation\Rule;
 
 /**
  * @group Inventory
- * 
+ *
  * APIs for managing product inventory and stock movements
  */
 class InventoryController extends BaseApiController
@@ -24,17 +25,17 @@ class InventoryController extends BaseApiController
 
     /**
      * Adjust Stock
-     * 
+     *
      * Adjusts the stock quantity of a product in a specific warehouse.
      * Use type 'restock' to add inventory or 'order' to reduce it.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @bodyParam product_id integer required The ID of the product. Example: 1
      * @bodyParam warehouse_id integer required The ID of the warehouse. Example: 1
      * @bodyParam quantity integer required The quantity to adjust (must be positive). Example: 10
      * @bodyParam type string required The type of adjustment (order, restock). Example: restock
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": {
@@ -46,7 +47,7 @@ class InventoryController extends BaseApiController
      *   },
      *   "message": "Stock adjusted successfully"
      * }
-     * 
+     *
      * @response status=400 scenario="insufficient stock" {
      *   "success": false,
      *   "message": "Insufficient stock. Available: 5, Required: 10",
@@ -57,7 +58,7 @@ class InventoryController extends BaseApiController
      *     "missing_stock": 5
      *   }
      * }
-     * 
+     *
      * @response status=400 scenario="invalid ownership" {
      *   "success": false,
      *   "message": "Invalid product or warehouse for this tenant",
@@ -113,14 +114,14 @@ class InventoryController extends BaseApiController
 
     /**
      * Get Current Stock
-     * 
+     *
      * Returns the current stock quantity of a product in a specific warehouse.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @bodyParam product_id integer required The ID of the product. Example: 1
      * @bodyParam warehouse_id integer required The ID of the warehouse. Example: 1
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": {
@@ -128,7 +129,7 @@ class InventoryController extends BaseApiController
      *   },
      *   "message": "Stock retrieved successfully"
      * }
-     * 
+     *
      * @response status=422 scenario="validation error" {
      *   "success": false,
      *   "message": "The product id field is required."

@@ -1,0 +1,216 @@
+name: Inventory
+description: |-
+
+  APIs for managing product inventory and stock movements
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/inventory/adjust
+    metadata:
+      groupName: Inventory
+      groupDescription: |-
+
+        APIs for managing product inventory and stock movements
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Adjust Stock'
+      description: |-
+        Adjusts the stock quantity of a product in a specific warehouse.
+        Use type 'restock' to add inventory or 'order' to reduce it.
+      authenticated: true
+      custom: []
+    headers:
+      X-API-KEY: '{YOUR_API_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      warehouse_id:
+        name: warehouse_id
+        description: 'The ID of the warehouse.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      quantity:
+        name: quantity
+        description: 'The quantity to adjust (must be positive).'
+        required: true
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      type:
+        name: type
+        description: 'The type of adjustment (order, restock).'
+        required: true
+        example: restock
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      product_id: 1
+      warehouse_id: 1
+      quantity: 10
+      type: restock
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": true,
+            "data": {
+              "product_id": 1,
+              "warehouse_id": 1,
+              "quantity": 10,
+              "type": "restock",
+              "created_at": "2024-12-18T00:00:00.000000Z"
+            },
+            "message": "Stock adjusted successfully"
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+            "success": false,
+            "message": "Insufficient stock. Available: 5, Required: 10",
+            "error_code": "insufficient_stock",
+            "details": {
+              "current_stock": 5,
+              "required_stock": 10,
+              "missing_stock": 5
+            }
+          }
+        headers: []
+        description: 'insufficient stock'
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+            "success": false,
+            "message": "Invalid product or warehouse for this tenant",
+            "error_code": "invalid_ownership",
+            "details": {
+              "product_exists": false,
+              "warehouse_exists": true
+            }
+          }
+        headers: []
+        description: 'invalid ownership'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - X-API-KEY
+      - fVcagZ4d68vDbk6E3haPe15
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/inventory/stock
+    metadata:
+      groupName: Inventory
+      groupDescription: |-
+
+        APIs for managing product inventory and stock movements
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Current Stock'
+      description: 'Returns the current stock quantity of a product in a specific warehouse.'
+      authenticated: true
+      custom: []
+    headers:
+      X-API-KEY: '{YOUR_API_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      warehouse_id:
+        name: warehouse_id
+        description: 'The ID of the warehouse.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      product_id: 1
+      warehouse_id: 1
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": true,
+            "data": {
+              "stock": 15
+            },
+            "message": "Stock retrieved successfully"
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "success": false,
+            "message": "The product id field is required."
+          }
+        headers: []
+        description: 'validation error'
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - X-API-KEY
+      - v4dha8gbZk3a16DcEf6Pe5V
+    controller: null
+    method: null
+    route: null
+    custom: []

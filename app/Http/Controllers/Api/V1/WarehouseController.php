@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Controllers\Api\BaseApiController;
 use App\Repositories\Interfaces\WarehouseRepositoryInterface;
 use Illuminate\Http\Request;
 
 /**
  * @group Warehouses
- * 
+ *
  * APIs for managing tenant warehouses
  */
 class WarehouseController extends BaseApiController
@@ -21,11 +22,11 @@ class WarehouseController extends BaseApiController
 
     /**
      * List Warehouses
-     * 
+     *
      * Returns a list of all warehouses belonging to the authenticated tenant.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": [
@@ -40,7 +41,7 @@ class WarehouseController extends BaseApiController
      *   ],
      *   "message": "Warehouses retrieved successfully"
      * }
-     * 
+     *
      * @response status=401 scenario="unauthorized" {
      *   "success": false,
      *   "message": "Invalid API key"

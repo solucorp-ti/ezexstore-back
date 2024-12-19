@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Controllers\Api\BaseApiController;
 use Illuminate\Http\Request;
 
 /**
@@ -13,7 +14,7 @@ class TestController extends BaseApiController
 {
     /**
      * Test API Connection
-     * 
+     *
      * Returns basic information about the authenticated tenant and user to verify API connectivity.
      *
      * @header X-API-KEY required The API key for authentication
@@ -35,7 +36,7 @@ class TestController extends BaseApiController
      *   },
      *   "message": "API connection successful"
      * }
-     * 
+     *
      * @response status=401 scenario="invalid api key" {
      *   "success": false,
      *   "message": "Invalid API key"

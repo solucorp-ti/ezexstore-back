@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Controllers\Api\BaseApiController;
 use App\Services\Interfaces\ProductServiceInterface;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
-use Illuminate\Http\JsonResponse;
 
 /**
  * @group Products
- * 
+ *
  * APIs for managing products in the tenant's catalog
  */
 class ProductController extends BaseApiController
@@ -23,11 +24,11 @@ class ProductController extends BaseApiController
     }
     /**
      * List Products
-     * 
+     *
      * Returns a list of all products belonging to the authenticated tenant.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": [
@@ -58,7 +59,7 @@ class ProductController extends BaseApiController
             $request->tenant->id,
             $request->input('per_page')
         );
-    
+
         return response()->json([
             'success' => true,
             'data' => $products->items(),
@@ -98,11 +99,11 @@ class ProductController extends BaseApiController
 
     /**
      * Create Product
-     * 
+     *
      * Creates a new product for the authenticated tenant.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @bodyParam product_name string required The name of the product. Example: Test Product
      * @bodyParam description string optional The description of the product. Example: A test product description
      * @bodyParam base_price numeric required The base price of the product. Example: 99.99
@@ -115,7 +116,7 @@ class ProductController extends BaseApiController
      * @bodyParam brand string optional The brand of the product. Example: Test Brand
      * @bodyParam family string optional The product family. Example: Test Family
      * @bodyParam line string optional The product line. Example: Test Line
-     * 
+     *
      * @response scenario="success" status=201 {
      *   "success": true,
      *   "data": {
@@ -131,7 +132,7 @@ class ProductController extends BaseApiController
      *   },
      *   "message": "Product created successfully"
      * }
-     * 
+     *
      * @response status=422 scenario="validation error" {
      *   "success": false,
      *   "message": "The product name field is required."
@@ -151,13 +152,13 @@ class ProductController extends BaseApiController
 
     /**
      * Get Product Details
-     * 
+     *
      * Returns detailed information about a specific product.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @urlParam id integer required The ID of the product. Example: 1
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": {
@@ -179,7 +180,7 @@ class ProductController extends BaseApiController
      *   },
      *   "message": "Product retrieved successfully"
      * }
-     * 
+     *
      * @response status=404 scenario="not found" {
      *   "success": false,
      *   "message": "Product not found"
@@ -198,13 +199,13 @@ class ProductController extends BaseApiController
 
     /**
      * Update Product
-     * 
+     *
      * Updates an existing product. All fields are optional for updates.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @urlParam id integer required The ID of the product. Example: 1
-     * 
+     *
      * @bodyParam product_name string optional The name of the product. Example: Updated Product
      * @bodyParam description string optional The description of the product.
      * @bodyParam base_price numeric optional The base price of the product. Example: 149.99
@@ -217,7 +218,7 @@ class ProductController extends BaseApiController
      * @bodyParam brand string optional The brand. Example: New Brand
      * @bodyParam family string optional The product family. Example: New Family
      * @bodyParam line string optional The product line. Example: New Line
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": {
@@ -228,7 +229,7 @@ class ProductController extends BaseApiController
      *   },
      *   "message": "Product updated successfully"
      * }
-     * 
+     *
      * @response status=404 scenario="not found" {
      *   "success": false,
      *   "message": "Product not found"
@@ -253,19 +254,19 @@ class ProductController extends BaseApiController
 
     /**
      * Delete Product
-     * 
+     *
      * Soft deletes a product. The product can be reactivated later by updating its status to active.
      *
      * @header X-API-KEY required The API key for authentication
-     * 
+     *
      * @urlParam id integer required The ID of the product. Example: 1
-     * 
+     *
      * @response scenario="success" {
      *   "success": true,
      *   "data": null,
      *   "message": "Product deleted successfully"
      * }
-     * 
+     *
      * @response status=404 scenario="not found" {
      *   "success": false,
      *   "message": "Product not found"
