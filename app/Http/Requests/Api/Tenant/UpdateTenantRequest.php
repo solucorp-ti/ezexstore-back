@@ -3,26 +3,25 @@
 namespace App\Http\Requests\Api\Tenant;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateTenantRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
-        return false;
+        return true; // Ajustar según tu lógica de autorización
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
-            //
+            'name' => ['sometimes', 'string', 'max:255'],
+            'subdomain' => [
+                'sometimes', 
+                'string', 
+                'max:255',
+                Rule::unique('tenants')->ignore($this->route('tenant'))
+            ]
         ];
     }
 }
