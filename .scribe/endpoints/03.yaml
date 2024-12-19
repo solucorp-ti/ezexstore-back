@@ -52,7 +52,7 @@ endpoints:
         name: description
         description: 'optional The description of the product.'
         required: false
-        example: 'Saepe minima aliquam accusamus non.'
+        example: 'Hic nulla quia perferendis itaque.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -160,7 +160,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       product_name: 'Updated Product'
-      description: 'Saepe minima aliquam accusamus non.'
+      description: 'Hic nulla quia perferendis itaque.'
       base_price: '149.99'
       status: inactive
       unit_of_measure: kg
@@ -203,7 +203,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - Zhe3d51kca68Pav6EgVDfb4
+      - bd15ZeVE8aDc3vP6f6khg4a
     controller: null
     method: null
     route: null

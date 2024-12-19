@@ -1,7 +1,5 @@
 name: Tenants
-description: |-
-
-  APIs for managing tenant information
+description: ''
 endpoints:
   -
     httpMethods:
@@ -9,19 +7,20 @@ endpoints:
     uri: api/v1/tenants
     metadata:
       groupName: Tenants
-      groupDescription: |-
-
-        APIs for managing tenant information
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
       title: 'Create Tenant'
-      description: 'Creates a new tenant with the provided information.'
-      authenticated: true
+      description: |-
+        Creates a new tenant with the provided information. This is a public endpoint.
+
+        No authentication required.
+      authenticated: false
       custom: []
     headers:
-      X-API-KEY: '{YOUR_API_KEY}'
       Content-Type: application/json
       Accept: application/json
+      X-API-KEY: '{YOUR_API_KEY}'
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -81,7 +80,7 @@ endpoints:
         name: config.whatsapp_number
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: kfqyamvchtvyjtut
+        example: npajuut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -153,7 +152,7 @@ endpoints:
       config:
         company_name: '"Example Company"'
         company_email: '"contact@example.com"'
-        whatsapp_number: kfqyamvchtvyjtut
+        whatsapp_number: npajuut
         search_engine_type: '"regular"'
       user:
         name: '"John Doe"'
@@ -209,10 +208,7 @@ endpoints:
         description: 'validation error'
         custom: []
     responseFields: []
-    auth:
-      - headers
-      - X-API-KEY
-      - Vc1EvD4haa6b8P3efg65dZk
+    auth: []
     controller: null
     method: null
     route: null
@@ -223,9 +219,7 @@ endpoints:
     uri: api/v1/tenants
     metadata:
       groupName: Tenants
-      groupDescription: |-
-
-        APIs for managing tenant information
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
       title: 'Update Tenant'
@@ -255,7 +249,7 @@ endpoints:
         name: config.logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'http://bauch.com/laborum-quo-facere-voluptate-quasi'
+        example: 'http://lowe.net/dolor-maxime-quaerat-nihil-praesentium-rerum'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -313,7 +307,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       config:
-        logo_url: 'http://bauch.com/laborum-quo-facere-voluptate-quasi'
+        logo_url: 'http://lowe.net/dolor-maxime-quaerat-nihil-praesentium-rerum'
         company_name: '"Updated Company"'
         company_email: '"new@example.com"'
         whatsapp_number: '"+1234567890"'
@@ -359,7 +353,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - Vac164Z8Pv6akdghDe35Ebf
+      - fD4b668ZkaPVegh3acd5vE1
     controller: null
     method: null
     route: null

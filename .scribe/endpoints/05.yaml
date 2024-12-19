@@ -88,7 +88,7 @@ endpoints:
         name: per_page
         description: 'Must be at least 1. Must not be greater than 100.'
         required: false
-        example: 5
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +98,7 @@ endpoints:
         name: product_id
         description: 'The <code>id</code> of an existing record in the products table.'
         required: false
-        example: 20
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -108,7 +108,7 @@ endpoints:
         name: warehouse_id
         description: 'The <code>id</code> of an existing record in the warehouses table.'
         required: false
-        example: 17
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -130,7 +130,7 @@ endpoints:
         name: date_from
         description: 'Must be a valid date.'
         required: false
-        example: '2024-12-19T23:37:13'
+        example: '2024-12-19T23:49:27'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -140,19 +140,19 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after or equal to <code>date_from</code>.'
         required: false
-        example: '2042-03-24'
+        example: '2049-11-10'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      per_page: 5
-      product_id: 20
-      warehouse_id: 17
+      per_page: 13
+      product_id: 5
+      warehouse_id: 4
       type: order
-      date_from: '2024-12-19T23:37:13'
-      date_to: '2042-03-24'
+      date_from: '2024-12-19T23:49:27'
+      date_to: '2049-11-10'
     fileParameters: []
     responses:
       -
@@ -196,7 +196,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - VvZE8a1ec645Pkdh3bg6fDa
+      - D658ec6aaZbv1gEhfPVk4d3
     controller: null
     method: null
     route: null

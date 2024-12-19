@@ -91,6 +91,7 @@ INTRO
         'default' => 'Endpoints',
         'order' => [
             'Authentication',
+            'Tenants',
             'Products',
             'Inventory',
             'Warehouses'

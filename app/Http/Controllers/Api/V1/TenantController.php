@@ -24,8 +24,13 @@ class TenantController extends Controller
 
     /**
      * Create Tenant
+     * 
+     * Creates a new tenant with the provided information. This is a public endpoint.
+     * 
+     * No authentication required.
      *
-     * Creates a new tenant with the provided information.
+     * @unauthenticated
+     * @group Tenants
      *
      * @bodyParam name string required The name of the tenant. Example: "Example Tenant"
      * @bodyParam subdomain string required The subdomain of the tenant (only lowercase alphanumeric and hyphens). Example: "example"
@@ -103,6 +108,9 @@ class TenantController extends Controller
      * Update Tenant
      *
      * Updates the information of the current tenant. The tenant is identified by the API key.
+     *
+     * @authenticated
+     * @group Tenants
      *
      * @header X-API-KEY required The API key identifies the tenant to update
      *
