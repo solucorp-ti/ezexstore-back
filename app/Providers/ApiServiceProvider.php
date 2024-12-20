@@ -21,12 +21,14 @@ use App\Repositories\{
 use App\Services\Interfaces\{
     ApiKeyServiceInterface,
     InventoryLogServiceInterface,
-    ProductServiceInterface
+    ProductServiceInterface,
+    ProductPhotoServiceInterface
 };
 use App\Services\{
     ApiKeyService,
     InventoryLogService,
-    ProductService
+    ProductService,
+    ProductPhotoService
 };
 use Illuminate\Support\ServiceProvider;
 
@@ -49,5 +51,6 @@ class ApiServiceProvider extends ServiceProvider
         $this->app->bind(ProductRepository::class, function ($app) {
             return new ProductRepository($app->make(\App\Models\Product::class));
         });
+        $this->app->bind(ProductPhotoServiceInterface::class, ProductPhotoService::class);
     }
 }

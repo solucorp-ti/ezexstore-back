@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\BaseApiController;
-use App\Http\Requests\Api\Product\StoreProductPhotoRequest;
 use App\Models\Product;
-use Illuminate\Http\JsonResponse;
+use App\Services\Interfaces\ProductPhotoServiceInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
-
 /**
  * @group Product Photos
  *
@@ -16,6 +15,12 @@ use Illuminate\Support\Facades\Storage;
  */
 class ProductPhotoController extends BaseApiController
 {
+    protected $photoService;
+
+    public function __construct(ProductPhotoServiceInterface $photoService)
+    {
+        $this->photoService = $photoService;
+    }
     /**
      * List Product Photos
      *
@@ -43,22 +48,10 @@ class ProductPhotoController extends BaseApiController
      *   "message": "Product photos retrieved successfully"
      * }
      */
-    public function index(Request $request, Product $product): JsonResponse
+    public function index(Product $product)
     {
-        $photos = $product->photos()
-            ->paginate($request->input('per_page', 15));
-
-        return response()->json([
-            'success' => true,
-            'data' => $photos->items(),
-            'meta' => [
-                'current_page' => $photos->currentPage(),
-                'last_page' => $photos->lastPage(),
-                'per_page' => $photos->perPage(),
-                'total' => $photos->total()
-            ],
-            'message' => 'Product photos retrieved successfully'
-        ]);
+        $photos = $this->photoService->getPhotos($product->id);
+        return $this->successResponse($photos, 'Photos retrieved successfully');
     }
 
     /**
@@ -87,21 +80,22 @@ class ProductPhotoController extends BaseApiController
      *   "message": "The photos field is required."
      * }
      */
-    public function store(StoreProductPhotoRequest $request, Product $product): JsonResponse
+    public function store(Request $request, Product $product)
     {
-        $photos = collect($request->file('photos'))->map(function ($photo) use ($product) {
-            $path = $photo->store("products/$product->id", 'public');
+        $validator = Validator::make($request->all(), [
+            'photo' => 'required|file|image|max:2048|mimes:jpg,jpeg,png,webp',
+        ]);
 
-            return $product->photos()->create([
-                'photo_url' => Storage::url($path)
-            ]);
-        });
+        if ($validator->fails()) {
+            return $this->errorResponse($validator->errors()->first(), 422);
+        }
 
-        return response()->json([
-            'success' => true,
-            'data' => $photos,
-            'message' => 'Photos uploaded successfully'
-        ], 201);
+        try {
+            $photo = $this->photoService->uploadPhoto($product, $request->file('photo'));
+            return $this->successResponse($photo, 'Photo uploaded successfully');
+        } catch (\Exception $e) {
+            return $this->errorResponse('Error uploading photo: ' . $e->getMessage(), 500);
+        }
     }
 
     /**
@@ -123,18 +117,13 @@ class ProductPhotoController extends BaseApiController
      *   "message": "Photo not found"
      * }
      */
-    public function destroy(Product $product, int $photoId): JsonResponse
+    public function destroy(Product $product, $photoId)
     {
-        $photo = $product->photos()->findOrFail($photoId);
-
-        $path = str_replace('/storage/', '', parse_url($photo->photo_url, PHP_URL_PATH));
-        Storage::disk('public')->delete($path);
-
-        $photo->delete();
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Photo deleted successfully'
-        ]);
+        try {
+            $this->photoService->deletePhoto($product->id, $photoId);
+            return $this->successResponse(null, 'Photo deleted successfully');
+        } catch (\Exception $e) {
+            return $this->errorResponse('Error deleting photo: ' . $e->getMessage(), 500);
+        }
     }
 }
