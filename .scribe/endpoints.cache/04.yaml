@@ -88,7 +88,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - bhk1a6PEDc48v36Veg5fdZa
+      - gEdfkaD4vcZ6PabV513eh68
     controller: null
     method: null
     route: null
@@ -209,7 +209,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 54ePgVadE8v1fcZak6D3bh6
+      - 5hE1cPb6Za3dg6VDe4a8vfk
     controller: null
     method: null
     route: null
@@ -248,7 +248,7 @@ endpoints:
         name: photo
         description: 'The photo.'
         required: true
-        example: omnis
+        example: est
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -276,7 +276,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       product_id: 1
-      photo: omnis
+      photo: est
       product: 1
       photoId: 1
     queryParameters: []
@@ -320,7 +320,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - ZhE3b46VgcvaD5ed1ka68fP
+      - bZakd6gf4hD16Vc5EevP3a8
     controller: null
     method: null
     route: null

@@ -7,7 +7,7 @@ return [
 
     'description' => 'API Documentation for EzexStore Backend System',
 
-    'base_url' => env('APP_URL', 'http://ezexstore-back.test'),
+    'base_url' => env('APP_URL', 'https://backend.ezexstore.com'),
 
 
     'routes' => [
@@ -41,7 +41,7 @@ return [
 
     'try_it_out' => [
         'enabled' => true,
-        'base_url' => env('APP_URL', 'http://ezexstore-back.test'),
+        'base_url' => env('APP_URL', 'https://backend.ezexstore.com'),
         'use_csrf' => false,
         'csrf_url' => '/sanctum/csrf-cookie',
     ],

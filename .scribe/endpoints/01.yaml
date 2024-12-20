@@ -80,7 +80,7 @@ endpoints:
         name: config.whatsapp_number
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: z
+        example: epjkxxvtog
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -152,7 +152,7 @@ endpoints:
       config:
         company_name: '"Example Company"'
         company_email: '"contact@example.com"'
-        whatsapp_number: z
+        whatsapp_number: epjkxxvtog
         search_engine_type: '"regular"'
       user:
         name: '"John Doe"'
@@ -320,7 +320,7 @@ endpoints:
         name: config.logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'http://brekke.info/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html'
+        example: 'http://walter.com/'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -378,7 +378,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       config:
-        logo_url: 'http://brekke.info/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html'
+        logo_url: 'http://walter.com/'
         company_name: '"Updated Company"'
         company_email: '"new@example.com"'
         whatsapp_number: '"+1234567890"'
@@ -424,7 +424,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - Pf8avc31EZgDeb6ah46Vd5k
+      - 6da4Zbc1V3Dk5vPEe6gha8f
     controller: null
     method: null
     route: null

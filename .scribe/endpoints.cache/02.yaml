@@ -29,20 +29,20 @@ endpoints:
         name: subdomain
         description: ''
         required: true
-        example: facilis
+        example: voluptatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      subdomain: facilis
+      subdomain: voluptatibus
     queryParameters:
       search:
         name: search
         description: 'Search by name, serial, SKU or part number'
         required: false
-        example: perferendis
+        example: inventore
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -52,7 +52,7 @@ endpoints:
         name: status
         description: 'Filter by status (active, inactive, discontinued)'
         required: false
-        example: accusantium
+        example: beatae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -62,7 +62,7 @@ endpoints:
         name: condition
         description: 'Filter by condition (new, used, discontinued, damaged, refurbished)'
         required: false
-        example: eligendi
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -72,7 +72,7 @@ endpoints:
         name: min_price
         description: 'numeric Minimum price filter'
         required: false
-        example: vitae
+        example: laboriosam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -82,7 +82,7 @@ endpoints:
         name: max_price
         description: 'numeric Maximum price filter'
         required: false
-        example: praesentium
+        example: quae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -92,7 +92,7 @@ endpoints:
         name: in_stock
         description: 'Filter products with stock'
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -109,12 +109,12 @@ endpoints:
         nullable: false
         custom: []
     cleanQueryParameters:
-      search: perferendis
-      status: accusantium
-      condition: eligendi
-      min_price: vitae
-      max_price: praesentium
-      in_stock: true
+      search: inventore
+      status: beatae
+      condition: rerum
+      min_price: laboriosam
+      max_price: quae
+      in_stock: false
       per_page: 15
     bodyParameters: []
     cleanBodyParameters: []
@@ -141,7 +141,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - b64fk35hVav8gEP6aZDd1ce
+      - aa3d6gcve4EPD1f86hbVZk5
     controller: null
     method: null
     route: null
@@ -323,7 +323,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - ae1ck3VbaPZg6dE64h5D8vf
+      - 4Z15bVke8avDd6EPch3a6gf
     controller: null
     method: null
     route: null
@@ -352,7 +352,7 @@ endpoints:
         name: product
         description: 'The product.'
         required: true
-        example: corrupti
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -369,7 +369,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      product: corrupti
+      product: quis
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -416,7 +416,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 4avE8Pca5dh16bge3Df6VZk
+      - 6geZdb5ah816P4VacDEf3vk
     controller: null
     method: null
     route: null
@@ -615,7 +615,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - ah6dkEefb63gDva81Zc54PV
+      - Ef16Vbh35Zvegkca6d84DPa
     controller: null
     method: null
     route: null
@@ -644,7 +644,7 @@ endpoints:
         name: product
         description: 'The product.'
         required: true
-        example: vitae
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -661,7 +661,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      product: vitae
+      product: quis
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -680,7 +680,7 @@ endpoints:
         name: description
         description: 'optional The description of the product.'
         required: false
-        example: 'Velit similique quia facere unde.'
+        example: 'Quas nulla labore qui nesciunt quos tempore.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -788,7 +788,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       product_name: 'Updated Product'
-      description: 'Velit similique quia facere unde.'
+      description: 'Quas nulla labore qui nesciunt quos tempore.'
       base_price: '149.99'
       status: inactive
       unit_of_measure: kg
@@ -831,7 +831,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - a41vfk6dDZPVc3Eg8h6a5be
+      - aDkghEc46eb3v5aV8ZdP1f6
     controller: null
     method: null
     route: null
@@ -860,7 +860,7 @@ endpoints:
         name: product
         description: 'The product.'
         required: true
-        example: eveniet
+        example: molestias
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -877,7 +877,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      product: eveniet
+      product: molestias
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -910,7 +910,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 5fbDaac8hvZkPeg634E1dV6
+      - Pbk3Z8fVdg56aDE4vha6ce1
     controller: null
     method: null
     route: null
