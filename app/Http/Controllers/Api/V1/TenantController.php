@@ -51,7 +51,7 @@ class TenantController extends Controller
      *   "message": "Tenant not found"
      * }
      */
-    public function show(string $subdomain): JsonResponse
+    public function show($subdomain): JsonResponse
     {
         try {
             $tenant = $this->tenantService->findBySubdomain($subdomain);

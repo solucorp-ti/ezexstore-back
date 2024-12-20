@@ -15,7 +15,7 @@ class TenantRepository extends BaseRepository implements TenantRepositoryInterfa
     public function findBySubdomain(string $subdomain)
     {
         return $this->model
-            ->with(['config', 'users', 'apiKeys'])
+            ->with(['config', 'users'])
             ->where('subdomain', $subdomain)
             ->first();
     }

@@ -2,11 +2,8 @@
 
 namespace App\Services;
 
-use App\Models\Product;
 use App\Repositories\ProductRepository;
 use App\Services\Interfaces\ProductServiceInterface;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -19,10 +16,9 @@ class ProductService implements ProductServiceInterface
         $this->repository = $repository;
     }
 
-    public function getProducts(int $tenantId, array $filters = [], ?int $perPage = null): LengthAwarePaginator
+    public function getProducts($tenant, array $filters = [], $perPage = null)
     {
-        $perPage = $perPage ?? config('app.pagination.per_page', 15);
-        return $this->repository->getPaginatedForTenant($tenantId, $filters, $perPage);
+        return $this->repository->getProductsByFilters($filters, $perPage);
     }
 
     public function createProduct(array $data, int $tenantId)

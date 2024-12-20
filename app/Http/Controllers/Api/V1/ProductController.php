@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\BaseApiController;
 use App\Services\Interfaces\ProductServiceInterface;
+use App\Services\TenantService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -17,10 +18,12 @@ use Illuminate\Validation\Rule;
 class ProductController extends BaseApiController
 {
     protected $productService;
+    protected $tenantService;
 
-    public function __construct(ProductServiceInterface $productService)
+    public function __construct(ProductServiceInterface $productService, TenantService $tenantService)
     {
         $this->productService = $productService;
+        $this->tenantService = $tenantService;
     }
 
     private function getValidationRules($productId = null): array
@@ -145,7 +148,7 @@ class ProductController extends BaseApiController
      *   "message": "Products retrieved successfully"
      * }
      */
-    public function index(Request $request): JsonResponse
+    public function index(Request $request, $subdomain): JsonResponse
     {
         $filters = $request->only([
             'search',
@@ -156,10 +159,20 @@ class ProductController extends BaseApiController
             'in_stock'
         ]);
 
+        // Obtener el tenant por subdominio
+        $tenant = $this->tenantService->findBySubdomain($subdomain);
+
+        if (!$tenant || !$tenant->id) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Tenant not found or invalid'
+            ], 404);
+        }
+
         $products = $this->productService->getProducts(
-            $request->tenant->id,
+            $tenant,
             $filters,
-            $request->input('per_page')
+            $request->input('per_page', null)
         );
 
         return response()->json([

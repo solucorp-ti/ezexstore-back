@@ -88,4 +88,21 @@ class ProductRepository
             ->where('serial_number', $serial)
             ->first();
     }
+
+    public function getProductsByFilters(array $filters, ?int $perPage = null): LengthAwarePaginator
+    {
+        $query = $this->model->query();
+
+        // Apply filters to the query
+        $query->when($filters['search'] ?? null, function (Builder $query, string $search) {
+            $query->where(function ($query) use ($search) {
+                $query->where('product_name', 'like', "%{$search}%")
+                    ->orWhere('serial_number', 'like', "%{$search}%")
+                    ->orWhere('sku', 'like', "%{$search}%")
+                    ->orWhere('part_number', 'like', "%{$search}%");
+            });
+        });
+
+        return $query->paginate($perPage ?? config('app.pagination.per_page', 15));
+    }
 }

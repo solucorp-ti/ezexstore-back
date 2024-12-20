@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Tenant;
 use App\Repositories\Interfaces\{
     ApiKeyRepositoryInterface,
     InventoryLogRepositoryInterface,
@@ -22,13 +23,15 @@ use App\Services\Interfaces\{
     ApiKeyServiceInterface,
     InventoryLogServiceInterface,
     ProductServiceInterface,
-    ProductPhotoServiceInterface
+    ProductPhotoServiceInterface,
+    TenantServiceInterface
 };
 use App\Services\{
     ApiKeyService,
     InventoryLogService,
     ProductService,
-    ProductPhotoService
+    ProductPhotoService,
+    TenantService
 };
 use Illuminate\Support\ServiceProvider;
 
@@ -40,6 +43,7 @@ class ApiServiceProvider extends ServiceProvider
         $this->app->bind(ApiKeyServiceInterface::class, ApiKeyService::class);
         $this->app->bind(InventoryLogServiceInterface::class, InventoryLogService::class);
         $this->app->bind(ProductServiceInterface::class, ProductService::class);
+        $this->app->bind(TenantServiceInterface::class, TenantService::class);
 
         // Repositories
         $this->app->bind(ApiKeyRepositoryInterface::class, ApiKeyRepository::class);

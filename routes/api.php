@@ -27,8 +27,9 @@ Route::get('health-check', function () {
 Route::prefix('v1')->middleware(['api', 'json'])->group(function () {
     // Rutas públicas
     Route::post('tenants', [TenantController::class, 'store']);
-    Route::get('tenants/{subdomain}', [TenantController::class, 'show']);
-    
+    Route::get('/{subdomain}/products', [ProductController::class, 'index']);
+    Route::get('tenants', [TenantController::class, 'show']);
+
     // Rutas protegidas
     Route::middleware('api.key')->group(function () {
         // Test
@@ -40,7 +41,6 @@ Route::prefix('v1')->middleware(['api', 'json'])->group(function () {
             Route::post('sync', [ProductController::class, 'syncProduct']); // Crea o actualiza
 
             // Rutas RESTful estándar
-            Route::get('/', [ProductController::class, 'index']);
             Route::get('{product}', [ProductController::class, 'show']);
             Route::post('/', [ProductController::class, 'store']);
             Route::put('{product}', [ProductController::class, 'update']);
