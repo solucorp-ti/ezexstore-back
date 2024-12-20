@@ -4,7 +4,7 @@ use Knuckles\Scribe\Extracting\Strategies;
 
 return [
     'title' => 'EzexStore API Documentation',
-    
+
     'description' => 'API Documentation for EzexStore Backend System',
 
     'base_url' => env('APP_URL', 'http://ezexstore-back.test'),
@@ -23,8 +23,10 @@ return [
     ],
 
     'type' => 'laravel',
-    
+
     'theme' => 'elements',
+
+    'logo' => '/img/logo.png',
 
     'static' => [
         'output_path' => 'public/docs',
@@ -68,8 +70,7 @@ La API utiliza autenticación mediante API Keys y maneja datos específicos por 
 - products:write - Creación/Modificación de productos
 - inventory:read - Consulta de inventario
 - inventory:write - Modificación de inventario
-INTRO
-    ,
+INTRO,
 
     'example_languages' => [
         'bash',
@@ -97,8 +98,6 @@ INTRO
             'Warehouses'
         ],
     ],
-
-    'logo' => false,
 
     'last_updated' => 'Last updated: {date:F j, Y}',
 

@@ -182,7 +182,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - v1DfZPkaVEae3dcb8654h6g
+      - 8aVcbvgZdD1k3f65a4ehEP6
     controller: null
     method: null
     route: null
@@ -213,7 +213,7 @@ endpoints:
         name: search
         description: 'Search by name, serial, SKU or part number'
         required: false
-        example: similique
+        example: numquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -223,7 +223,7 @@ endpoints:
         name: status
         description: 'Filter by status (active, inactive, discontinued)'
         required: false
-        example: id
+        example: corporis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -233,7 +233,7 @@ endpoints:
         name: condition
         description: 'Filter by condition (new, used, discontinued, damaged, refurbished)'
         required: false
-        example: et
+        example: eveniet
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -243,7 +243,7 @@ endpoints:
         name: min_price
         description: 'numeric Minimum price filter'
         required: false
-        example: vero
+        example: suscipit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -253,7 +253,7 @@ endpoints:
         name: max_price
         description: 'numeric Maximum price filter'
         required: false
-        example: voluptatem
+        example: facere
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -280,11 +280,11 @@ endpoints:
         nullable: false
         custom: []
     cleanQueryParameters:
-      search: similique
-      status: id
-      condition: et
-      min_price: vero
-      max_price: voluptatem
+      search: numquam
+      status: corporis
+      condition: eveniet
+      min_price: suscipit
+      max_price: facere
       in_stock: true
       per_page: 15
     bodyParameters: []
@@ -312,7 +312,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - vEkg3ha1b6Z4fd5cDaV8e6P
+      - Z8av6ae3fEc4Pkbd6g1VD5h
     controller: null
     method: null
     route: null
@@ -341,7 +341,7 @@ endpoints:
         name: product
         description: 'The product.'
         required: true
-        example: ut
+        example: a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -358,7 +358,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      product: ut
+      product: a
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -405,7 +405,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - dckhDbEa4V5a1fZP368ev6g
+      - Df4P8aecb6aEV51d3vZhgk6
     controller: null
     method: null
     route: null
@@ -604,7 +604,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - g35vbfkPheadaV6ZD6E184c
+      - vdb5f8ePDEa4636Zchak1gV
     controller: null
     method: null
     route: null
@@ -633,7 +633,7 @@ endpoints:
         name: product
         description: 'The product.'
         required: true
-        example: cumque
+        example: iste
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -650,7 +650,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      product: cumque
+      product: iste
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -669,7 +669,7 @@ endpoints:
         name: description
         description: 'optional The description of the product.'
         required: false
-        example: 'Dignissimos qui dolorum adipisci voluptatem recusandae suscipit.'
+        example: 'Nihil in et et corrupti aperiam repellendus ut.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -777,7 +777,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       product_name: 'Updated Product'
-      description: 'Dignissimos qui dolorum adipisci voluptatem recusandae suscipit.'
+      description: 'Nihil in et et corrupti aperiam repellendus ut.'
       base_price: '149.99'
       status: inactive
       unit_of_measure: kg
@@ -820,7 +820,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - v51PgdahVa64cbDk8Z36feE
+      - 61kD5EfP8bdva3ag4Z6Vche
     controller: null
     method: null
     route: null
@@ -849,7 +849,7 @@ endpoints:
         name: product
         description: 'The product.'
         required: true
-        example: maiores
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -866,7 +866,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      product: maiores
+      product: omnis
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -899,7 +899,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 6dhc3P6veaa1ZVkEf485bDg
+      - hgd14VZf5e8caaDb36P6vEk
     controller: null
     method: null
     route: null

@@ -88,7 +88,7 @@ endpoints:
         name: per_page
         description: 'Must be at least 1. Must not be greater than 100.'
         required: false
-        example: 7
+        example: 21
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -98,7 +98,7 @@ endpoints:
         name: product_id
         description: 'The <code>id</code> of an existing record in the products table.'
         required: false
-        example: 20
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -108,7 +108,7 @@ endpoints:
         name: warehouse_id
         description: 'The <code>id</code> of an existing record in the warehouses table.'
         required: false
-        example: 9
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -130,7 +130,7 @@ endpoints:
         name: date_from
         description: 'Must be a valid date.'
         required: false
-        example: '2024-12-20T00:37:27'
+        example: '2024-12-20T00:48:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -140,19 +140,19 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after or equal to <code>date_from</code>.'
         required: false
-        example: '2026-01-22'
+        example: '2114-01-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      per_page: 7
-      product_id: 20
-      warehouse_id: 9
+      per_page: 21
+      product_id: 19
+      warehouse_id: 15
       type: order
-      date_from: '2024-12-20T00:37:27'
-      date_to: '2026-01-22'
+      date_from: '2024-12-20T00:48:26'
+      date_to: '2114-01-22'
     fileParameters: []
     responses:
       -
@@ -196,7 +196,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 1d4Z5Ea6baD3VekvfP6hc8g
+      - d8gk64bEVhDcP136fZavea5
     controller: null
     method: null
     route: null
