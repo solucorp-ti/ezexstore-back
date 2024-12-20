@@ -41,7 +41,7 @@ return [
 
     'try_it_out' => [
         'enabled' => true,
-        'base_url' => 'http://ezexstore-back.test',
+        'base_url' => env('APP_URL', 'http://ezexstore-back.test'),
         'use_csrf' => false,
         'csrf_url' => '/sanctum/csrf-cookie',
     ],
