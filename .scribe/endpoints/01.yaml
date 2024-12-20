@@ -80,7 +80,7 @@ endpoints:
         name: config.whatsapp_number
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: vuauihqhoqadizwryk
+        example: z
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -152,7 +152,7 @@ endpoints:
       config:
         company_name: '"Example Company"'
         company_email: '"contact@example.com"'
-        whatsapp_number: vuauihqhoqadizwryk
+        whatsapp_number: z
         search_engine_type: '"regular"'
       user:
         name: '"John Doe"'
@@ -216,7 +216,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/v1/tenants
+    uri: 'api/v1/tenants/{subdomain}'
     metadata:
       groupName: Tenants
       groupDescription: ''
@@ -320,7 +320,7 @@ endpoints:
         name: config.logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'https://www.volkman.biz/doloremque-assumenda-temporibus-aut-enim'
+        example: 'http://brekke.info/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -378,7 +378,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       config:
-        logo_url: 'https://www.volkman.biz/doloremque-assumenda-temporibus-aut-enim'
+        logo_url: 'http://brekke.info/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html'
         company_name: '"Updated Company"'
         company_email: '"new@example.com"'
         whatsapp_number: '"+1234567890"'
@@ -424,7 +424,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 6b3dceD1g468E5vhPafZkaV
+      - Pf8avc31EZgDeb6ah46Vd5k
     controller: null
     method: null
     route: null

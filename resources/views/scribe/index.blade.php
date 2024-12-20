@@ -368,10 +368,10 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-tenants-GETapi-v1-tenants">
+                                             id="toc-item-tenants-GETapi-v1-tenants--subdomain-">
                                             <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Get Tenant Information">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#tenants-GETapi-v1-tenants">
+                                                   href="#tenants-GETapi-v1-tenants--subdomain-">
                                                     Get Tenant Information
                                                 </a>
                                             </div>
@@ -1024,7 +1024,7 @@
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        vuauihqhoqadizwryk
+                        z
                     </div>
                 </div>
             </div>
@@ -1300,7 +1300,7 @@
     "config": {
         "company_name": "\"Example Company\"",
         "company_email": "\"contact@example.com\"",
-        "whatsapp_number": "vuauihqhoqadizwryk",
+        "whatsapp_number": "z",
         "search_engine_type": "\"regular\""
     },
     "user": {
@@ -1411,7 +1411,7 @@ You can check the Dev Tools console for debugging information.</p>
     \"config\": {
         \"company_name\": \"\\\"Example Company\\\"\",
         \"company_email\": \"\\\"contact@example.com\\\"\",
-        \"whatsapp_number\": \"vuauihqhoqadizwryk\",
+        \"whatsapp_number\": \"z\",
         \"search_engine_type\": \"\\\"regular\\\"\"
     },
     \"user\": {
@@ -1444,7 +1444,7 @@ let body = {
     "config": {
         "company_name": "\"Example Company\"",
         "company_email": "\"contact@example.com\"",
-        "whatsapp_number": "vuauihqhoqadizwryk",
+        "whatsapp_number": "z",
         "search_engine_type": "\"regular\""
     },
     "user": {
@@ -1482,7 +1482,7 @@ $response = $client-&gt;post(
             'config' =&gt; [
                 'company_name' =&gt; '"Example Company"',
                 'company_email' =&gt; '"contact@example.com"',
-                'whatsapp_number' =&gt; 'vuauihqhoqadizwryk',
+                'whatsapp_number' =&gt; 'z',
                 'search_engine_type' =&gt; '"regular"',
             ],
             'user' =&gt; [
@@ -1602,14 +1602,14 @@ print_r(json_decode((string) $body));</code></pre>                              
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="tenants-GETapi-v1-tenants">
+                    id="tenants-GETapi-v1-tenants--subdomain-">
                     Get Tenant Information
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://ezexstore-back.test/api/v1/tenants"
+            <div title="http://ezexstore-back.test/api/v1/tenants/{subdomain}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -1620,7 +1620,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://ezexstore-back.test</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/tenants</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/v1/tenants/{subdomain}</div>
                     </div>
 
                                     </div>
@@ -1739,7 +1739,7 @@ print_r(json_decode((string) $body));</code></pre>                              
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="GET"
-              data-path="api/v1/tenants"
+              data-path="api/v1/tenants/{subdomain}"
               data-hasfiles="0"
               data-hasjsonbody="0">
             
@@ -1762,34 +1762,34 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-v1-tenants-Content-Type">Content-Type</label>
+                                       for="header-GETapi-v1-tenants--subdomain--Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-GETapi-v1-tenants-Content-Type"
+                                               id="header-GETapi-v1-tenants--subdomain--Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-v1-tenants-Accept">Accept</label>
+                                       for="header-GETapi-v1-tenants--subdomain--Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-GETapi-v1-tenants-Accept"
+                                               id="header-GETapi-v1-tenants--subdomain--Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-GETapi-v1-tenants-X-API-KEY">X-API-KEY</label>
+                                       for="header-GETapi-v1-tenants--subdomain--X-API-KEY">X-API-KEY</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="X-API-KEY" name="X-API-KEY"
-                                               id="header-GETapi-v1-tenants-X-API-KEY"
+                                               id="header-GETapi-v1-tenants--subdomain--X-API-KEY"
                                                value="{YOUR_API_KEY}" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -1817,12 +1817,12 @@ print_r(json_decode((string) $body));</code></pre>                              
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                             <label aria-hidden="true"
-                                       for="urlparam-GETapi-v1-tenants-subdomain">subdomain</label>
+                                       for="urlparam-GETapi-v1-tenants--subdomain--subdomain">subdomain</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="subdomain" name="subdomain"
-                                               id="urlparam-GETapi-v1-tenants-subdomain"
+                                               id="urlparam-GETapi-v1-tenants--subdomain--subdomain"
                                                placeholder="The subdomain of the tenant."
                                                value="example" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
@@ -1836,7 +1836,7 @@ print_r(json_decode((string) $body));</code></pre>                              
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="GETapi-v1-tenants"
+                    <button type="button" data-endpoint="GETapi-v1-tenants--subdomain-"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -1844,7 +1844,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 </div>
             </div>
 
-            <div data-endpoint="GETapi-v1-tenants"
+            <div data-endpoint="GETapi-v1-tenants--subdomain-"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -1871,7 +1871,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="GETapi-v1-tenants"
+                <div data-endpoint="GETapi-v1-tenants--subdomain-"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -1921,7 +1921,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/v1/tenants" \
+    --get "http://ezexstore-back.test/api/v1/tenants/example" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-API-KEY: {YOUR_API_KEY}"</code></pre>                                        </div>
@@ -1932,7 +1932,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/tenants"
+    "http://ezexstore-back.test/api/v1/tenants/example"
 );
 
 const headers = {
@@ -1952,7 +1952,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/tenants';
+$url = 'http://ezexstore-back.test/api/v1/tenants/example';
 $response = $client-&gt;get(
     $url,
     [
@@ -1977,9 +1977,9 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <div class="sl-mb-2 sl-inline-block">Example response:</div>
                                             <div class="sl-mb-2 sl-inline-block">
                                                 <select
-                                                        class="example-response-GETapi-v1-tenants-toggle sl-text-base"
+                                                        class="example-response-GETapi-v1-tenants--subdomain--toggle sl-text-base"
                                                         aria-label="Response sample"
-                                                        onchange="switchExampleResponse('GETapi-v1-tenants', event.target.value);">
+                                                        onchange="switchExampleResponse('GETapi-v1-tenants--subdomain-', event.target.value);">
                                                                                                             <option value="0">200, success</option>
                                                                                                             <option value="1">404, not found</option>
                                                                                                     </select></div>
@@ -1998,7 +1998,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
                                 </button>
                             </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-v1-tenants example-response-GETapi-v1-tenants-0"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-v1-tenants--subdomain- example-response-GETapi-v1-tenants--subdomain--0"
                                      style=" "
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -2019,7 +2019,7 @@ print_r(json_decode((string) $body));</code></pre>                              
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-v1-tenants example-response-GETapi-v1-tenants-1"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-v1-tenants--subdomain- example-response-GETapi-v1-tenants--subdomain--1"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -2184,7 +2184,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        https://www.volkman.biz/doloremque-assumenda-temporibus-aut-enim
+                        http://brekke.info/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html
                     </div>
                 </div>
             </div>
@@ -2442,7 +2442,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "config": {
-        "logo_url": "https:\/\/www.volkman.biz\/doloremque-assumenda-temporibus-aut-enim",
+        "logo_url": "http:\/\/brekke.info\/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html",
         "company_name": "\"Updated Company\"",
         "company_email": "\"new@example.com\"",
         "whatsapp_number": "\"+1234567890\"",
@@ -2547,7 +2547,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"config\": {
-        \"logo_url\": \"https:\\/\\/www.volkman.biz\\/doloremque-assumenda-temporibus-aut-enim\",
+        \"logo_url\": \"http:\\/\\/brekke.info\\/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html\",
         \"company_name\": \"\\\"Updated Company\\\"\",
         \"company_email\": \"\\\"new@example.com\\\"\",
         \"whatsapp_number\": \"\\\"+1234567890\\\"\",
@@ -2574,7 +2574,7 @@ const headers = {
 
 let body = {
     "config": {
-        "logo_url": "https:\/\/www.volkman.biz\/doloremque-assumenda-temporibus-aut-enim",
+        "logo_url": "http:\/\/brekke.info\/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html",
         "company_name": "\"Updated Company\"",
         "company_email": "\"new@example.com\"",
         "whatsapp_number": "\"+1234567890\"",
@@ -2606,7 +2606,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'config' =&gt; [
-                'logo_url' =&gt; 'https://www.volkman.biz/doloremque-assumenda-temporibus-aut-enim',
+                'logo_url' =&gt; 'http://brekke.info/quasi-veritatis-reiciendis-veniam-laboriosam-ratione-qui-voluptas.html',
                 'company_name' =&gt; '"Updated Company"',
                 'company_email' =&gt; '"new@example.com"',
                 'whatsapp_number' =&gt; '"+1234567890"',
@@ -2824,7 +2824,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        dolor
+                        facilis
                     </div>
                 </div>
             </div>
@@ -2854,7 +2854,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        minus
+                        perferendis
                     </div>
                 </div>
             </div>
@@ -2876,7 +2876,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        veritatis
+                        accusantium
                     </div>
                 </div>
             </div>
@@ -2898,7 +2898,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        repellat
+                        eligendi
                     </div>
                 </div>
             </div>
@@ -2920,7 +2920,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        est
+                        vitae
                     </div>
                 </div>
             </div>
@@ -2942,7 +2942,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        accusamus
+                        praesentium
                     </div>
                 </div>
             </div>
@@ -2964,7 +2964,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        false
+                        true
                     </div>
                 </div>
             </div>
@@ -3117,7 +3117,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="subdomain" name="subdomain"
                                                id="urlparam-GETapi-v1--subdomain--products-subdomain"
                                                placeholder=""
-                                               value="dolor" data-component="url"
+                                               value="facilis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3151,7 +3151,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="search" name="search"
                                                    id="queryparam-GETapi-v1--subdomain--products-search"
                                                    placeholder="Search by name, serial, SKU or part number"
-                                                   value="minus" data-component="query"
+                                                   value="perferendis" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3164,7 +3164,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="status" name="status"
                                                    id="queryparam-GETapi-v1--subdomain--products-status"
                                                    placeholder="Filter by status (active, inactive, discontinued)"
-                                                   value="veritatis" data-component="query"
+                                                   value="accusantium" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3177,7 +3177,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="condition" name="condition"
                                                    id="queryparam-GETapi-v1--subdomain--products-condition"
                                                    placeholder="Filter by condition (new, used, discontinued, damaged, refurbished)"
-                                                   value="repellat" data-component="query"
+                                                   value="eligendi" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3190,7 +3190,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="min_price" name="min_price"
                                                    id="queryparam-GETapi-v1--subdomain--products-min_price"
                                                    placeholder="numeric Minimum price filter"
-                                                   value="est" data-component="query"
+                                                   value="vitae" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3203,7 +3203,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="max_price" name="max_price"
                                                    id="queryparam-GETapi-v1--subdomain--products-max_price"
                                                    placeholder="numeric Maximum price filter"
-                                                   value="accusamus" data-component="query"
+                                                   value="praesentium" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3216,7 +3216,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="in_stock" name="in_stock"
                                                    id="queryparam-GETapi-v1--subdomain--products-in_stock"
                                                    placeholder="Filter products with stock"
-                                                   value="" data-component="query"
+                                                   value="1" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3326,7 +3326,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/v1/dolor/products?search=minus&amp;status=veritatis&amp;condition=repellat&amp;min_price=est&amp;max_price=accusamus&amp;in_stock=&amp;per_page=15" \
+    --get "http://ezexstore-back.test/api/v1/facilis/products?search=perferendis&amp;status=accusantium&amp;condition=eligendi&amp;min_price=vitae&amp;max_price=praesentium&amp;in_stock=1&amp;per_page=15" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -3337,16 +3337,16 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/dolor/products"
+    "http://ezexstore-back.test/api/v1/facilis/products"
 );
 
 const params = {
-    "search": "minus",
-    "status": "veritatis",
-    "condition": "repellat",
-    "min_price": "est",
-    "max_price": "accusamus",
-    "in_stock": "0",
+    "search": "perferendis",
+    "status": "accusantium",
+    "condition": "eligendi",
+    "min_price": "vitae",
+    "max_price": "praesentium",
+    "in_stock": "1",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3369,7 +3369,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/dolor/products';
+$url = 'http://ezexstore-back.test/api/v1/facilis/products';
 $response = $client-&gt;get(
     $url,
     [
@@ -3379,12 +3379,12 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'search' =&gt; 'minus',
-            'status' =&gt; 'veritatis',
-            'condition' =&gt; 'repellat',
-            'min_price' =&gt; 'est',
-            'max_price' =&gt; 'accusamus',
-            'in_stock' =&gt; '0',
+            'search' =&gt; 'perferendis',
+            'status' =&gt; 'accusantium',
+            'condition' =&gt; 'eligendi',
+            'min_price' =&gt; 'vitae',
+            'max_price' =&gt; 'praesentium',
+            'in_stock' =&gt; '1',
             'per_page' =&gt; '15',
         ],
     ]
@@ -4354,7 +4354,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        suscipit
+                        corrupti
                     </div>
                 </div>
             </div>
@@ -4511,7 +4511,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="product" name="product"
                                                id="urlparam-GETapi-v1-products--product--product"
                                                placeholder="The product."
-                                               value="suscipit" data-component="url"
+                                               value="corrupti" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4620,7 +4620,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/v1/products/suscipit" \
+    --get "http://ezexstore-back.test/api/v1/products/corrupti" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4631,7 +4631,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/suscipit"
+    "http://ezexstore-back.test/api/v1/products/corrupti"
 );
 
 const headers = {
@@ -4651,7 +4651,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/suscipit';
+$url = 'http://ezexstore-back.test/api/v1/products/corrupti';
 $response = $client-&gt;get(
     $url,
     [
@@ -5666,7 +5666,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        in
+                        vitae
                     </div>
                 </div>
             </div>
@@ -5747,7 +5747,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Eum id perferendis quas.
+                        Velit similique quia facere unde.
                     </div>
                 </div>
             </div>
@@ -6131,7 +6131,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="product" name="product"
                                                id="urlparam-PUTapi-v1-products--product--product"
                                                placeholder="The product."
-                                               value="in" data-component="url"
+                                               value="vitae" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6175,7 +6175,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "product_name": "Updated Product",
-    "description": "Eum id perferendis quas.",
+    "description": "Velit similique quia facere unde.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -6278,13 +6278,13 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://ezexstore-back.test/api/v1/products/in" \
+    "http://ezexstore-back.test/api/v1/products/vitae" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"product_name\": \"Updated Product\",
-    \"description\": \"Eum id perferendis quas.\",
+    \"description\": \"Velit similique quia facere unde.\",
     \"base_price\": \"149.99\",
     \"status\": \"inactive\",
     \"unit_of_measure\": \"kg\",
@@ -6304,7 +6304,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/in"
+    "http://ezexstore-back.test/api/v1/products/vitae"
 );
 
 const headers = {
@@ -6315,7 +6315,7 @@ const headers = {
 
 let body = {
     "product_name": "Updated Product",
-    "description": "Eum id perferendis quas.",
+    "description": "Velit similique quia facere unde.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -6340,7 +6340,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/in';
+$url = 'http://ezexstore-back.test/api/v1/products/vitae';
 $response = $client-&gt;put(
     $url,
     [
@@ -6351,7 +6351,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'product_name' =&gt; 'Updated Product',
-            'description' =&gt; 'Eum id perferendis quas.',
+            'description' =&gt; 'Velit similique quia facere unde.',
             'base_price' =&gt; '149.99',
             'status' =&gt; 'inactive',
             'unit_of_measure' =&gt; 'kg',
@@ -6556,7 +6556,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quisquam
+                        eveniet
                     </div>
                 </div>
             </div>
@@ -6713,7 +6713,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="product" name="product"
                                                id="urlparam-DELETEapi-v1-products--product--product"
                                                placeholder="The product."
-                                               value="quisquam" data-component="url"
+                                               value="eveniet" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6822,7 +6822,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://ezexstore-back.test/api/v1/products/quisquam" \
+    "http://ezexstore-back.test/api/v1/products/eveniet" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -6833,7 +6833,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/quisquam"
+    "http://ezexstore-back.test/api/v1/products/eveniet"
 );
 
 const headers = {
@@ -6853,7 +6853,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/quisquam';
+$url = 'http://ezexstore-back.test/api/v1/products/eveniet';
 $response = $client-&gt;delete(
     $url,
     [
@@ -7882,7 +7882,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "photos[]="\
-    --form "photos[]=@C:\Users\joseu\AppData\Local\Temp\phpF020.tmp" </code></pre>                                        </div>
+    --form "photos[]=@C:\Users\joseu\AppData\Local\Temp\phpD4D8.tmp" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -7931,7 +7931,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'photos[]',
-                'contents' =&gt; fopen('C:\Users\joseu\AppData\Local\Temp\phpF020.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\joseu\AppData\Local\Temp\phpD4D8.tmp', 'r')
             ],
         ],
     ]
@@ -8179,7 +8179,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quo
+                        omnis
                     </div>
                 </div>
             </div>
@@ -8372,7 +8372,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="photo" name="photo"
                                                id="urlparam-DELETEapi-v1-products--product_id--photos--photo--photo"
                                                placeholder="The photo."
-                                               value="quo" data-component="url"
+                                               value="omnis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8493,7 +8493,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://ezexstore-back.test/api/v1/products/1/photos/quo" \
+    "http://ezexstore-back.test/api/v1/products/1/photos/omnis" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -8504,7 +8504,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/1/photos/quo"
+    "http://ezexstore-back.test/api/v1/products/1/photos/omnis"
 );
 
 const headers = {
@@ -8524,7 +8524,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/1/photos/quo';
+$url = 'http://ezexstore-back.test/api/v1/products/1/photos/omnis';
 $response = $client-&gt;delete(
     $url,
     [
@@ -10940,7 +10940,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                                                     x-ratelimit-limit
                                                             : 60
                                                                                                                     x-ratelimit-remaining
-                                                            : 59
+                                                            : 58
                                                                                                                     access-control-allow-origin
                                                             : *
                                                          </code></pre>
@@ -11207,7 +11207,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2
+                        14
                     </div>
                 </div>
             </div>
@@ -11232,7 +11232,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2
+                        13
                     </div>
                 </div>
             </div>
@@ -11257,7 +11257,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        1
+                        14
                     </div>
                 </div>
             </div>
@@ -11306,7 +11306,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2024-12-20T06:07:25
+                        2024-12-20T06:57:32
                     </div>
                 </div>
             </div>
@@ -11331,7 +11331,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2037-05-08
+                        2063-05-23
                     </div>
                 </div>
             </div>
@@ -11547,12 +11547,12 @@ These logs include changes in inventory, restocks, orders, and other related eve
                                      id="json-body-GETapi-v1-inventory-logs"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "per_page": 2,
-    "product_id": 2,
-    "warehouse_id": 1,
+    "per_page": 14,
+    "product_id": 13,
+    "warehouse_id": 14,
     "type": "order",
-    "date_from": "2024-12-20T06:07:25",
-    "date_to": "2037-05-08"
+    "date_from": "2024-12-20T06:57:32",
+    "date_to": "2063-05-23"
 }</div>
                             </div>
                                             </div>
@@ -11650,12 +11650,12 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"per_page\": 2,
-    \"product_id\": 2,
-    \"warehouse_id\": 1,
+    \"per_page\": 14,
+    \"product_id\": 13,
+    \"warehouse_id\": 14,
     \"type\": \"order\",
-    \"date_from\": \"2024-12-20T06:07:25\",
-    \"date_to\": \"2037-05-08\"
+    \"date_from\": \"2024-12-20T06:57:32\",
+    \"date_to\": \"2063-05-23\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -11685,12 +11685,12 @@ const headers = {
 };
 
 let body = {
-    "per_page": 2,
-    "product_id": 2,
-    "warehouse_id": 1,
+    "per_page": 14,
+    "product_id": 13,
+    "warehouse_id": 14,
     "type": "order",
-    "date_from": "2024-12-20T06:07:25",
-    "date_to": "2037-05-08"
+    "date_from": "2024-12-20T06:57:32",
+    "date_to": "2063-05-23"
 };
 
 fetch(url, {
@@ -11722,12 +11722,12 @@ $response = $client-&gt;get(
             'per_page' =&gt; '10',
         ],
         'json' =&gt; [
-            'per_page' =&gt; 2,
-            'product_id' =&gt; 2,
-            'warehouse_id' =&gt; 1,
+            'per_page' =&gt; 14,
+            'product_id' =&gt; 13,
+            'warehouse_id' =&gt; 14,
             'type' =&gt; 'order',
-            'date_from' =&gt; '2024-12-20T06:07:25',
-            'date_to' =&gt; '2037-05-08',
+            'date_from' =&gt; '2024-12-20T06:57:32',
+            'date_to' =&gt; '2063-05-23',
         ],
     ]
 );

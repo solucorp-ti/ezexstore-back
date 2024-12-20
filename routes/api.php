@@ -28,7 +28,7 @@ Route::prefix('v1')->middleware(['api', 'json'])->group(function () {
     // Rutas públicas
     Route::post('tenants', [TenantController::class, 'store']);
     Route::get('/{subdomain}/products', [ProductController::class, 'index']);
-    Route::get('tenants', [TenantController::class, 'show']);
+    Route::get('/tenants/{subdomain}', [TenantController::class, 'show']);
 
     // Rutas protegidas
     Route::middleware('api.key')->group(function () {
