@@ -94,6 +94,7 @@ INTRO,
             'Authentication',
             'Tenants',
             'Products',
+            'Product Photos',
             'Inventory',
             'Warehouses'
         ],

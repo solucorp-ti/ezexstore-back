@@ -90,7 +90,7 @@ endpoints:
         name: per_page
         description: 'Must be at least 1. Must not be greater than 100.'
         required: false
-        example: 21
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -100,7 +100,7 @@ endpoints:
         name: product_id
         description: 'The <code>id</code> of an existing record in the products table.'
         required: false
-        example: 17
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: warehouse_id
         description: 'The <code>id</code> of an existing record in the warehouses table.'
         required: false
-        example: 12
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -132,7 +132,7 @@ endpoints:
         name: date_from
         description: 'Must be a valid date.'
         required: false
-        example: '2024-12-20T03:09:15'
+        example: '2024-12-20T03:12:42'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -142,19 +142,19 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after or equal to <code>date_from</code>.'
         required: false
-        example: '2112-04-23'
+        example: '2053-07-27'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      per_page: 21
-      product_id: 17
-      warehouse_id: 12
+      per_page: 16
+      product_id: 10
+      warehouse_id: 4
       type: restock
-      date_from: '2024-12-20T03:09:15'
-      date_to: '2112-04-23'
+      date_from: '2024-12-20T03:12:42'
+      date_to: '2053-07-27'
     fileParameters: []
     responses:
       -
@@ -198,7 +198,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - f8Z3v6cEea4gk56D1adVbPh
+      - aeD6f3bkdhEZg6a41cP85Vv
     controller: null
     method: null
     route: null
