@@ -286,4 +286,62 @@ class ProductController extends BaseApiController
 
         return $this->successResponse(null, 'Product deleted successfully');
     }
+
+    /**
+     * Create or Update Product from ERP
+     *
+     * Special endpoint for ERP integration that handles both creation and update.
+     *
+     * @header X-API-KEY required The API key for authentication
+     * 
+     * @bodyParam product_name string required The name of the product. Example: Test Product
+     * @bodyParam description string optional The description of the product. Example: A test product description
+     * @bodyParam base_price numeric required The base price of the product. Example: 99.99
+     * @bodyParam status string required The status of the product (active, inactive, discontinued). Example: active
+     * @bodyParam unit_of_measure string required The unit of measure (piece, kg, liter, meter). Example: piece
+     * @bodyParam sku string optional The SKU of the product (must be unique per tenant). Example: SKU001
+     * @bodyParam part_number string optional The part number of the product. Example: PART001
+     * @bodyParam serial_number string optional The serial number of the product. Example: SN001
+     * @bodyParam part_condition string optional The condition of the product (new, used, discontinued, damaged, refurbished). Example: new
+     * @bodyParam brand string optional The brand of the product. Example: Test Brand
+     * @bodyParam family string optional The product family. Example: Test Family
+     * @bodyParam line string optional The product line. Example: Test Line
+     * 
+     * @response scenario="success" {
+     *   "success": true,
+     *   "data": {
+     *     "id": 1,
+     *     "product_serial": "TEST001",
+     *     ...
+     *   },
+     *   "message": "Product synchronized successfully"
+     * }
+     */
+    public function syncProduct(Request $request)
+    {
+        $validator = Validator::make($request->all(), $this->getValidationRules());
+
+        if ($validator->fails()) {
+            return $this->errorResponse($validator->errors()->first(), 422);
+        }
+
+        // Buscar producto existente por product_serial o SKU
+        $product = $this->productService->findByIdentifier(
+            $request->input('product_serial'),
+            $request->input('sku'),
+            $request->tenant->id
+        );
+
+        if ($product) {
+            // Actualizar
+            $product = $this->productService->updateProduct($product->id, $request->all(), $request->tenant->id);
+            $message = 'Product updated successfully';
+        } else {
+            // Crear
+            $product = $this->productService->createProduct($request->all(), $request->tenant->id);
+            $message = 'Product created successfully';
+        }
+
+        return $this->successResponse($product, $message);
+    }
 }

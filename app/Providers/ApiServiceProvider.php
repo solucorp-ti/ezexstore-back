@@ -20,11 +20,13 @@ use App\Repositories\{
 };
 use App\Services\Interfaces\{
     ApiKeyServiceInterface,
-    InventoryLogServiceInterface
+    InventoryLogServiceInterface,
+    ProductServiceInterface
 };
 use App\Services\{
     ApiKeyService,
-    InventoryLogService
+    InventoryLogService,
+    ProductService
 };
 use Illuminate\Support\ServiceProvider;
 
@@ -35,6 +37,7 @@ class ApiServiceProvider extends ServiceProvider
         // Services
         $this->app->bind(ApiKeyServiceInterface::class, ApiKeyService::class);
         $this->app->bind(InventoryLogServiceInterface::class, InventoryLogService::class);
+        $this->app->bind(ProductServiceInterface::class, ProductService::class);
 
         // Repositories
         $this->app->bind(ApiKeyRepositoryInterface::class, ApiKeyRepository::class);
@@ -43,5 +46,8 @@ class ApiServiceProvider extends ServiceProvider
         $this->app->bind(TenantRepositoryInterface::class, TenantRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
         $this->app->bind(WarehouseRepositoryInterface::class, WarehouseRepository::class);
+        $this->app->bind(ProductRepository::class, function ($app) {
+            return new ProductRepository($app->make(\App\Models\Product::class));
+        });
     }
 }

@@ -80,4 +80,12 @@ class ProductRepository
             ->where('sku', $sku)
             ->first();
     }
+
+    public function findBySerialForTenant(string $serial, int $tenantId): ?Product
+    {
+        return $this->model
+            ->where('tenant_id', $tenantId)
+            ->where('product_serial', $serial)
+            ->first();
+    }
 }
