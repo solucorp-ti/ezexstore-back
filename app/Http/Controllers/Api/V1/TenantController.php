@@ -23,6 +23,57 @@ class TenantController extends Controller
     ) {}
 
     /**
+     * Get Tenant Information
+     * 
+     * Retrieves tenant information based on subdomain. This is a public endpoint.
+     * 
+     * @unauthenticated
+     * @group Tenants
+     * 
+     * @urlParam subdomain string required The subdomain of the tenant. Example: example
+     * 
+     * @response scenario="success" {
+     *   "data": {
+     *     "id": 1,
+     *     "name": "Example Tenant",
+     *     "subdomain": "example",
+     *     "config": {
+     *       "company_name": "Example Company",
+     *       "company_email": "contact@example.com",
+     *       "whatsapp_number": "+1234567890",
+     *       "logo_url": "https://example.com/logo.png",
+     *       "search_engine_type": "regular"
+     *     }
+     *   }
+     * }
+     * 
+     * @response status=404 scenario="not found" {
+     *   "message": "Tenant not found"
+     * }
+     */
+    public function show(string $subdomain): JsonResponse
+    {
+        try {
+            $tenant = $this->tenantService->findBySubdomain($subdomain);
+
+            if (!$tenant) {
+                return response()->json([
+                    'message' => 'Tenant not found'
+                ], 404);
+            }
+
+            return response()->json([
+                'data' => $tenant->load('config')
+            ]);
+        } catch (QueryException $e) {
+            return response()->json([
+                'message' => 'Database error',
+                'errors' => $e->getMessage()
+            ], 500);
+        }
+    }
+
+    /**
      * Create Tenant
      * 
      * Creates a new tenant with the provided information. This is a public endpoint.

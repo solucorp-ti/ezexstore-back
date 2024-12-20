@@ -23,10 +23,10 @@ class TenantService
                 'name' => $data['name'],
                 'subdomain' => Str::slug($data['subdomain'])
             ];
-            
+
             // Crear tenant
             $tenant = $this->tenantRepository->create($tenantData);
-            
+
             // Crear configuración
             $tenant->config()->create([
                 'logo_url' => $data['config']['logo_url'] ?? null,
@@ -46,7 +46,7 @@ class TenantService
             // Crear el usuario
             $user = $this->userRepository->create($userData);
             Log::info('User created', $user->toArray());
-            
+
             // Asociar el usuario con el tenant
             $tenant->users()->attach($user->id, ['role_id' => $data['user']['role_id'] ?? null]);
 
@@ -60,10 +60,10 @@ class TenantService
             ];
             $apiKey = $tenant->apiKeys()->create($apiKeyData);
             Log::info('API Key created', $apiKey->toArray());
-            
+
             // Cargar la relación config, users y apiKeys
             $tenant->load('config', 'users', 'apiKeys');
-            
+
             return $tenant;
         });
     }
@@ -71,15 +71,20 @@ class TenantService
     public function update(int $id, array $data)
     {
         return DB::transaction(function () use ($id, $data) {
-            
+
             $tenant = $this->tenantRepository->update($id, $data);
-            
+
             if (isset($data['config'])) {
                 $tenant->config()->update($data['config']);
                 $tenant->load('config');
             }
-            
+
             return $tenant;
         });
+    }
+
+    public function findBySubdomain(string $subdomain)
+    {
+        return $this->tenantRepository->findBySubdomain($subdomain);
     }
 }

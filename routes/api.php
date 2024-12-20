@@ -27,7 +27,8 @@ Route::get('health-check', function () {
 Route::prefix('v1')->middleware(['api', 'json'])->group(function () {
     // Rutas públicas
     Route::post('tenants', [TenantController::class, 'store']);
-
+    Route::get('tenants/{subdomain}', [TenantController::class, 'show']);
+    
     // Rutas protegidas
     Route::middleware('api.key')->group(function () {
         // Test
