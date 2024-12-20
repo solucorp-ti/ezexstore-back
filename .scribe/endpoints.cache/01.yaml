@@ -82,7 +82,7 @@ endpoints:
         name: config.whatsapp_number
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: ktevdha
+        example: vuauihqhoqadizwryk
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -154,7 +154,7 @@ endpoints:
       config:
         company_name: '"Example Company"'
         company_email: '"contact@example.com"'
-        whatsapp_number: ktevdha
+        whatsapp_number: vuauihqhoqadizwryk
         search_engine_type: '"regular"'
       user:
         name: '"John Doe"'
@@ -217,6 +217,77 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - GET
+    uri: api/v1/tenants
+    metadata:
+      groupName: Tenants
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Tenant Information'
+      description: 'Retrieves tenant information based on subdomain. This is a public endpoint.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      X-API-KEY: '{YOUR_API_KEY}'
+    urlParameters:
+      subdomain:
+        name: subdomain
+        description: 'The subdomain of the tenant.'
+        required: true
+        example: example
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      subdomain: example
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "data": {
+              "id": 1,
+              "name": "Example Tenant",
+              "subdomain": "example",
+              "config": {
+                "company_name": "Example Company",
+                "company_email": "contact@example.com",
+                "whatsapp_number": "+1234567890",
+                "logo_url": "https://example.com/logo.png",
+                "search_engine_type": "regular"
+              }
+            }
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "message": "Tenant not found"
+          }
+        headers: []
+        description: 'not found'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - PUT
     uri: api/v1/tenants
     metadata:
@@ -251,7 +322,7 @@ endpoints:
         name: config.logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'http://www.legros.com/quo-consequatur-quas-eum-assumenda-laborum'
+        example: 'https://www.volkman.biz/doloremque-assumenda-temporibus-aut-enim'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -309,7 +380,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       config:
-        logo_url: 'http://www.legros.com/quo-consequatur-quas-eum-assumenda-laborum'
+        logo_url: 'https://www.volkman.biz/doloremque-assumenda-temporibus-aut-enim'
         company_name: '"Updated Company"'
         company_email: '"new@example.com"'
         whatsapp_number: '"+1234567890"'
@@ -355,7 +426,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - bE6153cVaaDgk6hZP4fdev8
+      - 6b3dceD1g468E5vhPafZkaV
     controller: null
     method: null
     route: null

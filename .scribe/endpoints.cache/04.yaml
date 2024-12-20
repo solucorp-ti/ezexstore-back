@@ -88,7 +88,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - acgd613Vhe6DZk58P4bvEfa
+      - bEVah1cde66afg43DPvZk58
     controller: null
     method: null
     route: null
@@ -209,7 +209,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - vcak4581eh6VD6gPbf3daZE
+      - aEkbg8fZda616D5V4hv3ceP
     controller: null
     method: null
     route: null
@@ -248,7 +248,7 @@ endpoints:
         name: photo
         description: 'The photo.'
         required: true
-        example: eveniet
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -276,7 +276,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       product_id: 1
-      photo: eveniet
+      photo: quo
       product: 1
       photoId: 1
     queryParameters: []
@@ -320,7 +320,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - g4P56ZkchE1Ve6fb8dD3vaa
+      - b3hvf8aeP5kEDgcda6V641Z
     controller: null
     method: null
     route: null

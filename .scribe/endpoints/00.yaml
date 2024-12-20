@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - Pvac86D6hVZ1adbk3g4feE5
+      - PdV6E3f54Ze6kD1hac8vgba
     controller: null
     method: null
     route: null
