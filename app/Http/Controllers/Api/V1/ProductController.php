@@ -24,39 +24,45 @@ class ProductController extends BaseApiController
     }
     /**
      * List Products
-     *
-     * Returns a list of all products belonging to the authenticated tenant.
+     * 
+     * Returns a filtered list of products belonging to the authenticated tenant.
      *
      * @header X-API-KEY required The API key for authentication
+     * 
+     * @queryParam search string Search by name, serial, SKU or part number
+     * @queryParam status string Filter by status (active, inactive, discontinued)
+     * @queryParam condition string Filter by condition (new, used, discontinued, damaged, refurbished)
+     * @queryParam min_price numeric Minimum price filter
+     * @queryParam max_price numeric Maximum price filter
+     * @queryParam in_stock boolean Filter products with stock
+     * @queryParam per_page integer Items per page. Example: 15
      *
      * @response scenario="success" {
      *   "success": true,
-     *   "data": [
-     *     {
-     *       "id": 1,
-     *       "product_serial": "TEST001",
-     *       "product_name": "Test Product",
-     *       "description": "Product description",
-     *       "base_price": "99.99",
-     *       "status": "active",
-     *       "unit_of_measure": "piece",
-     *       "sku": "SKU001",
-     *       "part_number": "PART001",
-     *       "serial_number": "SN001",
-     *       "part_condition": "new",
-     *       "brand": "Test Brand",
-     *       "family": "Test Family",
-     *       "line": "Test Line",
-     *       "is_active": true
-     *     }
-     *   ],
+     *   "data": [...],
+     *   "meta": {
+     *     "current_page": 1,
+     *     "last_page": 5,
+     *     "per_page": 15,
+     *     "total": 75
+     *   },
      *   "message": "Products retrieved successfully"
      * }
      */
     public function index(Request $request): JsonResponse
     {
+        $filters = $request->only([
+            'search',
+            'status',
+            'condition',
+            'min_price',
+            'max_price',
+            'in_stock'
+        ]);
+
         $products = $this->productService->getProducts(
             $request->tenant->id,
+            $filters,
             $request->input('per_page')
         );
 

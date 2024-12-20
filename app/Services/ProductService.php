@@ -4,98 +4,88 @@ namespace App\Services;
 
 use App\Models\Product;
 use App\Repositories\ProductRepository;
+use App\Services\Interfaces\ProductServiceInterface;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Exception;
 
-class ProductService
+class ProductService implements ProductServiceInterface
 {
-    public function __construct(protected ProductRepository $repository) {}
+    protected $repository;
 
-    /**
-     * Obtener productos paginados
-     */
-    public function getPaginatedProducts(int $tenantId, array $filters = []): LengthAwarePaginator 
+    public function __construct(ProductRepository $repository)
     {
-        return $this->repository->getPaginatedForTenant($tenantId, $filters);
+        $this->repository = $repository;
     }
 
-    /**
-     * Crear nuevo producto
-     */
-    public function createProduct(array $data): Product|null
+    public function getProducts(int $tenantId, array $filters = [], ?int $perPage = null): LengthAwarePaginator
+    {
+        $perPage = $perPage ?? config('app.pagination.per_page', 15);
+        return $this->repository->getPaginatedForTenant($tenantId, $filters, $perPage);
+    }
+
+    public function createProduct(array $data, int $tenantId)
     {
         try {
             DB::beginTransaction();
             
+            $data['tenant_id'] = $tenantId;
             $product = $this->repository->create($data);
             
-            // Si hay fotos, las procesamos aquí
-            if (!empty($data['photos'])) {
-                // TODO: Implementar lógica de fotos
-            }
-
             DB::commit();
             return $product;
-
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error creating product: ' . $e->getMessage());
             throw $e;
         }
     }
 
-    /**
-     * Actualizar producto
-     */
-    public function updateProduct(Product $product, array $data): bool
+    public function findProduct(int $id, int $tenantId)
+    {
+        return $this->repository->findForTenant($id, $tenantId);
+    }
+
+    public function updateProduct(int $id, array $data, int $tenantId)
     {
         try {
             DB::beginTransaction();
             
-            $updated = $this->repository->update($product, $data);
-            
-            if (!empty($data['photos'])) {
-                // TODO: Implementar lógica de fotos
+            $product = $this->repository->findForTenant($id, $tenantId);
+            if (!$product) {
+                return null;
             }
 
+            $this->repository->update($product, $data);
+            
             DB::commit();
-            return $updated;
-
-        } catch (Exception $e) {
+            return $product->fresh();
+        } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error updating product: ' . $e->getMessage());
             throw $e;
         }
     }
 
-    /**
-     * Eliminar producto
-     */
-    public function deleteProduct(Product $product): bool
+    public function deleteProduct(int $id, int $tenantId): bool
     {
         try {
             DB::beginTransaction();
             
-            // Aquí podríamos añadir lógica adicional antes de eliminar
+            $product = $this->repository->findForTenant($id, $tenantId);
+            if (!$product) {
+                return false;
+            }
+
             $deleted = $this->repository->delete($product);
             
             DB::commit();
             return $deleted;
-
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error deleting product: ' . $e->getMessage());
             throw $e;
         }
-    }
-
-    /**
-     * Buscar producto verificando tenant
-     */
-    public function findProductForTenant(int $productId, int $tenantId): ?Product
-    {
-        return $this->repository->findForTenant($productId, $tenantId);
     }
 }
