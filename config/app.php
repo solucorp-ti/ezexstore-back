@@ -198,6 +198,8 @@ return [
 
         App\Providers\ApiServiceProvider::class,
 
+        App\Providers\ProductServiceProvider::class,
+
     ],
 
     /*
