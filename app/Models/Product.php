@@ -13,7 +13,6 @@ class Product extends Model
 
     protected $fillable = [
         'tenant_id',
-        'product_serial',
         'product_name',
         'description',
         'base_price',
@@ -26,12 +25,10 @@ class Product extends Model
         'brand',
         'family',
         'line',
-        'is_active',
     ];
 
     protected $casts = [
         'base_price' => 'decimal:2',
-        'is_active' => 'boolean',
     ];
 
     public function tenant()
@@ -69,8 +66,7 @@ class Product extends Model
      */
     public function scopeActive(Builder $query): Builder
     {
-        return $query->where('is_active', true)
-            ->where('status', 'active');
+        return $query->where('status', 'active');
     }
 
     /**
@@ -80,7 +76,7 @@ class Product extends Model
     {
         return $query->where(function ($query) use ($search) {
             $query->where('product_name', 'like', "%{$search}%")
-                ->orWhere('product_serial', 'like', "%{$search}%")
+                ->orWhere('serial_number', 'like', "%{$search}%")
                 ->orWhere('sku', 'like', "%{$search}%")
                 ->orWhere('part_number', 'like', "%{$search}%");
         });

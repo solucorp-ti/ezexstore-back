@@ -25,7 +25,7 @@ class ProductRepository
             ->when($filters['search'] ?? null, function (Builder $query, string $search) {
                 $query->where(function ($query) use ($search) {
                     $query->where('product_name', 'like', "%{$search}%")
-                        ->orWhere('product_serial', 'like', "%{$search}%")
+                        ->orWhere('serial_number', 'like', "%{$search}%")
                         ->orWhere('sku', 'like', "%{$search}%")
                         ->orWhere('part_number', 'like', "%{$search}%");
                 });
@@ -85,7 +85,7 @@ class ProductRepository
     {
         return $this->model
             ->where('tenant_id', $tenantId)
-            ->where('product_serial', $serial)
+            ->where('serial_number', $serial)
             ->first();
     }
 }

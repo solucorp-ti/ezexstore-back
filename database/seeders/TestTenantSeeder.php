@@ -23,7 +23,6 @@ class TestTenantSeeder extends Seeder
             'name' => 'Test Admin',
             'email' => 'admin@test.com',
             'password' => bcrypt('password'),
-            'is_active' => true
         ]);
 
         // Asignar rol admin

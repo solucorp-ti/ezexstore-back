@@ -15,7 +15,6 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'product_serial' => ['required', 'string', 'max:255'],
             'product_name' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'base_price' => ['required', 'numeric', 'min:0'],
@@ -23,12 +22,11 @@ class StoreProductRequest extends FormRequest
             'unit_of_measure' => ['required', Rule::in(['piece', 'kg', 'liter', 'meter'])],
             'sku' => ['nullable', 'string', 'max:255', 'unique:products'],
             'part_number' => ['nullable', 'string', 'max:255'],
-            'serial_number' => ['nullable', 'string', 'max:255'],
+            'serial_number' => ['required', 'string', 'max:255'],
             'part_condition' => ['nullable', Rule::in(['new', 'used', 'discontinued', 'damaged', 'refurbished'])],
             'brand' => ['nullable', 'string', 'max:255'],
             'family' => ['nullable', 'string', 'max:255'],
             'line' => ['nullable', 'string', 'max:255'],
-            'is_active' => ['boolean'],
             'photos.*' => ['nullable', 'image', 'max:2048'] // 2MB max por foto
         ];
     }
@@ -36,10 +34,6 @@ class StoreProductRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'product_serial.required' => 'El número de serie es requerido',
-            'product_serial.string' => 'El número de serie debe ser texto',
-            'product_serial.max' => 'El número de serie no debe exceder 255 caracteres',
-
             'product_name.required' => 'El nombre del producto es requerido',
             'product_name.string' => 'El nombre debe ser texto',
             'product_name.max' => 'El nombre no debe exceder 255 caracteres',

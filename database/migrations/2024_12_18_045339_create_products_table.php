@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tenant_id')->constrained()->cascadeOnDelete();
-            $table->string('product_serial');
             $table->string('product_name');
             $table->text('description')->nullable();
             $table->decimal('base_price', 10, 2);
@@ -27,14 +26,12 @@ return new class extends Migration
             $table->string('brand')->nullable();
             $table->string('family')->nullable();
             $table->string('line')->nullable();
-            $table->boolean('is_active')->default(true);
             $table->timestamps();
             $table->softDeletes();
             
             $table->index('tenant_id');
-            $table->index('product_serial');
+            $table->index('serial_number');
             $table->index('status');
-            $table->index('is_active');
         });
     }
 

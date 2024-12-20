@@ -128,7 +128,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 664aDE3avVPfbd1kgZ5e8hc
+      - chvakf145EDZVPba3e6g86d
     controller: null
     method: null
     route: null
@@ -209,7 +209,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - db3DVvgEZ6ka8hfe61a4cP5
+      - c5E8a46fgkeZD61hdv3abPV
     controller: null
     method: null
     route: null

@@ -79,7 +79,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - f6daZeE58b3gvkh64ca1VDP
+      - 8fPZ3dDbh64ev6ag5VEca1k
     controller: null
     method: null
     route: null
@@ -164,7 +164,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 1kg5f4h8Zb3P6E6cDdeVvaa
+      - vcPVfake64h5Zg16d83DabE
     controller: null
     method: null
     route: null
@@ -203,7 +203,7 @@ endpoints:
         name: photo
         description: 'The photo.'
         required: true
-        example: voluptatem
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -221,7 +221,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       product_id: 1
-      photo: voluptatem
+      photo: et
       photoId: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -253,7 +253,7 @@ endpoints:
     auth:
       - headers
       - X-API-KEY
-      - 8P646ZkbhDed1fav3gEca5V
+      - 361PZadDb4ve8fcagh5VEk6
     controller: null
     method: null
     route: null

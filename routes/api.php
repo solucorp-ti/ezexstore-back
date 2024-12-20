@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::get('health-check', function() {
+
+Route::get('health-check', function () {
     return response()->json(['status' => 'ok']);
 });
 
@@ -34,16 +35,16 @@ Route::prefix('v1')->middleware(['api', 'json'])->group(function () {
 
         // Productos y fotos
         Route::prefix('products')->group(function () {
+            // Ruta especial para compatibilidad con ERP
+            Route::post('sync', [ProductController::class, 'syncProduct']); // Crea o actualiza
+
             // Rutas RESTful estándar
             Route::get('/', [ProductController::class, 'index']);
             Route::get('{product}', [ProductController::class, 'show']);
             Route::post('/', [ProductController::class, 'store']);
             Route::put('{product}', [ProductController::class, 'update']);
             Route::delete('{product}', [ProductController::class, 'destroy']);
-        
-            // Ruta especial para compatibilidad con ERP
-            Route::post('sync', [ProductController::class, 'syncProduct']); // Crea o actualiza
-        
+
             // Rutas de fotos
             Route::get('{product}/photos', [ProductPhotoController::class, 'index']);
             Route::post('{product}/photos', [ProductPhotoController::class, 'store']);

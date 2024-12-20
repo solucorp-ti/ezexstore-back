@@ -15,7 +15,6 @@ class UpdateProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'product_serial' => ['sometimes', 'string', 'max:255'],
             'product_name' => ['sometimes', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'base_price' => ['sometimes', 'numeric', 'min:0'],
@@ -28,12 +27,11 @@ class UpdateProductRequest extends FormRequest
                 Rule::unique('products')->ignore($this->route('product'))
             ],
             'part_number' => ['nullable', 'string', 'max:255'],
-            'serial_number' => ['nullable', 'string', 'max:255'],
+            'serial_number' => ['sometimes', 'string', 'max:255'],
             'part_condition' => ['nullable', Rule::in(['new', 'used', 'discontinued', 'damaged', 'refurbished'])],
             'brand' => ['nullable', 'string', 'max:255'],
             'family' => ['nullable', 'string', 'max:255'],
             'line' => ['nullable', 'string', 'max:255'],
-            'is_active' => ['boolean'],
             'photos.*' => ['nullable', 'image', 'max:2048']
         ];
     }
@@ -41,9 +39,6 @@ class UpdateProductRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'product_serial.string' => 'El número de serie debe ser texto',
-            'product_serial.max' => 'El número de serie no debe exceder 255 caracteres',
-
             'product_name.string' => 'El nombre debe ser texto',
             'product_name.max' => 'El nombre no debe exceder 255 caracteres',
 

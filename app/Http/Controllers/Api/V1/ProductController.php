@@ -22,6 +22,102 @@ class ProductController extends BaseApiController
     {
         $this->productService = $productService;
     }
+
+    private function getValidationRules($productId = null): array
+    {
+        return [
+            'product_name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'base_price' => 'required|numeric|min:0',
+            'status' => 'required|in:active,inactive,discontinued',
+            'unit_of_measure' => 'required|in:piece,kg,liter,meter',
+            'sku' => [
+                'nullable',
+                'string',
+                Rule::unique('products')->where(function ($query) {
+                    return $query->where('tenant_id', request()->tenant->id);
+                })->ignore($productId)
+            ],
+            'part_number' => 'nullable|string',
+            'serial_number' => 'required|string',
+            'part_condition' => 'nullable|in:new,used,discontinued,damaged,refurbished',
+            'brand' => 'nullable|string',
+            'family' => 'nullable|string',
+            'line' => 'nullable|string',
+        ];
+    }
+
+    private function getSyncValidationRules(): array
+    {
+        return [
+            'product_name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'base_price' => 'required|numeric|min:0',
+            'status' => 'required|in:active,inactive,discontinued',
+            'unit_of_measure' => 'required|in:piece,kg,liter,meter',
+            'sku' => [
+                'nullable',
+                'string',
+            ],
+            'part_number' => 'nullable|string',
+            'serial_number' => 'required|string',
+            'part_condition' => 'nullable|in:new,used,discontinued,damaged,refurbished',
+            'brand' => 'nullable|string',
+            'family' => 'nullable|string',
+            'line' => 'nullable|string',
+        ];
+    }
+
+    /**
+     * Create or Update Product from ERP
+     *
+     * Special endpoint for ERP integration that handles both creation and update.
+     *
+     * @header X-API-KEY required The API key for authentication
+     * 
+     * @bodyParam product_name string required The name of the product. Example: Test Product
+     * @bodyParam description string optional The description of the product. Example: A test product description
+     * @bodyParam base_price numeric required The base price of the product. Example: 99.99
+     * @bodyParam status string required The status of the product (active, inactive, discontinued). Example: active
+     * @bodyParam unit_of_measure string required The unit of measure (piece, kg, liter, meter). Example: piece
+     * @bodyParam sku string optional The SKU of the product (must be unique per tenant). Example: SKU001
+     * @bodyParam part_number string optional The part number of the product. Example: PART001
+     * @bodyParam serial_number string required The serial number of the product. Example: SN001
+     * @bodyParam part_condition string optional The condition of the product (new, used, discontinued, damaged, refurbished). Example: new
+     * @bodyParam brand string optional The brand of the product. Example: Test Brand
+     * @bodyParam family string optional The product family. Example: Test Family
+     * @bodyParam line string optional The product line. Example: Test Line
+     * 
+     * @response scenario="success" {
+     *   "success": true,
+     *   "data": {
+     *     "id": 1,
+     *     ...
+     *   },
+     *   "message": "Product synchronized successfully"
+     * }
+     */
+    public function syncProduct(Request $request)
+    {
+        $validator = Validator::make($request->all(), $this->getSyncValidationRules());
+
+        if ($validator->fails()) {
+            return $this->errorResponse($validator->errors()->first(), 422);
+        }
+
+        try {
+            $result = $this->productService->syncProduct($request->all(), $request->tenant->id);
+
+            $message = $result['is_new']
+                ? 'Product created successfully'
+                : 'Product updated successfully';
+
+            return $this->successResponse($result['product'], $message);
+        } catch (\Exception $e) {
+            return $this->errorResponse('Error synchronizing product: ' . $e->getMessage(), 500);
+        }
+    }
+
     /**
      * List Products
      * 
@@ -79,30 +175,6 @@ class ProductController extends BaseApiController
         ]);
     }
 
-    private function getValidationRules($productId = null): array
-    {
-        return [
-            'product_name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'base_price' => 'required|numeric|min:0',
-            'status' => 'required|in:active,inactive,discontinued',
-            'unit_of_measure' => 'required|in:piece,kg,liter,meter',
-            'sku' => [
-                'nullable',
-                'string',
-                Rule::unique('products')->where(function ($query) {
-                    return $query->where('tenant_id', request()->tenant->id);
-                })->ignore($productId)
-            ],
-            'part_number' => 'nullable|string',
-            'serial_number' => 'nullable|string',
-            'part_condition' => 'nullable|in:new,used,discontinued,damaged,refurbished',
-            'brand' => 'nullable|string',
-            'family' => 'nullable|string',
-            'line' => 'nullable|string',
-        ];
-    }
-
     /**
      * Create Product
      *
@@ -117,7 +189,7 @@ class ProductController extends BaseApiController
      * @bodyParam unit_of_measure string required The unit of measure (piece, kg, liter, meter). Example: piece
      * @bodyParam sku string optional The SKU of the product (must be unique per tenant). Example: SKU001
      * @bodyParam part_number string optional The part number of the product. Example: PART001
-     * @bodyParam serial_number string optional The serial number of the product. Example: SN001
+     * @bodyParam serial_number string required The serial number of the product. Example: SN001
      * @bodyParam part_condition string optional The condition of the product (new, used, discontinued, damaged, refurbished). Example: new
      * @bodyParam brand string optional The brand of the product. Example: Test Brand
      * @bodyParam family string optional The product family. Example: Test Family
@@ -169,7 +241,6 @@ class ProductController extends BaseApiController
      *   "success": true,
      *   "data": {
      *     "id": 1,
-     *     "product_serial": "TEST001",
      *     "product_name": "Test Product",
      *     "description": "Product description",
      *     "base_price": "99.99",
@@ -182,7 +253,6 @@ class ProductController extends BaseApiController
      *     "brand": "Test Brand",
      *     "family": "Test Family",
      *     "line": "Test Line",
-     *     "is_active": true
      *   },
      *   "message": "Product retrieved successfully"
      * }
@@ -219,7 +289,7 @@ class ProductController extends BaseApiController
      * @bodyParam unit_of_measure string optional The unit of measure (piece, kg, liter, meter). Example: kg
      * @bodyParam sku string optional The SKU (must be unique per tenant). Example: SKU002
      * @bodyParam part_number string optional The part number. Example: PART002
-     * @bodyParam serial_number string optional The serial number. Example: SN002
+     * @bodyParam serial_number string required The serial number. Example: SN002
      * @bodyParam part_condition string optional The condition (new, used, discontinued, damaged, refurbished). Example: used
      * @bodyParam brand string optional The brand. Example: New Brand
      * @bodyParam family string optional The product family. Example: New Family
@@ -285,63 +355,5 @@ class ProductController extends BaseApiController
         }
 
         return $this->successResponse(null, 'Product deleted successfully');
-    }
-
-    /**
-     * Create or Update Product from ERP
-     *
-     * Special endpoint for ERP integration that handles both creation and update.
-     *
-     * @header X-API-KEY required The API key for authentication
-     * 
-     * @bodyParam product_name string required The name of the product. Example: Test Product
-     * @bodyParam description string optional The description of the product. Example: A test product description
-     * @bodyParam base_price numeric required The base price of the product. Example: 99.99
-     * @bodyParam status string required The status of the product (active, inactive, discontinued). Example: active
-     * @bodyParam unit_of_measure string required The unit of measure (piece, kg, liter, meter). Example: piece
-     * @bodyParam sku string optional The SKU of the product (must be unique per tenant). Example: SKU001
-     * @bodyParam part_number string optional The part number of the product. Example: PART001
-     * @bodyParam serial_number string optional The serial number of the product. Example: SN001
-     * @bodyParam part_condition string optional The condition of the product (new, used, discontinued, damaged, refurbished). Example: new
-     * @bodyParam brand string optional The brand of the product. Example: Test Brand
-     * @bodyParam family string optional The product family. Example: Test Family
-     * @bodyParam line string optional The product line. Example: Test Line
-     * 
-     * @response scenario="success" {
-     *   "success": true,
-     *   "data": {
-     *     "id": 1,
-     *     "product_serial": "TEST001",
-     *     ...
-     *   },
-     *   "message": "Product synchronized successfully"
-     * }
-     */
-    public function syncProduct(Request $request)
-    {
-        $validator = Validator::make($request->all(), $this->getValidationRules());
-
-        if ($validator->fails()) {
-            return $this->errorResponse($validator->errors()->first(), 422);
-        }
-
-        // Buscar producto existente por product_serial o SKU
-        $product = $this->productService->findByIdentifier(
-            $request->input('product_serial'),
-            $request->input('sku'),
-            $request->tenant->id
-        );
-
-        if ($product) {
-            // Actualizar
-            $product = $this->productService->updateProduct($product->id, $request->all(), $request->tenant->id);
-            $message = 'Product updated successfully';
-        } else {
-            // Crear
-            $product = $this->productService->createProduct($request->all(), $request->tenant->id);
-            $message = 'Product created successfully';
-        }
-
-        return $this->successResponse($product, $message);
     }
 }

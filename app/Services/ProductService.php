@@ -108,7 +108,7 @@ class ProductService implements ProductServiceInterface
             DB::beginTransaction();
 
             $product = $this->findByIdentifier(
-                $data['product_serial'],
+                $data['serial_number'],
                 $data['sku'] ?? null,
                 $tenantId
             );
@@ -134,7 +134,7 @@ class ProductService implements ProductServiceInterface
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error syncing product: ' . $e->getMessage(), [
-                'product_serial' => $data['product_serial'] ?? null,
+                'serial_number' => $data['serial_number'] ?? null,
                 'sku' => $data['sku'] ?? null,
                 'tenant_id' => $tenantId
             ]);

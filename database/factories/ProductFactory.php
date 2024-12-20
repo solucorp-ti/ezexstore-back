@@ -11,7 +11,6 @@ class ProductFactory extends Factory
     {
         return [
             'tenant_id' => Tenant::factory(),
-            'product_serial' => 'P' . str_pad(fake()->unique()->numberBetween(1, 999999), 6, '0', STR_PAD_LEFT),
             'product_name' => fake()->words(3, true),
             'description' => fake()->paragraph(),
             'base_price' => fake()->randomFloat(2, 10, 1000),
@@ -24,7 +23,6 @@ class ProductFactory extends Factory
             'brand' => fake()->company(),
             'family' => fake()->word(),
             'line' => fake()->word(),
-            'is_active' => true,
         ];
     }
 }

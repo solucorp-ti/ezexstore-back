@@ -20,7 +20,6 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
-        'is_active',
     ];
 
     protected $hidden = [
@@ -31,7 +30,6 @@ class User extends Authenticatable implements FilamentUser
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-        'is_active' => 'boolean',
     ];
 
     public function tenants(): BelongsToMany
@@ -48,6 +46,6 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->is_active;
+        return $this->status === 'active';
     }
 }
