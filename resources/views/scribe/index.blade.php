@@ -1012,7 +1012,7 @@
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        lepwocj
+                        njofjyfktablann
                     </div>
                 </div>
             </div>
@@ -1288,7 +1288,7 @@
     "config": {
         "company_name": "\"Example Company\"",
         "company_email": "\"contact@example.com\"",
-        "whatsapp_number": "lepwocj",
+        "whatsapp_number": "njofjyfktablann",
         "search_engine_type": "\"regular\""
     },
     "user": {
@@ -1399,7 +1399,7 @@ You can check the Dev Tools console for debugging information.</p>
     \"config\": {
         \"company_name\": \"\\\"Example Company\\\"\",
         \"company_email\": \"\\\"contact@example.com\\\"\",
-        \"whatsapp_number\": \"lepwocj\",
+        \"whatsapp_number\": \"njofjyfktablann\",
         \"search_engine_type\": \"\\\"regular\\\"\"
     },
     \"user\": {
@@ -1432,7 +1432,7 @@ let body = {
     "config": {
         "company_name": "\"Example Company\"",
         "company_email": "\"contact@example.com\"",
-        "whatsapp_number": "lepwocj",
+        "whatsapp_number": "njofjyfktablann",
         "search_engine_type": "\"regular\""
     },
     "user": {
@@ -1470,7 +1470,7 @@ $response = $client-&gt;post(
             'config' =&gt; [
                 'company_name' =&gt; '"Example Company"',
                 'company_email' =&gt; '"contact@example.com"',
-                'whatsapp_number' =&gt; 'lepwocj',
+                'whatsapp_number' =&gt; 'njofjyfktablann',
                 'search_engine_type' =&gt; '"regular"',
             ],
             'user' =&gt; [
@@ -1735,7 +1735,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        http://batz.biz/
+                        http://connelly.biz/at-esse-ea-commodi-facilis
                     </div>
                 </div>
             </div>
@@ -1993,7 +1993,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "config": {
-        "logo_url": "http:\/\/batz.biz\/",
+        "logo_url": "http:\/\/connelly.biz\/at-esse-ea-commodi-facilis",
         "company_name": "\"Updated Company\"",
         "company_email": "\"new@example.com\"",
         "whatsapp_number": "\"+1234567890\"",
@@ -2098,7 +2098,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"config\": {
-        \"logo_url\": \"http:\\/\\/batz.biz\\/\",
+        \"logo_url\": \"http:\\/\\/connelly.biz\\/at-esse-ea-commodi-facilis\",
         \"company_name\": \"\\\"Updated Company\\\"\",
         \"company_email\": \"\\\"new@example.com\\\"\",
         \"whatsapp_number\": \"\\\"+1234567890\\\"\",
@@ -2125,7 +2125,7 @@ const headers = {
 
 let body = {
     "config": {
-        "logo_url": "http:\/\/batz.biz\/",
+        "logo_url": "http:\/\/connelly.biz\/at-esse-ea-commodi-facilis",
         "company_name": "\"Updated Company\"",
         "company_email": "\"new@example.com\"",
         "whatsapp_number": "\"+1234567890\"",
@@ -2157,7 +2157,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'config' =&gt; [
-                'logo_url' =&gt; 'http://batz.biz/',
+                'logo_url' =&gt; 'http://connelly.biz/at-esse-ea-commodi-facilis',
                 'company_name' =&gt; '"Updated Company"',
                 'company_email' =&gt; '"new@example.com"',
                 'whatsapp_number' =&gt; '"+1234567890"',
@@ -3163,7 +3163,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        numquam
+                        ipsa
                     </div>
                 </div>
             </div>
@@ -3185,7 +3185,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        corporis
+                        aliquam
                     </div>
                 </div>
             </div>
@@ -3207,7 +3207,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        eveniet
+                        explicabo
                     </div>
                 </div>
             </div>
@@ -3229,7 +3229,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        suscipit
+                        sit
                     </div>
                 </div>
             </div>
@@ -3251,7 +3251,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        facere
+                        omnis
                     </div>
                 </div>
             </div>
@@ -3427,7 +3427,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="search" name="search"
                                                    id="queryparam-GETapi-v1-products-search"
                                                    placeholder="Search by name, serial, SKU or part number"
-                                                   value="numquam" data-component="query"
+                                                   value="ipsa" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3440,7 +3440,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="status" name="status"
                                                    id="queryparam-GETapi-v1-products-status"
                                                    placeholder="Filter by status (active, inactive, discontinued)"
-                                                   value="corporis" data-component="query"
+                                                   value="aliquam" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3453,7 +3453,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="condition" name="condition"
                                                    id="queryparam-GETapi-v1-products-condition"
                                                    placeholder="Filter by condition (new, used, discontinued, damaged, refurbished)"
-                                                   value="eveniet" data-component="query"
+                                                   value="explicabo" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3466,7 +3466,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="min_price" name="min_price"
                                                    id="queryparam-GETapi-v1-products-min_price"
                                                    placeholder="numeric Minimum price filter"
-                                                   value="suscipit" data-component="query"
+                                                   value="sit" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3479,7 +3479,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="max_price" name="max_price"
                                                    id="queryparam-GETapi-v1-products-max_price"
                                                    placeholder="numeric Maximum price filter"
-                                                   value="facere" data-component="query"
+                                                   value="omnis" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -3602,7 +3602,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/v1/products?search=numquam&amp;status=corporis&amp;condition=eveniet&amp;min_price=suscipit&amp;max_price=facere&amp;in_stock=1&amp;per_page=15" \
+    --get "http://ezexstore-back.test/api/v1/products?search=ipsa&amp;status=aliquam&amp;condition=explicabo&amp;min_price=sit&amp;max_price=omnis&amp;in_stock=1&amp;per_page=15" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -3617,11 +3617,11 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const params = {
-    "search": "numquam",
-    "status": "corporis",
-    "condition": "eveniet",
-    "min_price": "suscipit",
-    "max_price": "facere",
+    "search": "ipsa",
+    "status": "aliquam",
+    "condition": "explicabo",
+    "min_price": "sit",
+    "max_price": "omnis",
     "in_stock": "1",
     "per_page": "15",
 };
@@ -3655,11 +3655,11 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'query' =&gt; [
-            'search' =&gt; 'numquam',
-            'status' =&gt; 'corporis',
-            'condition' =&gt; 'eveniet',
-            'min_price' =&gt; 'suscipit',
-            'max_price' =&gt; 'facere',
+            'search' =&gt; 'ipsa',
+            'status' =&gt; 'aliquam',
+            'condition' =&gt; 'explicabo',
+            'min_price' =&gt; 'sit',
+            'max_price' =&gt; 'omnis',
             'in_stock' =&gt; '1',
             'per_page' =&gt; '15',
         ],
@@ -3845,7 +3845,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        a
+                        eveniet
                     </div>
                 </div>
             </div>
@@ -4002,7 +4002,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="product" name="product"
                                                id="urlparam-GETapi-v1-products--product--product"
                                                placeholder="The product."
-                                               value="a" data-component="url"
+                                               value="eveniet" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4111,7 +4111,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/v1/products/a" \
+    --get "http://ezexstore-back.test/api/v1/products/eveniet" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4122,7 +4122,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/a"
+    "http://ezexstore-back.test/api/v1/products/eveniet"
 );
 
 const headers = {
@@ -4142,7 +4142,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/a';
+$url = 'http://ezexstore-back.test/api/v1/products/eveniet';
 $response = $client-&gt;get(
     $url,
     [
@@ -5157,7 +5157,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        iste
+                        nisi
                     </div>
                 </div>
             </div>
@@ -5238,7 +5238,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Nihil in et et corrupti aperiam repellendus ut.
+                        Rem sunt magni earum voluptatem officia voluptatem.
                     </div>
                 </div>
             </div>
@@ -5622,7 +5622,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="product" name="product"
                                                id="urlparam-PUTapi-v1-products--product--product"
                                                placeholder="The product."
-                                               value="iste" data-component="url"
+                                               value="nisi" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5666,7 +5666,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "product_name": "Updated Product",
-    "description": "Nihil in et et corrupti aperiam repellendus ut.",
+    "description": "Rem sunt magni earum voluptatem officia voluptatem.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -5769,13 +5769,13 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://ezexstore-back.test/api/v1/products/iste" \
+    "http://ezexstore-back.test/api/v1/products/nisi" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"product_name\": \"Updated Product\",
-    \"description\": \"Nihil in et et corrupti aperiam repellendus ut.\",
+    \"description\": \"Rem sunt magni earum voluptatem officia voluptatem.\",
     \"base_price\": \"149.99\",
     \"status\": \"inactive\",
     \"unit_of_measure\": \"kg\",
@@ -5795,7 +5795,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/iste"
+    "http://ezexstore-back.test/api/v1/products/nisi"
 );
 
 const headers = {
@@ -5806,7 +5806,7 @@ const headers = {
 
 let body = {
     "product_name": "Updated Product",
-    "description": "Nihil in et et corrupti aperiam repellendus ut.",
+    "description": "Rem sunt magni earum voluptatem officia voluptatem.",
     "base_price": "149.99",
     "status": "inactive",
     "unit_of_measure": "kg",
@@ -5831,7 +5831,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/iste';
+$url = 'http://ezexstore-back.test/api/v1/products/nisi';
 $response = $client-&gt;put(
     $url,
     [
@@ -5842,7 +5842,7 @@ $response = $client-&gt;put(
         ],
         'json' =&gt; [
             'product_name' =&gt; 'Updated Product',
-            'description' =&gt; 'Nihil in et et corrupti aperiam repellendus ut.',
+            'description' =&gt; 'Rem sunt magni earum voluptatem officia voluptatem.',
             'base_price' =&gt; '149.99',
             'status' =&gt; 'inactive',
             'unit_of_measure' =&gt; 'kg',
@@ -6047,7 +6047,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        omnis
+                        modi
                     </div>
                 </div>
             </div>
@@ -6204,7 +6204,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="product" name="product"
                                                id="urlparam-DELETEapi-v1-products--product--product"
                                                placeholder="The product."
-                                               value="omnis" data-component="url"
+                                               value="modi" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6313,7 +6313,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://ezexstore-back.test/api/v1/products/omnis" \
+    "http://ezexstore-back.test/api/v1/products/modi" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -6324,7 +6324,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/omnis"
+    "http://ezexstore-back.test/api/v1/products/modi"
 );
 
 const headers = {
@@ -6344,7 +6344,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/omnis';
+$url = 'http://ezexstore-back.test/api/v1/products/modi';
 $response = $client-&gt;delete(
     $url,
     [
@@ -9040,7 +9040,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        19
+                        17
                     </div>
                 </div>
             </div>
@@ -9065,7 +9065,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        15
+                        12
                     </div>
                 </div>
             </div>
@@ -9089,7 +9089,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        order
+                        restock
                     </div>
                 </div>
             </div>
@@ -9114,7 +9114,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2024-12-20T00:48:26
+                        2024-12-20T03:09:15
                     </div>
                 </div>
             </div>
@@ -9139,7 +9139,7 @@ These logs include changes in inventory, restocks, orders, and other related eve
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2114-01-22
+                        2112-04-23
                     </div>
                 </div>
             </div>
@@ -9356,11 +9356,11 @@ These logs include changes in inventory, restocks, orders, and other related eve
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "per_page": 21,
-    "product_id": 19,
-    "warehouse_id": 15,
-    "type": "order",
-    "date_from": "2024-12-20T00:48:26",
-    "date_to": "2114-01-22"
+    "product_id": 17,
+    "warehouse_id": 12,
+    "type": "restock",
+    "date_from": "2024-12-20T03:09:15",
+    "date_to": "2112-04-23"
 }</div>
                             </div>
                                             </div>
@@ -9459,11 +9459,11 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"per_page\": 21,
-    \"product_id\": 19,
-    \"warehouse_id\": 15,
-    \"type\": \"order\",
-    \"date_from\": \"2024-12-20T00:48:26\",
-    \"date_to\": \"2114-01-22\"
+    \"product_id\": 17,
+    \"warehouse_id\": 12,
+    \"type\": \"restock\",
+    \"date_from\": \"2024-12-20T03:09:15\",
+    \"date_to\": \"2112-04-23\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -9494,11 +9494,11 @@ const headers = {
 
 let body = {
     "per_page": 21,
-    "product_id": 19,
-    "warehouse_id": 15,
-    "type": "order",
-    "date_from": "2024-12-20T00:48:26",
-    "date_to": "2114-01-22"
+    "product_id": 17,
+    "warehouse_id": 12,
+    "type": "restock",
+    "date_from": "2024-12-20T03:09:15",
+    "date_to": "2112-04-23"
 };
 
 fetch(url, {
@@ -9531,11 +9531,11 @@ $response = $client-&gt;get(
         ],
         'json' =&gt; [
             'per_page' =&gt; 21,
-            'product_id' =&gt; 19,
-            'warehouse_id' =&gt; 15,
-            'type' =&gt; 'order',
-            'date_from' =&gt; '2024-12-20T00:48:26',
-            'date_to' =&gt; '2114-01-22',
+            'product_id' =&gt; 17,
+            'warehouse_id' =&gt; 12,
+            'type' =&gt; 'restock',
+            'date_from' =&gt; '2024-12-20T03:09:15',
+            'date_to' =&gt; '2112-04-23',
         ],
     ]
 );
@@ -9659,7 +9659,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
         </div>
 
-        <p>Retrieves a paginated list of photos for a specific product.</p>
+        <p>Retrieves list of photos for a specific product.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -9755,38 +9755,34 @@ print_r(json_decode((string) $body));</code></pre>                              
             </div>
             </div>
 </div>
-                                                            </div>
-                        </div>
-                    
-
-                                                <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                                <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Query Parameters</h3>
-
-                                <div class="sl-text-sm">
-                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
     <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">per_page</div>
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">product</div>
                                             <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The number of photos per page. Default: 15.</p>
+            <p>The ID of the product.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        10
+                        1
                     </div>
                 </div>
             </div>
             </div>
 </div>
-                                                                </div>
+                                                            </div>
                         </div>
+                    
+
                     
                     
                                     </div>
@@ -9914,44 +9910,22 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
-                                                    </div>
-                    </div>
-                </div>
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Query Parameters
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                                                                                            <label aria-hidden="true"
-                                       for="queryparam-GETapi-v1-products--product_id--photos-per_page">per_page</label>
+                                                            <label aria-hidden="true"
+                                       for="urlparam-GETapi-v1-products--product_id--photos-product">product</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
-                                                                                    <input aria-label="per_page" name="per_page"
-                                                   id="queryparam-GETapi-v1-products--product_id--photos-per_page"
-                                                   placeholder="The number of photos per page. Default: 15."
-                                                   value="10" data-component="query"
-                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
-                                            >
-                                                                            </div>
+                                        <input aria-label="product" name="product"
+                                               id="urlparam-GETapi-v1-products--product_id--photos-product"
+                                               placeholder="The ID of the product."
+                                               value="1" data-component="url"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
                                 </div>
                                                     </div>
                     </div>
                 </div>
+            
             
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
@@ -10041,7 +10015,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://ezexstore-back.test/api/v1/products/1/photos?per_page=10" \
+    --get "http://ezexstore-back.test/api/v1/products/1/photos" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -10054,12 +10028,6 @@ You can check the Dev Tools console for debugging information.</p>
                                             <pre><code class="language-javascript">const url = new URL(
     "http://ezexstore-back.test/api/v1/products/1/photos"
 );
-
-const params = {
-    "per_page": "10",
-};
-Object.keys(params)
-    .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
     "X-API-KEY": "{YOUR_API_KEY}",
@@ -10087,9 +10055,6 @@ $response = $client-&gt;get(
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
-        'query' =&gt; [
-            'per_page' =&gt; '10',
-        ],
     ]
 );
 $body = $response-&gt;getBody();
@@ -10110,6 +10075,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-v1-products--product_id--photos', event.target.value);">
                                                                                                             <option value="0">200, success</option>
+                                                                                                            <option value="1">404, product not found</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -10136,17 +10102,25 @@ print_r(json_decode((string) $body));</code></pre>                              
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;photo_url&quot;: &quot;/storage/products/1/photo1.jpg&quot;,
-            &quot;created_at&quot;: &quot;2024-12-18T00:00:00.000000Z&quot;
+            &quot;product_id&quot;: 1,
+            &quot;photo_url&quot;: &quot;products/1/1/1_1734660820.png&quot;,
+            &quot;created_at&quot;: &quot;2024-12-20T02:13:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-12-20T02:13:40.000000Z&quot;,
+            &quot;full_url&quot;: &quot;http://localhost:8000/storage/products/1/1/1_1734660820.png&quot;
         }
     ],
-    &quot;meta&quot;: {
-        &quot;current_page&quot;: 1,
-        &quot;last_page&quot;: 3,
-        &quot;per_page&quot;: 15,
-        &quot;total&quot;: 45
-    },
-    &quot;message&quot;: &quot;Product photos retrieved successfully&quot;
+    &quot;message&quot;: &quot;Photos retrieved successfully&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-v1-products--product_id--photos example-response-GETapi-v1-products--product_id--photos-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Product not found&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -10188,7 +10162,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
         </div>
 
-        <p>Uploads one or more photos for a specific product.</p>
+        <p>Uploads one or more photos for a specific product. Send multiple photos using the same form-field name with array notation.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -10229,7 +10203,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
+                        multipart/form-data
                     </div>
                 </div>
             </div>
@@ -10300,13 +10274,40 @@ print_r(json_decode((string) $body));</code></pre>                              
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">photos</div>
-                                            <span class="sl-truncate sl-text-muted">string[]</span>
+                                            <span class="sl-truncate sl-text-muted">file[]</span>
                                     </div>
                                     <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
                     <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>An array of photo files to upload.</p>
+            <p>Must be a file. Must be an image. Must not be greater than 2048 kilobytes.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">photos[]</div>
+                                            <span class="sl-truncate sl-text-muted">file[]</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Array of photo files to upload (max 2MB each, formats: jpg, jpeg, png, webp).</p>
         </div>
                                     </div>
 </div>
@@ -10327,8 +10328,8 @@ print_r(json_decode((string) $body));</code></pre>                              
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="POST"
               data-path="api/v1/products/{product_id}/photos"
-              data-hasfiles="0"
-              data-hasjsonbody="1">
+              data-hasfiles="1"
+              data-hasjsonbody="0">
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -10391,7 +10392,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
                                                id="header-POSTapi-v1-products--product_id--photos-Content-Type"
-                                               value="application/json" data-component="header"
+                                               value="multipart/form-data" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10462,14 +10463,21 @@ print_r(json_decode((string) $body));</code></pre>                              
                         </div>
                     </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-POSTapi-v1-products--product_id--photos"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "photos": null
-}</div>
-                            </div>
+                                                    <div class="ParameterGrid sl-p-4">
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-v1-products--product_id--photos-photos">photos</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="photos" name="photos"
+                                                       id="bodyparam-POSTapi-v1-products--product_id--photos-photos"
+                                                       placeholder="Must be a file. Must be an image. Must not be greater than 2048 kilobytes."
+                                                       value="" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                                                                </div>
                                             </div>
                 </div>
             
@@ -10562,12 +10570,10 @@ You can check the Dev Tools console for debugging information.</p>
                                             <pre><code class="language-bash">curl --request POST \
     "http://ezexstore-back.test/api/v1/products/1/photos" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
-    --header "Content-Type: application/json" \
+    --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --data "{
-    \"photos\": null
-}"
-</code></pre>                                        </div>
+    --form "photos[]="\
+    --form "photos[]=@C:\Users\joseu\AppData\Local\Temp\phpD444.tmp" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -10580,18 +10586,18 @@ You can check the Dev Tools console for debugging information.</p>
 
 const headers = {
     "X-API-KEY": "{YOUR_API_KEY}",
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
 
-let body = {
-    "photos": null
-};
+const body = new FormData();
+body.append('photos[]', '');
+body.append('photos[]', document.querySelector('input[name="photos[]"]').files[0]);
 
 fetch(url, {
     method: "POST",
     headers,
-    body: JSON.stringify(body),
+    body,
 }).then(response =&gt; response.json());</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -10606,11 +10612,18 @@ $response = $client-&gt;post(
     [
         'headers' =&gt; [
             'X-API-KEY' =&gt; '{YOUR_API_KEY}',
-            'Content-Type' =&gt; 'application/json',
+            'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
-        'json' =&gt; [
-            'photos' =&gt; null,
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'photos[]',
+                'contents' =&gt; ''
+            ],
+            [
+                'name' =&gt; 'photos[]',
+                'contents' =&gt; fopen('C:\Users\joseu\AppData\Local\Temp\phpD444.tmp', 'r')
+            ],
         ],
     ]
 );
@@ -10633,6 +10646,8 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                         onchange="switchExampleResponse('POSTapi-v1-products--product_id--photos', event.target.value);">
                                                                                                             <option value="0">201, success</option>
                                                                                                             <option value="1">422, validation error</option>
+                                                                                                            <option value="2">422, invalid file</option>
+                                                                                                            <option value="3">422, file too large</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -10659,8 +10674,11 @@ print_r(json_decode((string) $body));</code></pre>                              
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;photo_url&quot;: &quot;/storage/products/1/photo1.jpg&quot;,
-            &quot;created_at&quot;: &quot;2024-12-18T00:00:00.000000Z&quot;
+            &quot;product_id&quot;: 1,
+            &quot;photo_url&quot;: &quot;products/1/1/1_1734660820.png&quot;,
+            &quot;created_at&quot;: &quot;2024-12-20T02:13:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-12-20T02:13:40.000000Z&quot;,
+            &quot;full_url&quot;: &quot;http://localhost:8000/storage/products/1/1/1_1734660820.png&quot;
         }
     ],
     &quot;message&quot;: &quot;Photos uploaded successfully&quot;
@@ -10675,6 +10693,28 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: false,
     &quot;message&quot;: &quot;The photos field is required.&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-products--product_id--photos example-response-POSTapi-v1-products--product_id--photos-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;The photo must be an image file (jpg, jpeg, png, webp).&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-products--product_id--photos example-response-POSTapi-v1-products--product_id--photos-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;The photo may not be greater than 2MB.&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -10716,7 +10756,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                     </div>
         </div>
 
-        <p>Deletes a specific photo for the given product.</p>
+        <p>Deletes a specific photo for the given product. This action cannot be undone.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -10830,7 +10870,31 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        itaque
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">product</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The ID of the product.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        1
                     </div>
                 </div>
             </div>
@@ -10999,7 +11063,19 @@ print_r(json_decode((string) $body));</code></pre>                              
                                         <input aria-label="photo" name="photo"
                                                id="urlparam-DELETEapi-v1-products--product_id--photos--photo--photo"
                                                placeholder="The photo."
-                                               value="et" data-component="url"
+                                               value="itaque" data-component="url"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                            <label aria-hidden="true"
+                                       for="urlparam-DELETEapi-v1-products--product_id--photos--photo--product">product</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="product" name="product"
+                                               id="urlparam-DELETEapi-v1-products--product_id--photos--photo--product"
+                                               placeholder="The ID of the product."
+                                               value="1" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -11108,7 +11184,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://ezexstore-back.test/api/v1/products/1/photos/et" \
+    "http://ezexstore-back.test/api/v1/products/1/photos/itaque" \
     --header "X-API-KEY: {YOUR_API_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -11119,7 +11195,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://ezexstore-back.test/api/v1/products/1/photos/et"
+    "http://ezexstore-back.test/api/v1/products/1/photos/itaque"
 );
 
 const headers = {
@@ -11139,7 +11215,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://ezexstore-back.test/api/v1/products/1/photos/et';
+$url = 'http://ezexstore-back.test/api/v1/products/1/photos/itaque';
 $response = $client-&gt;delete(
     $url,
     [
@@ -11168,7 +11244,8 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('DELETEapi-v1-products--product_id--photos--photo-', event.target.value);">
                                                                                                             <option value="0">200, success</option>
-                                                                                                            <option value="1">404, photo not found</option>
+                                                                                                            <option value="1">403, unauthorized</option>
+                                                                                                            <option value="2">404, not found</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -11192,11 +11269,23 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: true,
+    &quot;data&quot;: null,
     &quot;message&quot;: &quot;Photo deleted successfully&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
                                                             <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-DELETEapi-v1-products--product_id--photos--photo- example-response-DELETEapi-v1-products--product_id--photos--photo--1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-DELETEapi-v1-products--product_id--photos--photo- example-response-DELETEapi-v1-products--product_id--photos--photo--2"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                

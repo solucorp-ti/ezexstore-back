@@ -15,7 +15,7 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'List Product Photos'
-      description: 'Retrieves a paginated list of photos for a specific product.'
+      description: 'Retrieves list of photos for a specific product.'
       authenticated: true
       custom: []
     headers:
@@ -33,21 +33,21 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-    cleanUrlParameters:
-      product_id: 1
-    queryParameters:
-      per_page:
-        name: per_page
-        description: 'The number of photos per page. Default: 15.'
-        required: false
-        example: 10
+      product:
+        name: product
+        description: 'The ID of the product.'
+        required: true
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: true
         nullable: false
         custom: []
-    cleanQueryParameters:
-      per_page: 10
+    cleanUrlParameters:
+      product_id: 1
+      product: 1
+    queryParameters: []
+    cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -60,26 +60,33 @@ endpoints:
             "data": [
               {
                 "id": 1,
-                "photo_url": "/storage/products/1/photo1.jpg",
-                "created_at": "2024-12-18T00:00:00.000000Z"
+                "product_id": 1,
+                "photo_url": "products/1/1/1_1734660820.png",
+                "created_at": "2024-12-20T02:13:40.000000Z",
+                "updated_at": "2024-12-20T02:13:40.000000Z",
+                "full_url": "http://localhost:8000/storage/products/1/1/1_1734660820.png"
               }
             ],
-            "meta": {
-              "current_page": 1,
-              "last_page": 3,
-              "per_page": 15,
-              "total": 45
-            },
-            "message": "Product photos retrieved successfully"
+            "message": "Photos retrieved successfully"
           }
         headers: []
         description: success
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": false,
+            "message": "Product not found"
+          }
+        headers: []
+        description: 'product not found'
         custom: []
     responseFields: []
     auth:
       - headers
       - X-API-KEY
-      - Z4Ef8cPhd63D61Vgbka5eva
+      - ba8VZP4E5cD3hg6ekvad16f
     controller: null
     method: null
     route: null
@@ -96,12 +103,12 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'Upload Product Photos'
-      description: 'Uploads one or more photos for a specific product.'
+      description: 'Uploads one or more photos for a specific product. Send multiple photos using the same form-field name with array notation.'
       authenticated: true
       custom: []
     headers:
       X-API-KEY: '{YOUR_API_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       product_id:
@@ -121,17 +128,30 @@ endpoints:
     bodyParameters:
       photos:
         name: photos
-        description: 'An array of photo files to upload.'
+        description: 'Must be a file. Must be an image. Must not be greater than 2048 kilobytes.'
+        required: true
+        example:
+          - null
+        type: 'file[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'photos[]':
+        name: 'photos[]'
+        description: 'Array of photo files to upload (max 2MB each, formats: jpg, jpeg, png, webp).'
         required: true
         example: null
-        type: 'string[]'
+        type: 'file[]'
         enumValues: []
         exampleWasSpecified: true
         nullable: false
         custom: []
     cleanBodyParameters:
-      photos: null
-    fileParameters: []
+      'photos[]': null
+    fileParameters:
+      photos:
+        - null
     responses:
       -
         status: 201
@@ -141,8 +161,11 @@ endpoints:
             "data": [
               {
                 "id": 1,
-                "photo_url": "/storage/products/1/photo1.jpg",
-                "created_at": "2024-12-18T00:00:00.000000Z"
+                "product_id": 1,
+                "photo_url": "products/1/1/1_1734660820.png",
+                "created_at": "2024-12-20T02:13:40.000000Z",
+                "updated_at": "2024-12-20T02:13:40.000000Z",
+                "full_url": "http://localhost:8000/storage/products/1/1/1_1734660820.png"
               }
             ],
             "message": "Photos uploaded successfully"
@@ -160,11 +183,31 @@ endpoints:
         headers: []
         description: 'validation error'
         custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "success": false,
+            "message": "The photo must be an image file (jpg, jpeg, png, webp)."
+          }
+        headers: []
+        description: 'invalid file'
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "success": false,
+            "message": "The photo may not be greater than 2MB."
+          }
+        headers: []
+        description: 'file too large'
+        custom: []
     responseFields: []
     auth:
       - headers
       - X-API-KEY
-      - 5g6kbd4vaaVZ8Df3ec1hEP6
+      - 5dEkahPDaf8ZV4cbge6v631
     controller: null
     method: null
     route: null
@@ -181,7 +224,7 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'Delete Product Photo'
-      description: 'Deletes a specific photo for the given product.'
+      description: 'Deletes a specific photo for the given product. This action cannot be undone.'
       authenticated: true
       custom: []
     headers:
@@ -203,10 +246,20 @@ endpoints:
         name: photo
         description: 'The photo.'
         required: true
-        example: et
+        example: itaque
         type: string
         enumValues: []
         exampleWasSpecified: false
+        nullable: false
+        custom: []
+      product:
+        name: product
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
         nullable: false
         custom: []
       photoId:
@@ -221,7 +274,8 @@ endpoints:
         custom: []
     cleanUrlParameters:
       product_id: 1
-      photo: et
+      photo: itaque
+      product: 1
       photoId: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -234,10 +288,21 @@ endpoints:
         content: |-
           {
             "success": true,
+            "data": null,
             "message": "Photo deleted successfully"
           }
         headers: []
         description: success
+        custom: []
+      -
+        status: 403
+        content: |-
+          {
+            "success": false,
+            "message": "This action is unauthorized."
+          }
+        headers: []
+        description: unauthorized
         custom: []
       -
         status: 404
@@ -247,13 +312,13 @@ endpoints:
             "message": "Photo not found"
           }
         headers: []
-        description: 'photo not found'
+        description: 'not found'
         custom: []
     responseFields: []
     auth:
       - headers
       - X-API-KEY
-      - bV4cvhdED3a1Pfek6Za5g86
+      - vaVP4chk8efEa1D365Z6bgd
     controller: null
     method: null
     route: null

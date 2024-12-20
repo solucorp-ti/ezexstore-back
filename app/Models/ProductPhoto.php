@@ -27,6 +27,6 @@ class ProductPhoto extends Model
      */
     public function getFullUrlAttribute(): string
     {
-        return asset('storage/' . $this->photo_url);
+        return config('app.url') . '/storage/' . $this->photo_url;
     }
 }
