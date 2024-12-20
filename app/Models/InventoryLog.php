@@ -31,4 +31,9 @@ class InventoryLog extends Model
     {
         return $this->belongsTo(Warehouse::class);
     }
+
+    public function getTotalQtyAttribute()
+    {
+        return $this->type === 'restock' ? $this->quantity : -$this->quantity;
+    }
 }

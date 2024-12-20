@@ -31,6 +31,8 @@ class Product extends Model
         'base_price' => 'decimal:2',
     ];
 
+    protected $appends = ['available_quantity'];
+
     public function tenant()
     {
         return $this->belongsTo(Tenant::class);
@@ -115,6 +117,13 @@ class Product extends Model
     {
         return $query->whereDoesntHave('warehouses', function ($query) {
             $query->where('stock', '>', 0);
+        });
+    }
+
+    public function getAvailableQuantityAttribute()
+    {
+        return $this->inventoryLogs->sum(function ($log) {
+            return $log->type === 'restock' ? $log->quantity : -$log->quantity;
         });
     }
 }

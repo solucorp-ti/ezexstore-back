@@ -3,14 +3,51 @@
 namespace Database\Seeders;
 
 use App\Models\ApiKey;
+use App\Models\InventoryLog;
+use App\Models\Product;
 use App\Models\Tenant;
 use App\Models\TenantConfig;
 use App\Models\User;
 use App\Models\Warehouse;
 use Illuminate\Database\Seeder;
+use Faker\Generator;
+use Illuminate\Container\Container;
 
 class TenantSeeder extends Seeder
 {
+    /**
+     * The current Faker instance.
+     *
+     * @var \Faker\Generator
+     */
+    protected $faker;
+
+    /**
+     * Create a new seeder instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->faker = $this->withFaker();
+    }
+
+    /**
+     * Get a new Faker instance.
+     *
+     * @return \Faker\Generator
+     */
+    protected function withFaker()
+    {
+        return Container::getInstance()->make(Generator::class);
+    }
+
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+
     public function run(): void
     {
         // Crear un Tenant
@@ -38,10 +75,45 @@ class TenantSeeder extends Seeder
         ]);
 
         // Crear un Almacén (Warehouse)
-        Warehouse::factory()->create([
+        $warehouse = Warehouse::factory()->create([
             'tenant_id' => $tenant->id,
             'name' => 'Main Warehouse'
         ]);
+
+        Product::factory()
+            ->count(20)
+            ->create([
+                'tenant_id' => $tenant->id
+            ]);
+
+        $products = Product::where('tenant_id', $tenant->id)->get();
+
+        //Añadir inventario a cada producto con el modelo inventorylog
+        foreach ($products as $product) {
+            InventoryLog::factory()->create([
+                'tenant_id' => $tenant->id,
+                'warehouse_id' => $warehouse->id,
+                'product_id' => $product->id,
+                'quantity' => $this->faker->numberBetween(1, 100),
+                'type' => $this->faker->randomElement(['restock', 'order']),
+            ]);
+
+            InventoryLog::factory()->create([
+                'tenant_id' => $tenant->id,
+                'warehouse_id' => $warehouse->id,
+                'product_id' => $product->id,
+                'quantity' => $this->faker->numberBetween(1, 100),
+                'type' => $this->faker->randomElement(['restock', 'order']),
+            ]);
+
+            InventoryLog::factory()->create([
+                'tenant_id' => $tenant->id,
+                'warehouse_id' => $warehouse->id,
+                'product_id' => $product->id,
+                'quantity' => $this->faker->numberBetween(1, 100),
+                'type' => $this->faker->randomElement(['restock', 'order']),
+            ]);
+        }
 
         TenantConfig::create([
             'tenant_id' => $tenant->id,
